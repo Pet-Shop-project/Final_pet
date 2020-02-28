@@ -56,8 +56,8 @@ export class HeavtCatsService {
   all_details(_id){
     return this.http.get<any>("http://localhost:3000/PET-SHOP/allcats/details/"+_id)
   }
-  updatelightpet(id):Observable<any>{
-    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/light_cats/update/"+id)
+  updatelightpet(id,Cats){
+    return this.http.put("http://localhost:3000/PET-SHOP/light_cats/update/"+id,Cats)
   }
   updatenormalpet(id):Observable<any>{
     return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/normal_cats/update/"+id)

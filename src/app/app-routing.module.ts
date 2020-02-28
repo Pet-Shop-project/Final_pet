@@ -64,6 +64,9 @@ import { AlldogsearchComponent } from './search/alldogsearch/alldogsearch.compon
 import { PaymentComponent } from './payment/payment/payment.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { AddnewadminComponent } from './addnewadmin/addnewadmin.component';
+import { CatAdminEditComponent } from './cat_admin/cat-admin-edit/cat-admin-edit.component';
+import { HeavyCatEditComponent } from './cat_admin/heavy-cat-edit/heavy-cat-edit.component';
+import { NormalCatEditComponent } from './cat_admin/normal-cat-edit/normal-cat-edit.component';
 
 const routes: Routes = [
   
@@ -142,8 +145,10 @@ const routes: Routes = [
 {path:'all_dog_search/:name',component:AlldogsearchComponent},
 {path:'payment',component:PaymentComponent},
 {path:'adminlogin',component:AdminloginComponent},
-{path:'addnewadmin',component:AddnewadminComponent}
-
+{path:'addnewadmin',component:AddnewadminComponent},
+{path:'light-cat-edit/:id',component:CatAdminEditComponent},
+{path:'heavy-cat-edit/:id',component:HeavyCatEditComponent},
+{path:'normal-cat-edit/:id',component:NormalCatEditComponent},
 
 // {path:'404',component:PageNotfoundComponent},
 // { path: '', component:PageNotfoundComponent},

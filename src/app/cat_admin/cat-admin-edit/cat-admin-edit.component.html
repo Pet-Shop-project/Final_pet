@@ -1,0 +1,26 @@
+<div class='container'>
+     <div class='window'>
+       <div class='overlay'></div>
+       <div class='content'>
+         <div class='welcome'>Light Cats<br><br>Form</div>
+         <form action="/light_cats/update/:i_d" method='PUT' #adminform='ngForm' novalidate (ngSubmit)="onSubmit()">
+         
+         <div class='input-fields'>
+           <!--  -->
+           <input  #name="ngModel" [(ngModel)]="cat.name"  type='text'  class='input-line full-width'  value={{cat.name}} name="name" >
+          <input  #size="ngModel" [(ngModel)]="cat.size" type='text' class='input-line full-width'  value={{cat.size}} name="size">
+         
+          <input #lifespan="ngModel" [(ngModel)]="cat.lifespan" type='number'   class='input-line full-width'  value={{cat.life_span}} name="lifespan">
+          <input  #weight="ngModel" [(ngModel)]="cat.weight" type='number'  class='input-line full-width'  value={{cat.weight}} name="weight">
+          <input  #color="ngModel" [(ngModel)]="cat.color"  type='text' class='input-line full-width' value={{cat.color}} name="color">
+          <input  #price="ngModel" [(ngModel)]="cat.price" type='number' class='input-line full-width' value={{cat.price}} name="price">
+          <input  #temperament="ngModel" [(ngModel)]="cat.temperament"  type='text'  class='input-line full-width' value={{cat.temperament}} name="temperament">
+          <input  #images="ngModel" [(ngModel)]="cat.images"  type='text'  class='input-line full-width' value={{cat.images[0]}} name="images">
+       
+         </div>
+        {{cat | json}}
+         <div><button  type="submit" class='ghost-round full-width'>Edit</button></div>
+         </form>
+       </div>
+     </div>
+   </div>

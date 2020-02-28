@@ -88,6 +88,9 @@ import { NormaldogsearchComponent } from './search/normaldogsearch/normaldogsear
 import { HeavydogsearchComponent } from './search/heavydogsearch/heavydogsearch.component';
 import { HeavycatsearchComponent } from './search/heavycatsearch/heavycatsearch.component';
 import { NormalcatsearchComponent } from './search/normalcatsearch/normalcatsearch.component';
+import { CatAdminEditComponent } from './cat_admin/cat-admin-edit/cat-admin-edit.component';
+import { HeavyCatEditComponent } from './cat_admin/heavy-cat-edit/heavy-cat-edit.component';
+import { NormalCatEditComponent } from './cat_admin/normal-cat-edit/normal-cat-edit.component';
 
 // import { from } from 'rxjs';
 // import { MaterialModule } from './material/material.module';
@@ -176,6 +179,9 @@ import { NormalcatsearchComponent } from './search/normalcatsearch/normalcatsear
     HeavydogsearchComponent,
     HeavycatsearchComponent,
     NormalcatsearchComponent,
+    CatAdminEditComponent,
+    HeavyCatEditComponent,
+    NormalCatEditComponent,
   ],
   imports: [
     BrowserModule,
