@@ -59,11 +59,11 @@ export class HeavtCatsService {
   updatelightpet(id,Cats){
     return this.http.put("http://localhost:3000/PET-SHOP/light_cats/update/"+id,Cats)
   }
-  updatenormalpet(id):Observable<any>{
-    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/normal_cats/update/"+id)
+  updatenormalpet(id,Cats){
+    return this.http.put("http://localhost:3000/PET-SHOP/normal_cats/update/"+id,Cats)
   }
-  updateheavypet(id):Observable<any>{
-    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/heavy_cats/update/"+id)
+  updateheavypet(id,Cats){
+    return this.http.put("http://localhost:3000/PET-SHOP/heavy_cats/update/"+id,Cats)
   }
 
 addnewheavycat(Cats):Observable<any>{

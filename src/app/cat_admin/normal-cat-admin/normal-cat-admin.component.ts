@@ -23,4 +23,7 @@ export class NormalCatAdminComponent implements OnInit {
    console.log(cat._id);
    
   }
+  onSelect_norm(cat){
+    this.router.navigate(['/normal-cat-edit',cat._id])
+}
 }

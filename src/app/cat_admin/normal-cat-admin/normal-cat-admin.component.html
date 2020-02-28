@@ -12,7 +12,8 @@
                  <h5 class="card-text">Price: {{cat.price}} $</h5>
                  <h5 class="card-text">coat: {{cat.coat}} cm</h5>
                  <h5 class="card-text">Color: {{cat.color}}</h5>
-                 <a href="#" class="action-button shadow animate blue">Edit</a>
+                 <div (click)="onSelect_norm(cat)">
+                  <a  class="action-button shadow animate blue" >Edit</a></div>
                  <a href="#" class="action-button shadow animate yellow" style="margin-left: -10px;">Delete</a>
                  
                </div>
