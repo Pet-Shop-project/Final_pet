@@ -1,0 +1,29 @@
+<div class='container'>
+     <div class='window'>
+       <div class='overlay'></div>
+       <div class='content'>
+         <div class='welcome'>Light Cats<br><br>Form</div>
+         <form action="/heavydogs/update//:id" method='PUT' #adminform='ngForm' novalidate (ngSubmit)="onSubmit()">
+         
+         <div class='input-fields'>
+           <!--  -->
+           <input  #name="ngModel" [(ngModel)]="dog.name"  type='text'  class='input-line full-width'  value={{dog.name}} name="name" >
+          <input  #size="ngModel" [(ngModel)]="dog.size" type='text' class='input-line full-width'  value={{dog.size}} name="size">
+         
+          <input #lifespan="ngModel" [(ngModel)]="dog.lifespan" type='number'   class='input-line full-width'  value={{dog.life_span}} name="lifespan">
+          <input  #weight="ngModel" [(ngModel)]="dog.weight" type='number'  class='input-line full-width'  value={{dog.weight}} name="weight">
+          <input  #color="ngModel" [(ngModel)]="dog.color"  type='text' class='input-line full-width' value={{dog.color}} name="color">
+          <input  #price="ngModel" [(ngModel)]="dog.price" type='number' class='input-line full-width' value={{dog.price}} name="price">
+          <input  #temperament="ngModel" [(ngModel)]="dog.temperament"  type='text'  class='input-line full-width' value={{dog.temperament}} name="temperament">
+          <input  #images="ngModel" [(ngModel)]="dog.images"  type='text'  class='input-line full-width' value={{dog.images[0]}} name="images">
+       
+         </div>
+        {{dog | json}}
+         <div><button  type="submit" class='ghost-round full-width'>Edit</button></div>
+         </form>
+       </div>
+     </div>
+   </div>
+
+
+

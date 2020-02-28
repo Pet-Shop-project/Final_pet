@@ -91,6 +91,9 @@ import { NormalcatsearchComponent } from './search/normalcatsearch/normalcatsear
 import { CatAdminEditComponent } from './cat_admin/cat-admin-edit/cat-admin-edit.component';
 import { HeavyCatEditComponent } from './cat_admin/heavy-cat-edit/heavy-cat-edit.component';
 import { NormalCatEditComponent } from './cat_admin/normal-cat-edit/normal-cat-edit.component';
+import { HeavyDogEditComponent } from './dog-admin/heavy-dog-edit/heavy-dog-edit.component';
+import { LightDogEditComponent } from './dog-admin/light-dog-edit/light-dog-edit.component';
+import { NormalDogEditComponent } from './dog-admin/normal-dog-edit/normal-dog-edit.component';
 
 // import { from } from 'rxjs';
 // import { MaterialModule } from './material/material.module';
@@ -182,6 +185,9 @@ import { NormalCatEditComponent } from './cat_admin/normal-cat-edit/normal-cat-e
     CatAdminEditComponent,
     HeavyCatEditComponent,
     NormalCatEditComponent,
+    HeavyDogEditComponent,
+    LightDogEditComponent,
+    NormalDogEditComponent,
   ],
   imports: [
     BrowserModule,

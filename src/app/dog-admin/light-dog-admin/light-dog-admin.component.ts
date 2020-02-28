@@ -17,9 +17,8 @@ public dogs=[];
     console.log(data);
     })
   }
-  // onSelect(dog){
-  //   this.router.navigate(['/lightdogdetails',dog._id])
-  //   console.log(dog._id)
-  // }
+  onSelect_light(dog){
+    this.router.navigate(['/light-dog-edit',dog._id])
+}
 
 }

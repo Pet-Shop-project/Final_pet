@@ -67,6 +67,9 @@ import { AddnewadminComponent } from './addnewadmin/addnewadmin.component';
 import { CatAdminEditComponent } from './cat_admin/cat-admin-edit/cat-admin-edit.component';
 import { HeavyCatEditComponent } from './cat_admin/heavy-cat-edit/heavy-cat-edit.component';
 import { NormalCatEditComponent } from './cat_admin/normal-cat-edit/normal-cat-edit.component';
+import { HeavyDogEditComponent } from './dog-admin/heavy-dog-edit/heavy-dog-edit.component';
+import { LightDogEditComponent } from './dog-admin/light-dog-edit/light-dog-edit.component';
+import { NormalDogEditComponent } from './dog-admin/normal-dog-edit/normal-dog-edit.component';
 
 const routes: Routes = [
   
@@ -149,6 +152,10 @@ const routes: Routes = [
 {path:'light-cat-edit/:id',component:CatAdminEditComponent},
 {path:'heavy-cat-edit/:id',component:HeavyCatEditComponent},
 {path:'normal-cat-edit/:id',component:NormalCatEditComponent},
+// dog
+{path:'heavy-dog-edit/:id',component:HeavyDogEditComponent},
+{path:'normal-dog-edit/:id',component:NormalDogEditComponent},
+{path:'light-dog-edit/:id',component:LightDogEditComponent},
 
 // {path:'404',component:PageNotfoundComponent},
 // { path: '', component:PageNotfoundComponent},
