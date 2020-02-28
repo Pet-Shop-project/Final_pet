@@ -134,4 +134,7 @@ random_lightb():Observable<any>{
     return this.http.get<any>("http://localhost:3000/PET-SHOP/sort/listcat_normal")
 
   }
+  listRandomccessories():Observable<any>{
+    return this.http.get("http://localhost:3000/PET-SHOP/accessories/random/")
+  }
 }

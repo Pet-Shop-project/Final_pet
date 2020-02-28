@@ -13,10 +13,13 @@ private requestBody = JSON.stringify(status);
   listaccessories():Observable<any>{
     return this.http.get("http://localhost:3000/PET-SHOP/accessories/list/")
   }
- updatepet(id):Observable<any>{
-   return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/accessories/update/"+id)
+ updatepet(id,access):Observable<any>{
+   return this.http.put("http://localhost:3000/PET-SHOP/accessories/update/"+id,access)
  }
   addnewaccessory(Accessories):Observable<any>{
     return this.http.post("http://localhost:3000/PET-SHOP/accessories/add",Accessories)
   }
+
+
+  
 }

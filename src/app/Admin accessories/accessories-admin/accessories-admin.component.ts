@@ -18,4 +18,8 @@ export class AccessoriesAdminComponent implements OnInit {
 
     })
   }
+  onSelect(){
+    this.router.navigate(['access-edit/'])
 }
+}
+

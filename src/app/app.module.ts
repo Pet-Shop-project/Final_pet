@@ -94,6 +94,7 @@ import { NormalCatEditComponent } from './cat_admin/normal-cat-edit/normal-cat-e
 import { HeavyDogEditComponent } from './dog-admin/heavy-dog-edit/heavy-dog-edit.component';
 import { LightDogEditComponent } from './dog-admin/light-dog-edit/light-dog-edit.component';
 import { NormalDogEditComponent } from './dog-admin/normal-dog-edit/normal-dog-edit.component';
+import { EditAccessComponent } from './Admin accessories/edit-access/edit-access.component';
 
 // import { from } from 'rxjs';
 // import { MaterialModule } from './material/material.module';
@@ -188,6 +189,7 @@ import { NormalDogEditComponent } from './dog-admin/normal-dog-edit/normal-dog-e
     HeavyDogEditComponent,
     LightDogEditComponent,
     NormalDogEditComponent,
+    EditAccessComponent,
   ],
   imports: [
     BrowserModule,

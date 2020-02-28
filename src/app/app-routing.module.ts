@@ -70,6 +70,7 @@ import { NormalCatEditComponent } from './cat_admin/normal-cat-edit/normal-cat-e
 import { HeavyDogEditComponent } from './dog-admin/heavy-dog-edit/heavy-dog-edit.component';
 import { LightDogEditComponent } from './dog-admin/light-dog-edit/light-dog-edit.component';
 import { NormalDogEditComponent } from './dog-admin/normal-dog-edit/normal-dog-edit.component';
+import { EditAccessComponent } from './Admin accessories/edit-access/edit-access.component';
 
 const routes: Routes = [
   
@@ -156,6 +157,7 @@ const routes: Routes = [
 {path:'heavy-dog-edit/:id',component:HeavyDogEditComponent},
 {path:'normal-dog-edit/:id',component:NormalDogEditComponent},
 {path:'light-dog-edit/:id',component:LightDogEditComponent},
+{path:'access-edit',component:EditAccessComponent},
 
 // {path:'404',component:PageNotfoundComponent},
 // { path: '', component:PageNotfoundComponent},

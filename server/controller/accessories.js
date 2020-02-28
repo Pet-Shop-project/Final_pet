@@ -61,4 +61,17 @@ route.get('/list',function(req,resp){
       console.log(res)
     })
   })  
+
+  route.get('/random',function(req,resp){
+
+    var cats=[];
+      mongoose.model('accessories').find(function(err,data){
+        for (i=0; i<3; i++)
+        {
+          cats[i]=data[i];
+        }
+        resp.send(cats);
+    })
+    
+    })
   module.exports = route;
