@@ -80,6 +80,7 @@ import { LightbirdssearchComponent } from './search/lightbirdssearch/lightbirdss
 import { NormalbirdssearchComponent } from './search/normalbirdssearch/normalbirdssearch.component';
 import { HeavybirdssearchComponent } from './search/heavybirdssearch/heavybirdssearch.component';
 import { AccessoryComponent } from './search/accessory/accessory.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 const routes: Routes = [
   
@@ -173,7 +174,8 @@ const routes: Routes = [
 {path:'lightbirdssearch/:name',component:LightbirdssearchComponent},
 {path:'normalbirdssearch/:name',component:NormalbirdssearchComponent},
 {path:'heavybirdssearch/:name',component:HeavybirdssearchComponent},
-{path:'accessorysearch/:name',component:AccessoryComponent}
+{path:'accessorysearch/:name',component:AccessoryComponent},
+{path:'wishlist',component:WishlistComponent}
 
 
 // {path:'404',component:PageNotfoundComponent},

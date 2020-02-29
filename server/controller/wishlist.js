@@ -4,7 +4,6 @@ var route = express.Router();
 var mongoose = require("mongoose");
 var bcrypt = require("bcryptjs");
 var jwt = require('jsonwebtoken');
-
 var allshoppets = require('../model/allshoppets')
 var wishlist = require('../model/wishlist')
 

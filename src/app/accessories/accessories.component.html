@@ -18,7 +18,7 @@
               <h5 class="card-text">Color: {{accessory.color}}</h5>
               <a class="action-button shadow animate blue" (click)="addToCart(accessory._id,accessory.price,accessory.name,accessory.images[0])" style="cursor: pointer;">Add To cart</a>
 
-              <a href="#" class="action-button shadow animate yellow" style="margin-left: -10px;">wishlist</a>
+              <a class="action-button shadow animate yellow" (click)="addToWishlist(accessory._id,accessory.price,accessory.name,accessory.images[0])" style="cursor: pointer;">wishlist</a>
               
             </div>
           </div>

@@ -37,16 +37,19 @@ route.get("/add/:id/:price/:name", verifytoken, function (req, resp, next) {
   productId = req.params.id
   productPrice = parseInt(req.params.price);
   productName = req.params.name;
+  // productImage = req.query.images;
   console.log(productId)
   console.log(productPrice);
-  console.log(productName)
+  console.log(productName);
+  // console.log(productImage);
+  
 
   const productAddedToCart = {
     price: productPrice,
     name: productName,
     quantity: 1,
-    _id: productId,
-    images: req.query.images
+    _id: productId
+    // images: productImage
   }
 
   mongoose.model('cart').findOne({
@@ -62,6 +65,7 @@ route.get("/add/:id/:price/:name", verifytoken, function (req, resp, next) {
       cart.totalQuantity = 1;
       cart.user = cartId;
       cart.name = productName;
+      // cart.images = productImage;
       cart.save(function (err, data) {
         resp.send(data);
         console.log(data);

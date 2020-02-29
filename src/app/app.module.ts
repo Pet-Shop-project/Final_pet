@@ -96,6 +96,7 @@ import { HeavybirdssearchComponent } from './search/heavybirdssearch/heavybirdss
 import { NormalbirdssearchComponent } from './search/normalbirdssearch/normalbirdssearch.component';
 import { LightbirdssearchComponent } from './search/lightbirdssearch/lightbirdssearch.component';
 import { AccessoryComponent } from './search/accessory/accessory.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 // import { from } from 'rxjs';
 // import { MaterialModule } from './material/material.module';
@@ -192,6 +193,7 @@ import { AccessoryComponent } from './search/accessory/accessory.component';
     NormalbirdssearchComponent,
     LightbirdssearchComponent,
     AccessoryComponent,
+    WishlistComponent,
   ],
   imports: [
     BrowserModule,

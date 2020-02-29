@@ -3,6 +3,7 @@ import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { DogsService } from 'src/app/services/dogs.service';
 import { Dogs } from 'src/app/services/dogs';
 import { CartService } from 'src/app/services/cart.service';
+import { WishlistService } from 'src/app/services/wishlist.service';
 
 @Component({
   selector: 'app-heavydogdetails',
@@ -11,7 +12,7 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class HeavydogdetailsComponent implements OnInit {
 
-  constructor(private route:ActivatedRoute , private dog:DogsService , private router:Router,private cartserv:CartService) { }
+  constructor(private route:ActivatedRoute , private dog:DogsService , private router:Router,private cartserv:CartService,private wishlist:WishlistService) { }
   public dogcode;
   public dogs = new Dogs("","",0,0,"",0,"",[""]);
   ngOnInit() {
@@ -27,6 +28,13 @@ export class HeavydogdetailsComponent implements OnInit {
     console.log(prductId)
     this.cartserv.cartProducting(prductId,productPrice,productName,productImg).subscribe(
       response => console.log('Add to cart', response),
+      error => console.log('error',error)
+      )
+  }
+  public addToWishlist(prductId,productPrice,productName,productImg){
+    console.log(prductId)
+    this.wishlist.cartProducting(prductId,productPrice,productName,productImg).subscribe(
+      response => console.log('Add to Wishlist', response),
       error => console.log('error',error)
       )
   }

@@ -87,7 +87,7 @@
           <br>
           <a class="action-button shadow animate blue" (click)="addToCart(pet._id,pet.price,pet.name,pet.images[0])" style="cursor: pointer;">Add To cart</a>
 
-          <a href="#" class="action-button shadow animate yellow">Add wishlist</a>
+          <a class="action-button shadow animate yellow" (click)="addToWishlist(pet._id,pet.price,pet.name,pet.images[0])" style="cursor: pointer;">Add wishlist</a>
           <br>
          <a class="action-button shadow animate black" style="margin-left: 150px;cursor: pointer;" (click)="back()" routerLink="/smallpets/all">Back</a>
         </div>
