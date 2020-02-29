@@ -18,9 +18,6 @@ var accessories = require("./controller/accessories");
 var smallpet_heavy=require('./controller/smallpet_heavy');
 var smallpet_light=require('./controller/smallpet_light');
 var smallpet_normal=require('./controller/smallpet_normal');
-// let heavy_cats=require("./controller/heavy-cats");
-// let light_cats=require("./controller/light-cats");
-// let normal_cats=require('./controller/normal-cats');
 var heavybirds=require("./controller/heavybirds");
 var lightbirds=require("./controller/lightbirds");
 var normalbirds=require("./controller/normalbirds");
@@ -28,33 +25,26 @@ var allbirds=require("./controller/allbirds")
 var smallpet_heavy=require('./controller/smallpet_heavy')
 var smallpet_light=require('./controller/smallpet_light')
 var smallpet_normal=require('./controller/smallpet_normal')
-// let heavy_cats=require("./controller/heavy-cats")
-// let light_cats=require("./controller/light-cats")
-// let normal_cats=require('./controller/normal-cats')
-var smallpet_all=require('./controller/smallpet_all')
-var shopcart = require('./controller/shopcart')
-
-var sort_heavy_cat=require("./controller/sort-heavycat")
-app.use("/PET-SHOP/sort-heavycat", sort_heavy_cat);
-// var sort_heavy_cat=require("./controller/sort-heavycat")
-// app.use("/PET-SHOP/sort-heavycat", sort_heavy_cat);
-app.use(cors());
-
-app.use('/PET-SHOP/heavy_pet',smallpet_heavy)
-app.use('/PET-SHOP/light_pet',smallpet_light)
-app.use('/PET-SHOP/normal_pet',smallpet_normal)
-app.use('/PET-SHOP/all_pet',smallpet_all)
 let heavy_cats=require("./controller/heavy-cats")
 let light_cats=require("./controller/light-cats")
 let normal_cats=require('./controller/normal-cats')
+var smallpet_all=require('./controller/smallpet_all')
+var shopcart = require('./controller/shopcart')
+var sort_heavy_cat=require("./controller/sort-heavycat")
 var user=require('./controller/user')
 var User=require('./model/user')
 var payment=require('./controller/payment')
 var admin=require('./controller/admin')
-
 var sort=require("./controller/sort")
-app.use("/PET-SHOP/sort",sort);
+var wishlist=require("./controller/wishlist");
 
+app.use(cors());
+app.use("/PET-SHOP/sort-heavycat", sort_heavy_cat);
+app.use('/PET-SHOP/heavy_pet',smallpet_heavy)
+app.use('/PET-SHOP/light_pet',smallpet_light)
+app.use('/PET-SHOP/normal_pet',smallpet_normal)
+app.use('/PET-SHOP/all_pet',smallpet_all)
+app.use("/PET-SHOP/sort",sort);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use("/PET-SHOP/lightdogs", lightdogs);
@@ -64,7 +54,6 @@ app.use("/PET-SHOP/alldogs", alldogs);
 app.use("/PET-SHOP/allcats", allcats)
 app.use("/PET-SHOP/accessories",accessories)
 app.use("/PET-SHOP/heavy_cats", heavy_cats);
-
 app.use("/PET-SHOP/light_cats", light_cats);
 app.use("/PET-SHOP/normal_cats", normal_cats);
 app.use('/PET-SHOP/heavy_pet',smallpet_heavy);
@@ -78,16 +67,10 @@ app.use("/PET-SHOP/user", user);
 app.use("/PET-SHOP/shopcart",shopcart);
 app.use("/PET-SHOP/payment",payment);
 app.use("/PET-SHOP/admin",admin);
-
-// app.use((req, res, next) => {
-//   User.findById('5e2f996086b6d81394e68468') 
-//     .then(user => {
-//       req.user = user;
-//       next();
-//     })
-//     .catch(err => console.log(err));
-// });
+app.use("/PET-SHOP/wishlist",wishlist)
 app.use(express.static("public"));
+
+
 app.all('*', function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'DELETE, HEAD, GET, OPTIONS, POST, PUT');
@@ -101,7 +84,6 @@ app.all("*", (req, resp, next) => {
 
 app.set("viewengine", "ejs");
 app.set("views", "./views");
-// mongoose.Promise = global.Promise;
 mongoose.connect("mongodb+srv://petshop:AAAAA@cluster0-mv8zv.mongodb.net/Pet_shop?retryWrites=true&w=majority",{ useNewUrlParser: true ,useUnifiedTopology: true}).then(()=> console.log("Up"))
 .then(()=>console.log("Database Connected"));
 

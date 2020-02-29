@@ -6,7 +6,7 @@ var bcrypt = require("bcryptjs");
 var jwt = require('jsonwebtoken');
 
 var allshoppets = require('../model/allshoppets')
-var cart = require('../model/cart')
+var wishlist = require('../model/wishlist')
 
 var User = require('../model/user');
 var parseUrlencoded = bodyParser.urlencoded({
@@ -49,13 +49,13 @@ route.get("/add/:id/:price/:name", verifytoken, function (req, resp, next) {
     images: req.query.images
   }
 
-  mongoose.model('cart').findOne({
+  mongoose.model('wishlist').findOne({
     user: cartId,
     product_id: req.params.id
   }, (err, cart) => {
 
     if (!cart) {
-      var cartModel = mongoose.model("cart")
+      var cartModel = mongoose.model("wishlist")
       var cart = new cartModel()
       cart.product_id = req.params.id // change to object of allshoppets
       cart.totalPrice = productPrice;
@@ -72,7 +72,7 @@ route.get("/add/:id/:price/:name", verifytoken, function (req, resp, next) {
     } else {
       cart.totalQuantity += 1;
       cart.totalPrice += productPrice
-      mongoose.model('cart').updateOne({
+      mongoose.model('wishlist').updateOne({
         user: cartId,
         product_id: req.params.id
       }, {
@@ -95,7 +95,7 @@ route.get("/add/:id/:price/:name", verifytoken, function (req, resp, next) {
 route.get('/details', verifytoken, function (req, resp) {
   if (req.query.token != null) {
     cartId = Token.useremail
-    mongoose.model("cart").find({
+    mongoose.model("wishlist").find({
       user: cartId
     }, function (err, data) {
       if (!err) {
@@ -114,7 +114,7 @@ route.get('/details', verifytoken, function (req, resp) {
 
 route.get('/deleteItem/:id', verifytoken, function (req, resp) {
   cartId = Token.useremail
-  mongoose.model('cart').deleteOne({
+  mongoose.model('wishlist').deleteOne({
     user: cartId
   }, {
     $pull: {
@@ -129,7 +129,7 @@ route.get('/deleteItem/:id', verifytoken, function (req, resp) {
 
 route.get('/clear', verifytoken, function (req, resp) {
   cartId = Token.useremail
-  mongoose.model("cart").remove({
+  mongoose.model("wishlist").remove({
     user: cartId
   }, (err, data) => console.log(data))
   resp.end()
