@@ -1,4 +1,3 @@
-<div class="container contstyle" *ngIf="!start_sort">
     <div class="row">
       <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB" *ngFor="let bird of birds"
         (click)=" showdetails(bird)">
@@ -10,7 +9,9 @@
           </div>
         </div>
       </div>
-  
-  
     </div>
-  </div>
+    <button class="btn first" style="margin-left: 150px;cursor: pointer;margin-bottom: 50px;" (click)="back()">Back</button>
+  <br>
+  <br>
+  <br>
+ 
