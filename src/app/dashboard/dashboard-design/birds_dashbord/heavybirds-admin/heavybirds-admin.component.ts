@@ -22,6 +22,9 @@ export class HeavybirdsAdminComponent implements OnInit {
   showdetails(bird){
     this.route.navigate(["/heavybirds_admin",bird._id])
     }
+    onSelect_heavy(bird){
+      this.route.navigate(['/heavybird_edit',bird._id])
+  }
 }
 
 

@@ -3,6 +3,9 @@
 <app-dashboard-navbar></app-dashboard-navbar>
 
 <div class="container">
+    <div class="row">
+        <input type="button" value="Add new dog" routerLink='/lightdog_addform'>
+      </div>
     <div class="row" style="margin-bottom: 100px;">
       <div class="col-md-4 mt-4" *ngFor="let dog of dogs" (click)="onSelect(dog)">
         <div class="card profile-card-5" >

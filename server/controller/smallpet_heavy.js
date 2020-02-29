@@ -1,7 +1,12 @@
-var express = require("express");
-var mongoose = require("mongoose");
-var router=express.Router();
-
+var express = require("express")
+var router = express.Router()
+var app = express()
+var bodyParser = require("body-parser")
+var mongoose = require("mongoose")
+var cors = require('cors');
+var parseUrlencoded = bodyParser.urlencoded({
+  extended: true
+});
 
 
 router.get('/heavy',(req,res)=>{
@@ -65,5 +70,24 @@ router.get('/random',function(req,resp){
     })
     
     })
-
+    router.post('/addpet',parseUrlencoded,(req,res)=>{
+        const heavySmallpet=mongoose.model('heavySmallpets');
+        const newheavySmallpet=new heavySmallpet({
+              name: req.body.name,
+              size: req.body.size,
+              life_span: req.body.life_span,
+              weight: req.body.weight,
+              color: req.body.color,
+              price: req.body.price,
+              temperament: req.body.temperament,
+              images: req.body.images
+        })
+        
+        newheavySmallpet.save((err,res)=>{
+          if (err){
+            console.log(err)
+          }
+          console.log(res)
+        }) 
+      })  
 module.exports=router

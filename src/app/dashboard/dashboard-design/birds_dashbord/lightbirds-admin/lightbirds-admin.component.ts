@@ -21,6 +21,9 @@ export class LightbirdsAdminComponent implements OnInit {
   showdetails(bird){
     this.route.navigate(["/light-details",bird._id])
     }
+    onSelect_light(bird){
+      this.route.navigate(['/lightbird_edit',bird._id])
+  }
 }
   
 

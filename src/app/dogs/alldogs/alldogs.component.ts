@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./alldogs.component.css']
 })
 export class AlldogsComponent implements OnInit {
-  collection = { count: 45, data: [] };
+  public dogs=[];
+  collection = { count: this.dogs.length, data: [] };
   config = {
     id: 'custom',
     itemsPerPage: 3,
@@ -42,7 +43,7 @@ export class AlldogsComponent implements OnInit {
     this.config.currentPage = event;
   }
   
-  public dogs=[];
+  
   ngOnInit() {
     this.dog.listalldog().subscribe(data=>{
       this.dogs=data;

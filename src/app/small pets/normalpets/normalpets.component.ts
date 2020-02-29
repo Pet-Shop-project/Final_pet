@@ -13,7 +13,7 @@ export class NormalpetsComponent implements OnInit {
   public sortpet=[]
   public start_sort=false
 
-  collection = { count: 12, data: [] };
+  collection = { count: this.smallpet.length, data: [] };
   config = {
     id: 'custom',
     itemsPerPage: 3,

@@ -23,4 +23,7 @@ export class LightsmallAdminComponent implements OnInit {
   showdetails(light){
     this.router.navigate(["/lightsmall-admin",light._id])
     }
+    onSelect_light(pet){
+      this.router.navigate(['/lightpet_edit',pet._id])
+  }
 }

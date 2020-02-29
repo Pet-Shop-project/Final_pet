@@ -13,7 +13,7 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class LightpetsDetailsComponent implements OnInit {
   public lightid;
-public pet=new Smallpets("","",0,"","",0,"",[""]);
+public pet=new Smallpets("","",0,0,"",0,"",[""]);
   constructor(private getLightpet:SmallpetServiceService,private detailroute:ActivatedRoute, private router:Router,private cartserv:CartService) { }
 
   ngOnInit() {

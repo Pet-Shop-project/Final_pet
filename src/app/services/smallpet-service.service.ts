@@ -49,14 +49,14 @@ export class SmallpetServiceService {
   getalldetails(all_id):Observable<any>{
     return this.http.get<any>(this.alldetails_api+all_id )
   }
-  updatelightpet(id):Observable<any>{
-    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/light_pet/update/"+id)
+  updatelightpet(id,Smallpets):Observable<any>{
+    return this.http.put("http://localhost:3000/PET-SHOP/light_pet/update/"+id,Smallpets)
   }
-  updatenormalpet(id):Observable<any>{
-    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/normal_pet/update/"+id)
+  updatenormalpet(id,Smallpets):Observable<any>{
+    return this.http.put("http://localhost:3000/PET-SHOP/normal_pet/update/"+id,Smallpets)
   }
-  updateheavypet(id):Observable<any>{
-    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/heavy_pet/update/"+id)
+  updateheavypet(id,Smallpets):Observable<any>{
+    return this.http.put("http://localhost:3000/PET-SHOP/heavy_pet/update/"+id,Smallpets) 
   }
 
   sortheavypet():Observable<any>{
@@ -69,6 +69,18 @@ export class SmallpetServiceService {
   }
   sortnormpet():Observable<any>{
     return this.http.get<any>(this.norm_api_sort)
+
+  }
+  addnewheavypet(Smallpets):Observable<any>{
+    return this.http.post('http://localhost:3000/PET-SHOP/heavy_pet/addpet/',Smallpets)
+
+  }
+  addnewlightpet(Smallpets):Observable<any>{
+    return this.http.post('http://localhost:3000/PET-SHOP/light_pet/addpet/',Smallpets)
+
+  }
+  addnewnormalpet(Smallpets):Observable<any>{
+    return this.http.post('http://localhost:3000/PET-SHOP/normal_pet/addpet/',Smallpets)
 
   }
 }

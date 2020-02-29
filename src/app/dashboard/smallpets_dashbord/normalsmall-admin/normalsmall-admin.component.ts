@@ -22,5 +22,7 @@ public pets:[];
   showdetails(normal){
     this.router.navigate(["/normalsmall-admin",normal._id])
     }
-
+    onSelect_normal(pet){
+      this.router.navigate(['/normalpet_edit',pet._id])
+  }
 }

@@ -53,4 +53,13 @@ export class DogsService {
   sort_normd(){
     return this.http.get<any>("http://localhost:3000/PET-SHOP/sort/listdog_norm")
   }
+  addnewdog(Dogs):Observable<any>{
+    return this.http.post<any>("http://localhost:3000/PET-SHOP/heavydogs/adddog/",Dogs)
+  }
+  addnewlightdog(Dogs):Observable<any>{
+    return this.http.post<any>("http://localhost:3000/PET-SHOP/lightdogs/adddog/",Dogs)
+  }
+  addnewnormaldog(Dogs):Observable<any>{
+    return this.http.post<any>("http://localhost:3000/PET-SHOP/normaldogs/adddog/",Dogs)
+  }
 }

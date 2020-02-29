@@ -2,6 +2,9 @@
 <app-dashboard-navbar></app-dashboard-navbar>
 
 <div class="container">
+    <div class="row">
+        <input type="button" value="Add new bird" routerLink='/lightbird_addform'>
+      </div>
     <div class="row" style="margin-bottom: 100px;">
       <div class="col-md-4 mt-4"*ngFor="let bird of birds" (click)="onSelect(bird)">
         <div class="card profile-card-5" >
@@ -12,7 +15,8 @@
                 <h4 class="card-title">{{bird.name}}</h4>
                 <h5 class="card-text">Price: {{bird.price}} $</h5>
               
-                <a href="#" class="action-button shadow animate blue">edit</a>
+                <div (click)="onSelect_light(bird)"> 
+                    <a  class="action-button shadow animate blue" >Edit</a></div>
                 <a href="#" class="action-button shadow animate yellow" style="margin-left: -10px;">delete</a>
                 
               </div>

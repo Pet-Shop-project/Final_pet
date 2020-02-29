@@ -134,4 +134,11 @@ random_lightb():Observable<any>{
     return this.http.get<any>("http://localhost:3000/PET-SHOP/sort/listcat_normal")
 
   }
+  addnewlightcat(Cats):Observable<any>{
+    return this.http.post<any>("http://localhost:3000/PET-SHOP/light_cats/addlight/",Cats)
+  }
+  addnewnormalcat(Cats):Observable<any>{
+    return this.http.post<any>("http://localhost:3000/PET-SHOP/normal_cats/addnormal/",Cats)
+  }
+
 }

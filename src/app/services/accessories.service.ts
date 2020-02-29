@@ -5,7 +5,7 @@ import { Accessories } from '../accessories'
 @Injectable({
   providedIn: 'root'
 })
-export class AccessoriesService {
+export class AccessoriesService { 
   
 private myMessage = new Subject<any>();
 private requestBody = JSON.stringify(status);

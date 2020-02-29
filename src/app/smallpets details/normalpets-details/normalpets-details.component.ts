@@ -12,7 +12,7 @@ import { CartService } from 'src/app/services/cart.service';
 export class NormalpetsDetailsComponent implements OnInit {
 
   public normalid;
-  public pet=new Smallpets("","",0,"","",0,"",[""]);
+  public pet=new Smallpets("","",0,0,"",0,"",[""]);
     constructor(private getnormalpet:SmallpetServiceService,private detailroute:ActivatedRoute, private router:Router,private cartserv:CartService) { }
   
     ngOnInit() {

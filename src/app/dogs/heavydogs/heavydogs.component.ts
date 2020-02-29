@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./heavydogs.component.css']
 })
 export class HeavydogsComponent implements OnInit {
-  collection = { count: 15, data: [] };
+  public dogs=[];
+  collection = { count:this.dogs.length, data: [] };
   config = {
     id: 'custom',
     itemsPerPage: 3,
@@ -42,7 +43,7 @@ export class HeavydogsComponent implements OnInit {
     this.config.currentPage = event;
   }
   
-  public dogs=[];
+  
   public sortdog=[]
   
   public start_sort=false

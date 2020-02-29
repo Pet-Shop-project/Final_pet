@@ -58,9 +58,9 @@ router.get('/listcat',function(req,resp){
 
     );
 });
-
+ 
   router.post('/addheavycat',parseUrlencoded,(req,res)=>{
-    const heavycats=mongoose.model('cats');
+    const heavycats=mongoose.model('cats'); 
     const newheavycats=new heavycats({
           name: req.body.name,
           size: req.body.size,

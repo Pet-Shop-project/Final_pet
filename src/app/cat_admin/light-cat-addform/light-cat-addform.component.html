@@ -1,1 +1,30 @@
-<p>light-cat-addform works!</p>
+<div class='container'>
+    <div class='window'>
+      <div class='overlay'></div>
+      <div class='content'>
+        <div class='welcome'>light Cats<br><br>Form</div>
+        <form action="/heavy_cats/addheavycat" method="POST" #adminform='ngForm' novalidate (ngSubmit)="onSubmit()">
+        
+        <div class='input-fields'>
+          
+        
+          <input  #name="ngModel" [(ngModel)]="catModel.name"  type='text' placeholder='name' name="name" class='input-line full-width' >
+          <input  #size="ngModel" [(ngModel)]="catModel.size" type='text' placeholder='size' name="size" class='input-line full-width' >
+         
+          <input #life_span="ngModel" [(ngModel)]="catModel.life_span" type='number' placeholder='life_span' name="life_span" class='input-line full-width' >
+          <input  #weight="ngModel" [(ngModel)]="catModel.weight" type='number' placeholder='weight' name="weight" class='input-line full-width'  >
+          <input  #color="ngModel" [(ngModel)]="catModel.color"  type='text' placeholder='color' name="color" class='input-line full-width' >
+          <input  #price="ngModel" [(ngModel)]="catModel.price" type='number' placeholder='price' name="price" class='input-line full-width' >
+          <input  #temperament="ngModel" [(ngModel)]="catModel.temperament"  type='text' placeholder='temperament' name="temperament" class='input-line full-width'>
+          <input type='text' placeholder='pet image' name="images" class='input-line full-width' #images="ngModel" [(ngModel)]="catModel.images[0]">
+          <input type='text' placeholder='pet image' name="images" class='input-line full-width' #images="ngModel" [(ngModel)]="catModel.images[1]">
+          <input type='text' placeholder='pet food ' name="images" class='input-line full-width' #images="ngModel" [(ngModel)]="catModel.images[2]">
+          <input type='text' placeholder='pet accessory ' name="images" class='input-line full-width' #images="ngModel" [(ngModel)]="catModel.images[3]">
+          
+        </div>
+       
+        <div><button  type="submit" class='ghost-round full-width'>Add</button></div>
+        </form>
+      </div>
+    </div>
+  </div>

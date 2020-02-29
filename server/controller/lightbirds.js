@@ -59,4 +59,24 @@ route.get('/list',function(req,resp){
     })
     
     })
+    route.post('/addbird',parseUrlencoded,(req,res)=>{
+      const lightbirds=mongoose.model('lightbirds'); 
+      const newlightbird=new lightbirds({
+            name: req.body.name,
+            size: req.body.size,
+            life_span: req.body.life_span,
+            weight: req.body.weight,
+            color: req.body.color,
+            price: req.body.price,
+            temperament: req.body.temperament,
+            images: req.body.images
+      })
+      
+      newlightbird.save((err,res)=>{
+        if (err){
+          console.log(err)
+        }
+        console.log(res)
+      })
+    })  
  module.exports = route;
