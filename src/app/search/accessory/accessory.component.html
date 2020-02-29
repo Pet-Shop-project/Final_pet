@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row" style="margin-bottom: 100px;">
+      <div class="col-md-4 mt-4" *ngFor="let accessory of accessories">
+        <div class="card profile-card-5" >
+            <div class="card-img-block">
+                <img class="card-img-top" src="{{accessory.images[0]}}" alt="Card image cap">
+            </div>
+                <div class="card-body pt-0">
+                <h4 class="card-title">{{accessory.name}}</h4>
+                <h5 class="card-text">Price: {{accessory.price}} $</h5>
+                <h5 class="card-text">Length: {{accessory.weight}} cm</h5>
+                <h5 class="card-text">Color: {{accessory.color}}</h5>
+                <a class="action-button shadow animate blue" (click)="addToCart(accessory._id,accessory.price,accessory.name,accessory.images[0])" style="cursor: pointer;">Add To cart</a>
+  
+                <a href="#" class="action-button shadow animate yellow" style="margin-left: -10px;">wishlist</a>
+                
+              </div>
+            </div>
+    </div>
+    </div>
+  </div>

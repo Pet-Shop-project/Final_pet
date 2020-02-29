@@ -71,4 +71,16 @@ export class SmallpetServiceService {
     return this.http.get<any>(this.norm_api_sort)
 
   }
+  search(name):Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/all_pet/search/"+name)
+  }
+  lightsearch(name):Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/light_pet/search/"+name)
+  }
+  normalsearch(name):Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/normal_pet/search/"+name)
+  }
+  heavysearch(name):Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/heavy_pet/search/"+name)
+  }
 }

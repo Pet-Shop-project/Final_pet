@@ -36,11 +36,5 @@ export class LightdogdetailsComponent implements OnInit {
   back(){
   this.router.navigate(['/dogs/lightdogs'])
   }
-  // goToCart(product){
-  //   this.router.navigate(['/cart',product._id]);
-  //   this.proId=product._id; 
-  //   this.cartserv.postCart(this.proId).subscribe();
-  // }
-  
 }
 

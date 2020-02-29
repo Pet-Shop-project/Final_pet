@@ -28,6 +28,7 @@ router.get('/listcat',function(req,resp){
     resp.json(data);
   
    })
+
   
   })
   router.put('/update/:id', function(req, res){
@@ -91,6 +92,20 @@ router.get('/listcat',function(req,resp){
         resp.send(cats);
     })
     
+    })
+    router.get('/search/:name',function(req,resp){
+
+     
+      var name=req.params.name;
+     
+     mongoose.model('light_cats').find({"name": {"$regex": name}},function(err,data){
+      if(data.length!=0)
+    
+      resp.json(data);
+      else
+      resp.send("Not found");
+    
+     })
     })
 module.exports = router;
 

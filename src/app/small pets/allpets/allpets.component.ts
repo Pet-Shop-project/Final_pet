@@ -56,5 +56,10 @@ export class AllpetsComponent implements OnInit {
   showdetails(all){
     this.router.navigate(["/alldetail",all._id])
     }
+    search(name){
+      this.router.navigate(['/allsmallpetsearch',name])
+     console.log(name);
+     
+    }
 
 }

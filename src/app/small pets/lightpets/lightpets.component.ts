@@ -63,4 +63,10 @@ public labels: any = {
         this.sortpet=data;
          this.start_sort=true
       })
-}}
+}
+search(name){
+  this.router.navigate(['/lightsmallpetsearch',name])
+ console.log(name);
+ 
+}
+}

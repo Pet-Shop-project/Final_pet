@@ -1,4 +1,10 @@
 <div class="container contstyle">
+  <form class="form-group" style="margin-top: 50px;margin-left: 80px;">
+    <input class="form-control" style="width: 300px;height: 55px;" type="search" placeholder="Search...."
+      aria-label="Search" #searchInput>
+    <button class="btn draw-border" style="margin-left: 310px;margin-top: -70px;" type="submit"
+      (click)="search(searchInput.value)">Search</button>
+  </form>
   <div class="row">
                         <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB" *ngFor= "let bird of birds |paginate:config" (click)=" showdetails(bird)">
                           <div class="img-container m-0 p-0 shadow-sm">

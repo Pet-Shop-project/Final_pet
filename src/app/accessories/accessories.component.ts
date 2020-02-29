@@ -62,5 +62,10 @@ export class AccessoriesComponent implements OnInit {
       error => console.log('error',error)
       )
   }
+  search(name){
+    this.router.navigate(['/accessorysearch',name])
+   console.log(name);
+   
+  }
 
 }

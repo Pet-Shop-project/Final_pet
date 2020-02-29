@@ -88,6 +88,14 @@ import { NormaldogsearchComponent } from './search/normaldogsearch/normaldogsear
 import { HeavydogsearchComponent } from './search/heavydogsearch/heavydogsearch.component';
 import { HeavycatsearchComponent } from './search/heavycatsearch/heavycatsearch.component';
 import { NormalcatsearchComponent } from './search/normalcatsearch/normalcatsearch.component';
+import { LightcatsearchComponent } from './search/lightcatsearch/lightcatsearch.component';
+import { LightsmallpetsearchComponent } from './search/lightsmallpetsearch/lightsmallpetsearch.component';
+import { NormalsmallpetsearchComponent } from './search/normalsmallpetsearch/normalsmallpetsearch.component';
+import { HeavysmallpetsearchComponent } from './search/heavysmallpetsearch/heavysmallpetsearch.component';
+import { HeavybirdssearchComponent } from './search/heavybirdssearch/heavybirdssearch.component';
+import { NormalbirdssearchComponent } from './search/normalbirdssearch/normalbirdssearch.component';
+import { LightbirdssearchComponent } from './search/lightbirdssearch/lightbirdssearch.component';
+import { AccessoryComponent } from './search/accessory/accessory.component';
 
 // import { from } from 'rxjs';
 // import { MaterialModule } from './material/material.module';
@@ -176,6 +184,14 @@ import { NormalcatsearchComponent } from './search/normalcatsearch/normalcatsear
     HeavydogsearchComponent,
     HeavycatsearchComponent,
     NormalcatsearchComponent,
+    LightcatsearchComponent,
+    LightsmallpetsearchComponent,
+    NormalsmallpetsearchComponent,
+    HeavysmallpetsearchComponent,
+    HeavybirdssearchComponent,
+    NormalbirdssearchComponent,
+    LightbirdssearchComponent,
+    AccessoryComponent,
   ],
   imports: [
     BrowserModule,

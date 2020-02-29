@@ -55,6 +55,11 @@ public start_sort=false
     this.router.navigate(['/lightdogdetails',dog._id])
     console.log(dog._id)
   }
+  search(name){
+    this.router.navigate(['/lightdogsearch',name])
+   console.log(name);
+   
+  }
   on_click(){
     this.dog.sort_lightd().subscribe(data=>{
       this.sortdog=data;

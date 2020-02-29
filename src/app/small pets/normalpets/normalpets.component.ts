@@ -63,4 +63,10 @@ export class NormalpetsComponent implements OnInit {
          this.start_sort=true
       })
 
-}}
+}
+search(name){
+  this.router.navigate(['/normalsmallpetsearch',name])
+ console.log(name);
+ 
+}
+}

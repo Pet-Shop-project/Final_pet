@@ -64,6 +64,22 @@ import { AlldogsearchComponent } from './search/alldogsearch/alldogsearch.compon
 import { PaymentComponent } from './payment/payment/payment.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { AddnewadminComponent } from './addnewadmin/addnewadmin.component';
+import { LightdogsearchComponent } from './search/lightdogsearch/lightdogsearch.component';
+import { NormaldogsearchComponent } from './search/normaldogsearch/normaldogsearch.component';
+import { HeavydogsearchComponent } from './search/heavydogsearch/heavydogsearch.component';
+import { AllcatsearchComponent } from './search/allcatsearch/allcatsearch.component';
+import { LightcatsearchComponent } from './search/lightcatsearch/lightcatsearch.component';
+import { NormalcatsearchComponent } from './search/normalcatsearch/normalcatsearch.component';
+import { HeavycatsearchComponent } from './search/heavycatsearch/heavycatsearch.component';
+import { AllsmallpetsearchComponent } from './search/allsmallpetsearch/allsmallpetsearch.component';
+import { LightsmallpetsearchComponent } from './search/lightsmallpetsearch/lightsmallpetsearch.component';
+import { NormalsmallpetsearchComponent } from './search/normalsmallpetsearch/normalsmallpetsearch.component';
+import { HeavysmallpetsearchComponent } from './search/heavysmallpetsearch/heavysmallpetsearch.component';
+import { AllbirdsearchComponent } from './search/allbirdsearch/allbirdsearch.component';
+import { LightbirdssearchComponent } from './search/lightbirdssearch/lightbirdssearch.component';
+import { NormalbirdssearchComponent } from './search/normalbirdssearch/normalbirdssearch.component';
+import { HeavybirdssearchComponent } from './search/heavybirdssearch/heavybirdssearch.component';
+import { AccessoryComponent } from './search/accessory/accessory.component';
 
 const routes: Routes = [
   
@@ -131,7 +147,6 @@ const routes: Routes = [
 {path:'heavysmall_admin',component:HeavysmallAdminComponent},
 {path:'lightsmall_admin',component:LightsmallAdminComponent},
 {path:'normalsmall_admin',component:NormalsmallAdminComponent},
-
 {path:'accessories_admin',component:AccessoriesAdminComponent},
 {path:'dog_addform',component:AddformAdminComponent},
 {path:'cat_addform',component:CatAdminAddformComponent},
@@ -142,7 +157,23 @@ const routes: Routes = [
 {path:'all_dog_search/:name',component:AlldogsearchComponent},
 {path:'payment',component:PaymentComponent},
 {path:'adminlogin',component:AdminloginComponent},
-{path:'addnewadmin',component:AddnewadminComponent}
+{path:'addnewadmin',component:AddnewadminComponent},
+{path:'lightdogsearch/:name',component:LightdogsearchComponent},
+{path:'normaldogsearch/:name',component:NormaldogsearchComponent},
+{path:'heavydogsearch/:name',component:HeavydogsearchComponent},
+{path:'allcatsearch/:name',component:AllcatsearchComponent},
+{path:'lightcatsearch/:name',component:LightcatsearchComponent},
+{path:'normalcatsearch/:name',component:NormalcatsearchComponent},
+{path:'heavycatsearch/:name',component:HeavycatsearchComponent},
+{path:'allsmallpetsearch/:name',component:AllsmallpetsearchComponent},
+{path:'lightsmallpetsearch/:name',component:LightsmallpetsearchComponent},
+{path:'normalsmallpetsearch/:name',component:NormalsmallpetsearchComponent},
+{path:'heavysmallpetsearch/:name',component:HeavysmallpetsearchComponent},
+{path:'allbirdssearch/:name',component:AllbirdsearchComponent},
+{path:'lightbirdssearch/:name',component:LightbirdssearchComponent},
+{path:'normalbirdssearch/:name',component:NormalbirdssearchComponent},
+{path:'heavybirdssearch/:name',component:HeavybirdssearchComponent},
+{path:'accessorysearch/:name',component:AccessoryComponent}
 
 
 // {path:'404',component:PageNotfoundComponent},

@@ -6,9 +6,6 @@ import { Birds } from '../birds'
   providedIn: 'root'
 })
 export class BirdsService {
-  // getheavydetails(heavyid: any) {
-  //   throw new Error("Method not implemented.");
-  // }
   constructor(private http:HttpClient) { }
   private requestBody = JSON.stringify(status);
   listlightd():Observable<any>{
@@ -53,5 +50,17 @@ listheavy():Observable<any>{
   }
   sort_norm_birds(){
     return this.http.get<any>("http://localhost:3000/PET-SHOP/sort/listbirds_norm")
+  }
+  search(name):Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/allbirds/search/"+name)
+  }
+  lightsearch(name):Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/lightbirds/search/"+name)
+  }
+  normalsearch(name):Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/normalbirds/search/"+name)
+  }
+  heavysearch(name):Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/heavybirds/search/"+name)
   }
 }

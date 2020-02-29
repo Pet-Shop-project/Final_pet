@@ -68,6 +68,11 @@ public sortCat=[]
     })
  
 }
+search(name){
+  this.router.navigate(['/heavycatsearch',name])
+ console.log(name);
+ 
+}
 
 }
 

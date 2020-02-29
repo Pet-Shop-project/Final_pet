@@ -59,4 +59,18 @@ route.get('/list',function(req,resp){
     })
     
     })
+    route.get('/search/:name',function(req,resp){
+
+     
+      var name=req.params.name;
+     
+     mongoose.model('normaldogs').find({"name": {"$regex": name}},function(err,data){
+      if(data.length!=0)
+    
+      resp.json(data);
+      else
+      resp.send("Not found");
+    
+     })
+    })
  module.exports = route;

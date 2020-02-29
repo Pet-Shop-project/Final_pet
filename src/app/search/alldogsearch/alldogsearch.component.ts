@@ -12,7 +12,6 @@ export class AlldogsearchComponent implements OnInit {
   public name;
   public dogcode;
   public dogs = new Dogs("","",0,0,"",0,"",[""]);
- 
   constructor(private route:ActivatedRoute , private dog:DogsService , private router:Router) { }
 
   ngOnInit() {
