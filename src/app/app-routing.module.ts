@@ -84,6 +84,7 @@ import { NormalbirdEditComponent } from "src/app/dashboard/dashboard-design/bird
 import { HeavypetEditComponent } from "src/app/dashboard/smallpets_dashbord/heavypet-edit/heavypet-edit.component";
 import { LightpetEditComponent } from "src/app/dashboard/smallpets_dashbord/lightpet-edit/lightpet-edit.component";
 import { NormalpetEditComponent } from "src/app/dashboard/smallpets_dashbord/normalpet-edit/normalpet-edit.component";
+import { EditAccessComponent } from './Admin accessories/edit-access/edit-access.component';
 
 const routes: Routes = [
   
@@ -184,9 +185,10 @@ const routes: Routes = [
 {path:'normalbird_edit/:id',component:NormalbirdEditComponent},
 {path:'heavypet_edit/:id',component:HeavypetEditComponent},
 {path:'lightpet_edit/:id',component:LightpetEditComponent},
-{path:'normalpet_edit/:id',component:NormalpetEditComponent}
+{path:'normalpet_edit/:id',component:NormalpetEditComponent},
 
 
+{path:'access-edit',component:EditAccessComponent},
 
 // {path:'404',component:PageNotfoundComponent},
 // { path: '', component:PageNotfoundComponent},

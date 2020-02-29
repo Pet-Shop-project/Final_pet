@@ -106,6 +106,7 @@ import { NormalbirdEditComponent } from './dashboard/dashboard-design/birds_dash
 import { HeavypetEditComponent } from './dashboard/smallpets_dashbord/heavypet-edit/heavypet-edit.component';
 import { LightpetEditComponent } from './dashboard/smallpets_dashbord/lightpet-edit/lightpet-edit.component';
 import { NormalpetEditComponent } from './dashboard/smallpets_dashbord/normalpet-edit/normalpet-edit.component';
+import { EditAccessComponent } from './Admin accessories/edit-access/edit-access.component';
 
 // import { from } from 'rxjs';
 // import { MaterialModule } from './material/material.module';
@@ -212,6 +213,7 @@ import { NormalpetEditComponent } from './dashboard/smallpets_dashbord/normalpet
     HeavypetEditComponent,
     LightpetEditComponent,
     NormalpetEditComponent,
+    EditAccessComponent,
   ],
   imports: [
     BrowserModule,

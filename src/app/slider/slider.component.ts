@@ -22,6 +22,7 @@ export class SliderComponent implements OnInit {
   public hvy_pet = []
   public light_pet = []
   public norm_pet = []
+  public access=[]
   ngOnInit() {
     this.nav.show();
     this.catServ.random_light_cat().subscribe(data => {
@@ -81,6 +82,11 @@ export class SliderComponent implements OnInit {
     this.catServ.random_normpet().subscribe(data => {
       this.norm_pet = data
     })
+
+    // access
+this.catServ.listRandomccessories().subscribe(data=>{
+  this.access=data
+})
   }
   onSelect_lightc() {
     this.router.navigate(['/light-cats'])
@@ -140,6 +146,10 @@ export class SliderComponent implements OnInit {
   }
   onSelect_norm_p() {
     this.router.navigate(['/smallpets/normal'])
+  }
+
+  onSelect_access() {
+    this.router.navigate(['/accessories'])
   }
 
 }
