@@ -12,7 +12,7 @@ export class NormalBirdsComponent implements OnInit {
  public birds= [];
  public sortbirds=[]
 public start_sort=false
- collection = { count: 14, data: [] };
+ collection = { count:this.birds.length, data: [] };
  config = {
    id: 'custom',
    itemsPerPage: 3,

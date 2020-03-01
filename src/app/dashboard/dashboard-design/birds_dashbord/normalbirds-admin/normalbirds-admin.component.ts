@@ -22,6 +22,9 @@ export class NormalbirdsAdminComponent implements OnInit {
   showdetails(bird){
     this.route.navigate(["/normal-details",bird._id])
     }
+    onSelect_normal(bird){
+      this.route.navigate(['/normalbird_edit',bird._id])
+  }
 }
   
 

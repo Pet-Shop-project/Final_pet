@@ -74,4 +74,24 @@ route.get('/list',function(req,resp){
      })
     })
 
+    route.post('/addbird',parseUrlencoded,(req,res)=>{
+      const heavybirds=mongoose.model('heavy_birds');
+      const newheavybird=new heavybirds({
+            name: req.body.name,
+            size: req.body.size,
+            life_span: req.body.life_span,
+            weight: req.body.weight,
+            color: req.body.color,
+            price: req.body.price,
+            temperament: req.body.temperament,
+            images: req.body.images 
+      })
+      
+      newheavybird.save((err,res)=>{
+        if (err){
+          console.log(err)
+        }
+        console.log(res)
+      })
+    })  
  module.exports = route;

@@ -10,7 +10,7 @@ import { Router } from "@angular/router";
 export class AllpetsComponent implements OnInit {
   public smallpet=[]
 
-  collection = { count: 36, data: [] };
+  collection = { count: this.smallpet.length, data: [] };
   config = {
     id: 'custom',
     itemsPerPage: 3,

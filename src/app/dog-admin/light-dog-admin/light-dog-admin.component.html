@@ -3,6 +3,9 @@
 <app-dashboard-navbar></app-dashboard-navbar>
 
 <div class="container">
+    <div class="row">
+        <input type="button" value="Add new dog" routerLink='/lightdog_addform'>
+      </div>
     <div class="row" style="margin-bottom: 100px;">
       <div class="col-md-4 mt-4" *ngFor="let dog of dogs" (click)="onSelect(dog)">
         <div class="card profile-card-5" >
@@ -14,7 +17,8 @@
                 <h5 class="card-text">Price: {{dog.price}} $</h5>
                 <!-- <h5 class="card-text">Length: {{accessory.length}} cm</h5>
                 <h5 class="card-text">Color: {{accessory.color}}</h5> -->
-                <a href="#" class="action-button shadow animate blue">edit</a>
+                <div (click)="onSelect_light(dog)">
+                  <a  class="action-button shadow animate blue" >Edit</a></div>
                 <a href="#" class="action-button shadow animate yellow" style="margin-left: -10px;">delete</a>
                 
               </div>

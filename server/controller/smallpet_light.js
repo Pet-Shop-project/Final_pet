@@ -1,6 +1,15 @@
-var express = require("express");
 var mongoose = require("mongoose");
-var router = express.Router();
+
+var express = require("express")
+var router = express.Router()
+var app = express()
+var bodyParser = require("body-parser")
+
+var cors = require('cors');
+var parseUrlencoded = bodyParser.urlencoded({
+  extended: true
+});
+
 
 
 
@@ -25,7 +34,6 @@ router.get("/details/:id", (req, res) => {
     if (error) {
       console.log(error)
     }
-    // console.log(data)
     res.json(data)
   })
 })
@@ -67,18 +75,45 @@ router.get('/random', function (req, resp) {
   })
 
 })
-router.get('/search/:name',function(req,resp){
+router.get('/search/:name', function (req, resp) {
 
-     
-    var name=req.params.name;
-   
-   mongoose.model('lightSmallpets').find({"name": {"$regex": name}},function(err,data){
-    if(data.length!=0)
-  
-    resp.json(data);
+
+  var name = req.params.name;
+
+  mongoose.model('lightSmallpets').find({
+    "name": {
+      "$regex": name
+    }
+  }, function (err, data) {
+    if (data.length != 0)
+
+      resp.json(data);
     else
-    resp.send("Not found");
-  
-   })
+      resp.send("Not found");
+
   })
+})
+
+
+
+router.post('/addpet', parseUrlencoded, (req, res) => {
+  const lightSmallpet = mongoose.model('lightSmallpets');
+  const newlightSmallpet = new lightSmallpet({
+    name: req.body.name,
+    size: req.body.size,
+    life_span: req.body.life_span,
+    weight: req.body.weight,
+    color: req.body.color,
+    price: req.body.price,
+    temperament: req.body.temperament,
+    images: req.body.images
+  })
+
+  newlightSmallpet.save((err, res) => {
+    if (err) {
+      console.log(err)
+    }
+    console.log(res)
+  })
+})
 module.exports = router

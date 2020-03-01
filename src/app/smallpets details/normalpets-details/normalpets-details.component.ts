@@ -13,9 +13,10 @@ import { WishlistService } from 'src/app/services/wishlist.service';
 export class NormalpetsDetailsComponent implements OnInit {
 
   public normalid;
-  public pet=new Smallpets("","",0,"","",0,"",[""]);
-    constructor(private getnormalpet:SmallpetServiceService,private detailroute:ActivatedRoute, private router:Router,private cartserv:CartService,private wishlist:WishlistService) { }
   
+    constructor(private getnormalpet:SmallpetServiceService,private detailroute:ActivatedRoute, private router:Router,private cartserv:CartService,private wishlist:WishlistService) { }
+  public pet=new Smallpets("","",0,0,"",0,"",[""]);
+    
     ngOnInit() {
       this.detailroute.paramMap.subscribe((params:ParamMap)=>{
         this.normalid=params.get("_id")

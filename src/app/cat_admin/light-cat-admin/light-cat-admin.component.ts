@@ -23,4 +23,7 @@ export class LightCatAdminComponent implements OnInit {
    console.log(cat._id);
    
   }
+  onSelect_light(cat){
+    this.router.navigate(['/light-cat-edit',cat._id])
+}
 }

@@ -56,14 +56,14 @@ export class HeavtCatsService {
   all_details(_id){
     return this.http.get<any>("http://localhost:3000/PET-SHOP/allcats/details/"+_id)
   }
-  updatelightpet(id):Observable<any>{
-    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/light_cats/update/"+id)
+  updatelightpet(id,Cats){
+    return this.http.put("http://localhost:3000/PET-SHOP/light_cats/update/"+id,Cats)
   }
-  updatenormalpet(id):Observable<any>{
-    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/normal_cats/update/"+id)
+  updatenormalpet(id,Cats){
+    return this.http.put("http://localhost:3000/PET-SHOP/normal_cats/update/"+id,Cats)
   }
-  updateheavypet(id):Observable<any>{
-    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/heavy_cats/update/"+id)
+  updateheavypet(id,Cats){
+    return this.http.put("http://localhost:3000/PET-SHOP/heavy_cats/update/"+id,Cats)
   }
 
 addnewheavycat(Cats):Observable<any>{
@@ -145,5 +145,15 @@ random_lightb():Observable<any>{
   }
   heavysearch(name):Observable<any>{
     return this.http.get<any>("http://localhost:3000/PET-SHOP/heavy_cats/search/"+name)
+  }
+  addnewlightcat(Cats):Observable<any>{
+    return this.http.post<any>("http://localhost:3000/PET-SHOP/light_cats/addlight/",Cats)
+  }
+  addnewnormalcat(Cats):Observable<any>{
+    return this.http.post<any>("http://localhost:3000/PET-SHOP/normal_cats/addnormal/",Cats)
+  }
+
+  listRandomccessories():Observable<any>{
+    return this.http.get("http://localhost:3000/PET-SHOP/accessories/random/")
   }
 }

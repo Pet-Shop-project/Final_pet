@@ -7,7 +7,8 @@ import {Router} from '@angular/router'
   styleUrls: ['./normal-cats.component.css']
 })
 export class NormalCatsComponent implements OnInit {
-  collection = { count: 15, data: [] };
+  public cats=[];
+  collection = { count: this.cats.length, data: [] };
   config = {
     id: 'custom',
     itemsPerPage: 3,
@@ -41,7 +42,7 @@ export class NormalCatsComponent implements OnInit {
     this.config.currentPage = event;
    }
   
-  public cats=[];
+  
   public sortCat=[]
   
   public start_sort=false

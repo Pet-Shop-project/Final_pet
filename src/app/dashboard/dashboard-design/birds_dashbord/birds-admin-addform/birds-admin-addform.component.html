@@ -1,0 +1,29 @@
+<div class='container'>
+  
+<div class='window'>
+  <div class='overlay'></div>
+  <div class='content'>
+    
+    <div class='welcome'>heavy birds<br><br> Form</div>
+    <form action="/heavybirds/addbird" method="POST" #adminform='ngForm' novalidate (ngSubmit)="onSubmit()">
+    <div class='input-fields'>
+      <input type='text' placeholder='name' name="name" class='input-line full-width' #name="ngModel" [(ngModel)]="birdModel.name">
+      <input type='text' placeholder='size' name="size" class='input-line full-width' #size="ngModel" [(ngModel)]="birdModel.size">
+      <input type='number' placeholder='life_span' name="life_span" class='input-line full-width' #life_span="ngModel" [(ngModel)]="birdModel.life_span">
+      <input type='number' placeholder='weight' name="weight" class='input-line full-width' #weight="ngModel" [(ngModel)]="birdModel.weight">
+      <input type='text' placeholder='color' name="color" class='input-line full-width' #color="ngModel" [(ngModel)]="birdModel.color">
+      <input type='number' placeholder='price' name="price" class='input-line full-width' #price="ngModel" [(ngModel)]="birdModel.price">
+      <input type='text' placeholder='temperament' name="temperament" class='input-line full-width' #temperament="ngModel" [(ngModel)]="birdModel.temperament">
+      <input type='text' placeholder='pet image' name="images" class='input-line full-width' #images="ngModel" [(ngModel)]="birdModel.images[0]">
+        <input type='text' placeholder='pet image' name="images" class='input-line full-width' #images="ngModel" [(ngModel)]="birdModel.images[1]">
+        <input type='text' placeholder='pet food ' name="images" class='input-line full-width' #images="ngModel" [(ngModel)]="birdModel.images[2]">
+        <input type='text' placeholder='pet accessory ' name="images" class='input-line full-width' #images="ngModel" [(ngModel)]="birdModel.images[3]">
+    </div>
+    <!-- <div class='spacing'>or continue with <span class='highlight'>Facebook</span></div> -->
+    <button type="submit"  class='ghost-round full-width ' >save</button>
+  </form>
+  </div>
+</div>
+
+</div> 
+    

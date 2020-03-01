@@ -33,14 +33,14 @@ listheavy():Observable<any>{
   alldetails(_id){
     return this.http.get<any>("http://localhost:3000/PET-SHOP/allbirds/details/"+_id)
   }
-  updatelightpet(id):Observable<any>{
-    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/lightbirds/update/"+id)
+  updatelightpet(id,Birds):Observable<any>{
+    return this.http.put("http://localhost:3000/PET-SHOP/lightbirds/update/"+id,Birds)
   }
-  updatenormalpet(id):Observable<any>{
-    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/normalbirds/update/"+id)
+  updatenormalpet(id,Birds):Observable<any>{
+    return this.http.put("http://localhost:3000/PET-SHOP/normalbirds/update/"+id,Birds)
   }
-  updateheavypet(id):Observable<any>{
-    return this.http.put(this.requestBody,"http://localhost:3000/PET-SHOP/heavybirds/update/"+id)
+  updateheavypet(id,Birds):Observable<any>{
+    return this.http.put("http://localhost:3000/PET-SHOP/heavybirds/update/"+id,Birds)
   }
   sort_light_birds(){
     return this.http.get<any>("http://localhost:3000/PET-SHOP/sort/listbirds_light")
@@ -62,5 +62,14 @@ listheavy():Observable<any>{
   }
   heavysearch(name):Observable<any>{
     return this.http.get<any>("http://localhost:3000/PET-SHOP/heavybirds/search/"+name)
+  }
+  addnewheavybird(Birds):Observable<any>{
+    return this.http.post("http://localhost:3000/PET-SHOP/heavybirds/addbird/",Birds)
+  }
+  addnewlightbird(Birds):Observable<any>{
+    return this.http.post("http://localhost:3000/PET-SHOP/lightbirds/addbird/",Birds)
+  }
+  addnewnormalbird(Birds):Observable<any>{
+    return this.http.post("http://localhost:3000/PET-SHOP/normalbirds/addbird/",Birds)
   }
 }

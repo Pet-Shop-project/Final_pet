@@ -39,7 +39,10 @@
     </ol>
 </div>
 <!-- rndom -->
+<!-- cats -->
+<h1>Cats</h1>
 <div class="row">
+
      <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let cat of cats_heavy " (click)="onSelect_hvyc()"  style="border-radius: 25px; width: 425px;height: 300px;">
        <div class="img-container m-0 p-0 shadow-sm">
          <img src="{{cat.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 25px; width: 425px;height: 300px;">
@@ -70,6 +73,7 @@
         </div>
    </div>
    <!-- row dog -->
+   <h1>Dogs</h1>
    <div class="row">
      <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let dog of lightdogs " (click)="onSelect_lightd()"  style="border-radius: 25px; width: 425px;height: 300px;">
        <div class="img-container m-0 p-0 shadow-sm">
@@ -102,6 +106,7 @@
         </div>
    </div>
    <!-- birds -->
+   <h1>Birds</h1>
    <div class="row">
    <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let bird of lightbirds " (click)="onSelect_lightb()"  style="border-radius: 25px; width: 425px;height: 300px;">
      <div class="img-container m-0 p-0 shadow-sm">
@@ -133,6 +138,7 @@
    </div>
 </div>
 <!-- pets -->
+<h1>Small pets</h1>
 <div class="row">
      <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let pet of hvy_pet " (click)="onSelect_lightp()"  style="border-radius: 25px; width: 425px;height: 300px;">
        <div class="img-container m-0 p-0 shadow-sm">
@@ -162,6 +168,19 @@
          </div>
        </div>
      </div>
+  </div>
+  <!-- access -->
+  <h1>Accessories</h1>
+  <div class="row">
+    <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let acc of access " (click)="onSelect_access()"  style="border-radius: 25px; width: 425px;height: 300px;">
+      <div class="img-container m-0 p-0 shadow-sm">
+        <img src="{{acc.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 25px; width: 425px;height: 300px;">
+        <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 25px; width: 425px;height: 300px; margin-left: 22px;">
+          <h2>{{acc.name}}</h2>
+          <p class="d-block small ">{{acc.price}} EGP</p>
+        </div>
+      </div>
+    </div>
   </div>
 <div class="container-fluid" style="background-color:lightgoldenrodyellow">
     <!-- Landing -->

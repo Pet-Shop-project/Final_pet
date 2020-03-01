@@ -17,8 +17,7 @@ export class NormalDogAdminComponent implements OnInit {
       console.log(data);
     })
   }
-  // onSelect(dog){
-  //   this.router.navigate(['/normaldogdetails',dog._id])
-  //   console.log(dog._id)
-  // }
+  onSelect_normal(dog){
+    this.router.navigate(['/normal-dog-edit',dog._id])
+}
 }

@@ -17,8 +17,7 @@ export class HeavyDogAdminComponent implements OnInit {
 
     })
   }
-  // onSelect(dog){
-  //   this.router.navigate(['/heavydogdetails',dog._id])
-  //   console.log(dog._id)
-  // }
+  onSelect_heavy(dog){
+    this.router.navigate(['/heavy-dog-edit',dog._id])
+}
 }

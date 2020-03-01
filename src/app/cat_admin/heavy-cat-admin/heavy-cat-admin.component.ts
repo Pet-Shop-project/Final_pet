@@ -27,4 +27,7 @@ export class HeavyCatAdminComponent implements OnInit {
    console.log(cat._id);
    
   }
+  onSelect_heavy(cat){
+    this.router.navigate(['/heavy-cat-edit',cat._id])
+}
 }
