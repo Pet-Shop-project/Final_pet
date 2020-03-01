@@ -150,8 +150,6 @@ const routes: Routes = [
 {path:'heavy-cats-details/:_id',component:HeavyCatsDetailsComponent},
 {path:'light-cats-details/:_id',component:LightCatsDetailsComponent},
 {path:'normal-cats-details/:_id',component:NormalCatsDetailsComponent},
-// {path:'404',component:PageNotfoundComponent},
-// { path: '', component:PageNotfoundComponent},
 {path:'heavy-cats-details',component:HeavyCatsDetailsComponent},
 {path:'light-cats-details',component:LightCatsDetailsComponent},
 {path:'normal-cats-details',component:NormalCatsDetailsComponent},
@@ -219,8 +217,6 @@ const routes: Routes = [
 {path:'heavypet_edit/:id',component:HeavypetEditComponent},
 {path:'lightpet_edit/:id',component:LightpetEditComponent},
 {path:'normalpet_edit/:id',component:NormalpetEditComponent},
-
-
 {path:'access-edit',component:EditAccessComponent},
 
 // {path:'404',component:PageNotfoundComponent},
