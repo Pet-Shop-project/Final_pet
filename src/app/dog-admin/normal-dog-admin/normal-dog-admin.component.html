@@ -3,9 +3,11 @@
 <app-dashboard-navbar></app-dashboard-navbar>
 
 <div class="container">
-    <div class="row">
-        <input type="button" value="Add new dog" routerLink='/normaldog_addform'>
+    <div class="row mt-4">
+        <div class="btn" routerLink='/normaldog_addform'>Add new dog<div class="btn2"></div>
       </div>
+      </div>
+    
     <div class="row" style="margin-bottom: 100px;">
       <div class="col-md-4 mt-4" *ngFor="let dog of dogs" (click)="onSelect(dog)">
         <div class="card profile-card-5" >

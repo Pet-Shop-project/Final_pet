@@ -2,10 +2,11 @@
 <app-dashboard-navbar></app-dashboard-navbar>
 
 <div class="container">
-   
-    <div class="row">
-        <input type="button" value="Add new pet" routerLink='/lightpet_addform'>
+    <div class="row mt-4">
+        <div class="btn" routerLink='/lightpet_addform'>Add new pet<div class="btn2"></div>
       </div>
+      </div>
+  
     <div class="row" style="margin-bottom: 100px;">
       <div class="col-md-4 mt-4"*ngFor="let pet of pets" (click)="onSelect(pet)">
         <div class="card profile-card-5" >
