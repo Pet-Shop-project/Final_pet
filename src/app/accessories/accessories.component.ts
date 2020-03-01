@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AccessoriesService } from '../services/accessories.service';
 import { Router } from '@angular/router';
 import { CartService } from '../services/cart.service';
+import { WishlistService } from '../services/wishlist.service';
 
 @Component({
   selector: 'app-accessories',
@@ -30,7 +31,7 @@ export class AccessoriesComponent implements OnInit {
       screenReaderPageLabel: 'page',
       screenReaderCurrentLabel: `You're on page`
   };
-  constructor(private acc:AccessoriesService,private router:Router,private cartserv:CartService) {
+  constructor(private acc:AccessoriesService,private router:Router,private cartserv:CartService,private wishlist:WishlistService) {
     for (var i = 0; i < this.collection.count; i++) {
       this.collection.data.push(
         {
@@ -61,6 +62,18 @@ export class AccessoriesComponent implements OnInit {
       response => console.log('Add to cart', response),
       error => console.log('error',error)
       )
+  }
+  public addToWishlist(prductId,productPrice,productName,productImg){
+    console.log(prductId)
+    this.wishlist.cartProducting(prductId,productPrice,productName,productImg).subscribe(
+      response => console.log('Add to Wishlist', response),
+      error => console.log('error',error)
+      )
+  }
+  search(name){
+    this.router.navigate(['/accessorysearch',name])
+   console.log(name);
+   
   }
 
 }

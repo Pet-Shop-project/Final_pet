@@ -35,7 +35,16 @@ export class DogsService {
   search(name):Observable<any>{
     return this.http.get<any>("http://localhost:3000/PET-SHOP/alldogs/search/"+name)
   }
-  updatelightpet(id,dogs){
+  lightsearch(name):Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/lightdogs/search/"+name)
+  }
+  normalsearch(name):Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/normaldogs/search/"+name)
+  }
+  heavysearch(name):Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/heavydogs/search/"+name)
+  }
+    updatelightpet(id,dogs){
     return this.http.put("http://localhost:3000/PET-SHOP/lightdogs/update/"+id,dogs)
   }
   updatenormalpet(id,dogs):Observable<any>{

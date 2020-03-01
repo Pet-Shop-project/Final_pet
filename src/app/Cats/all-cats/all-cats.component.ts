@@ -55,6 +55,11 @@ onSelect(cat){
   this.router.navigate(['/all-cat-details',cat._id])
   console.log(cat._id)
 }
+search(name){
+  this.router.navigate(['/allcatsearch',name])
+ console.log(name);
+ 
+}
 
 
 }

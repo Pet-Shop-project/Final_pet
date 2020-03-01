@@ -1,0 +1,27 @@
+<body style="margin-bottom: 150px;">
+  <h1 style="margin-top: 30px;">You have {{cartInfo.totalQuantity}} pets in wishlist<span></span> in shopping carts</h1>
+  <div>{{noProducts}}</div>
+
+  <ul class="cart__item-list" *ngFor="let product of productsInCart">
+    <li class="cart__item">
+      <!-- <img src="product.images[0]" /> -->
+      <h2>Name:{{product.name}}</h2>
+      <h2>Quantity:{{product.totalQuantity}}</h2>
+      <h2>price:{{product.totalPrice}}</h2>
+      <button class="icon-btn add-btn" (click)="delete(product.product_id)">
+        <div class="btn-txt">Delete</div>
+      </button>
+    </li>
+
+  </ul>
+  <button class="btn fifth" (click)="clearAllOfTheCart()" style="margin-left: 400px;">Clear</button>
+  <hr>
+  <div class="centered">
+    <form action="/create-order" method="POST">
+      <div style="font-size: 30px;margin-left: 50px;font-family: fantasy;margin-bottom: 60px;"> Total Price: {{total}}
+        LE
+        <!-- <button class="btn fourth" routerLink="/payment" style="margin-left: 50px;">Check out</button> -->
+      </div>
+    </form>
+  </div>
+</body>

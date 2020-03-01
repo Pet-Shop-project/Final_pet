@@ -52,7 +52,6 @@ public start_sort=false
       this.smallpet=data
      
     );
-    // console.log(this.lightsmallpet)
   }
   showdetails(heavy){
     this.router.navigate(["/heavydetail",heavy._id])
@@ -62,4 +61,10 @@ public start_sort=false
         this.sortpet=data;
          this.start_sort=true
       })
-}}
+}
+search(name){
+  this.router.navigate(['/heavysmallpetsearch',name])
+ console.log(name);
+ 
+}
+}

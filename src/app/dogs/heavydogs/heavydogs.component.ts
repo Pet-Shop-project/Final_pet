@@ -59,6 +59,11 @@ export class HeavydogsComponent implements OnInit {
     this.router.navigate(['/heavydogdetails',dog._id])
     console.log(dog._id)
   }
+  search(name){
+    this.router.navigate(['/heavydogsearch',name])
+   console.log(name);
+   
+  }
   on_click(){
     this.dog.sort_hvyd().subscribe(data=>{
       this.sortdog=data;

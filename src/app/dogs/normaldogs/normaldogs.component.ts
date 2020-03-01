@@ -56,7 +56,11 @@ public start_sort=false
     this.router.navigate(['/normaldogdetails',dog._id])
     console.log(dog._id)
   }
-
+  search(name){
+    this.router.navigate(['/normaldogsearch',name])
+   console.log(name);
+   
+  }
   on_click(){
     this.dog.sort_normd().subscribe(data=>{
       this.sortdog=data;

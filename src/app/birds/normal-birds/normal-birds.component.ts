@@ -31,7 +31,7 @@ public start_sort=false
      screenReaderPageLabel: 'page',
      screenReaderCurrentLabel: `You're on page`
  };
-  constructor(private bird:BirdsService,private route:Router) { 
+  constructor(private bird:BirdsService,private route:Router,private router:Router) { 
     for (var i = 0; i < this.collection.count; i++) {
       this.collection.data.push(
         {
@@ -62,6 +62,12 @@ public start_sort=false
         this.sortbirds=data;
          this.start_sort=true
       })
-}}
+}
+search(name){
+  this.router.navigate(['/normalbirdssearch',name])
+ console.log(name);
+ 
+}
+}
   
 

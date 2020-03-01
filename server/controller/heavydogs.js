@@ -59,6 +59,20 @@ route.get('/list',function(req,resp){
     })
     
     })
+    route.get('/search/:name',function(req,resp){
+
+     
+      var name=req.params.name;
+     
+     mongoose.model('heavydogs').find({"name": {"$regex": name}},function(err,data){
+      if(data.length!=0)
+    
+      resp.json(data);
+      else
+      resp.send("Not found");
+    
+     })
+    })
     route.post('/adddog',parseUrlencoded,(req,res)=>{
       const heavydogs=mongoose.model('heavydogs');
       const newheavydog=new heavydogs({

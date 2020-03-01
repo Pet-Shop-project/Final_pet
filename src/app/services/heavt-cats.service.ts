@@ -134,6 +134,18 @@ random_lightb():Observable<any>{
     return this.http.get<any>("http://localhost:3000/PET-SHOP/sort/listcat_normal")
 
   }
+  search(name):Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/allcats/search/"+name)
+  }
+  lightsearch(name):Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/light_cats/search/"+name)
+  }
+  normalsearch(name):Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/normal_cats/search/"+name)
+  }
+  heavysearch(name):Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/heavy_cats/search/"+name)
+  }
   addnewlightcat(Cats):Observable<any>{
     return this.http.post<any>("http://localhost:3000/PET-SHOP/light_cats/addlight/",Cats)
   }

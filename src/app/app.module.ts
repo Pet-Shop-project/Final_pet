@@ -88,6 +88,15 @@ import { NormaldogsearchComponent } from './search/normaldogsearch/normaldogsear
 import { HeavydogsearchComponent } from './search/heavydogsearch/heavydogsearch.component';
 import { HeavycatsearchComponent } from './search/heavycatsearch/heavycatsearch.component';
 import { NormalcatsearchComponent } from './search/normalcatsearch/normalcatsearch.component';
+import { LightcatsearchComponent } from './search/lightcatsearch/lightcatsearch.component';
+import { LightsmallpetsearchComponent } from './search/lightsmallpetsearch/lightsmallpetsearch.component';
+import { NormalsmallpetsearchComponent } from './search/normalsmallpetsearch/normalsmallpetsearch.component';
+import { HeavysmallpetsearchComponent } from './search/heavysmallpetsearch/heavysmallpetsearch.component';
+import { HeavybirdssearchComponent } from './search/heavybirdssearch/heavybirdssearch.component';
+import { NormalbirdssearchComponent } from './search/normalbirdssearch/normalbirdssearch.component';
+import { LightbirdssearchComponent } from './search/lightbirdssearch/lightbirdssearch.component';
+import { AccessoryComponent } from './search/accessory/accessory.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
 import { CatAdminEditComponent } from './cat_admin/cat-admin-edit/cat-admin-edit.component';
 import { HeavyCatEditComponent } from './cat_admin/heavy-cat-edit/heavy-cat-edit.component';
 import { NormalCatEditComponent } from './cat_admin/normal-cat-edit/normal-cat-edit.component';
@@ -195,6 +204,15 @@ import { EditAccessComponent } from './Admin accessories/edit-access/edit-access
     HeavydogsearchComponent,
     HeavycatsearchComponent,
     NormalcatsearchComponent,
+    LightcatsearchComponent,
+    LightsmallpetsearchComponent,
+    NormalsmallpetsearchComponent,
+    HeavysmallpetsearchComponent,
+    HeavybirdssearchComponent,
+    NormalbirdssearchComponent,
+    LightbirdssearchComponent,
+    AccessoryComponent,
+    WishlistComponent,
     CatAdminEditComponent,
     HeavyCatEditComponent,
     NormalCatEditComponent,

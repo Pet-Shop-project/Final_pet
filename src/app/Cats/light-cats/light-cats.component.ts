@@ -63,5 +63,10 @@ export class LightCatsComponent implements OnInit {
     })
  
 }
+search(name){
+  this.router.navigate(['/lightcatsearch',name])
+ console.log(name);
+ 
+}
 
 }

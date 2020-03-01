@@ -113,14 +113,6 @@ body{
     height: 4px;
     top: calc(50% - 2px);
   }
-  /* h1 {
-    color: #f1c40f;
-    font-size: 4rem;
-    text-transform: uppercase;
-    display: block;
-    width: 100%;
-    text-align: center;
-  } */
   @media screen and (max-width: 600px) {
     h1 {
       font-size: 3rem;

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Adminlogin } from './adminlogin';
 import { AdminloginService } from './adminlogin.service';
 import { NgForm } from '@angular/forms';
+import { GeneraladminService } from '../addnewadmin/generaladmin.service';
 
 @Component({
   selector: 'app-adminlogin',
@@ -16,7 +17,7 @@ export class AdminloginComponent implements OnInit {
   Result2: boolean=false;
   Div: string;
   Div2: string;
-  constructor(private router:Router , private Gen:GeneralService,private adminserv:AdminloginService) { }
+  constructor(private router:Router , private Gen:GeneraladminService,private adminserv:AdminloginService) { }
 
   ngOnInit() {
     this.resetForm()

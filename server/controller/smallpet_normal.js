@@ -67,7 +67,21 @@ router.get('/random',function(req,resp){
         resp.send(cats);
     })
     
-    })      
+    }) 
+    router.get('/search/:name',function(req,resp){
+
+     
+        var name=req.params.name;
+       
+       mongoose.model('normalSmallpets').find({"name": {"$regex": name}},function(err,data){
+        if(data.length!=0)
+      
+        resp.json(data);
+        else
+        resp.send("Not found");
+      
+       })
+      })             
     router.post('/addpet',parseUrlencoded,(req,res)=>{
         const normalSmallpet=mongoose.model('normalSmallpets');
         const newnormalSmallpet=new normalSmallpet({
