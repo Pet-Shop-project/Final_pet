@@ -11,7 +11,7 @@ import { Smallpets } from 'src/app/smallpets';
 export class HeavysmallpetsearchComponent implements OnInit {
   public heavyid;
   public name;
-public pet=new Smallpets("","",0,"","",0,"",[""]);
+public pet=new Smallpets("","",0,0,"",0,"",[""]);
 public smallpet:[];
 
   constructor(private router:Router,private getheavypet:SmallpetServiceService,private route:ActivatedRoute) { }

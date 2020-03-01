@@ -13,7 +13,7 @@ export class AllsmallpetsearchComponent implements OnInit {
   constructor(private router:Router,private getheavypet:SmallpetServiceService,private route:ActivatedRoute) { }
   public heavyid;
   public name;
-public pet=new Smallpets("","",0,"","",0,"",[""]);
+public pet=new Smallpets("","",0,0,"",0,"",[""]);
 public smallpet:[];
   ngOnInit() {
     this.route.paramMap.subscribe((params:ParamMap)=>{
