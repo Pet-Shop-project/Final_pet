@@ -17,6 +17,13 @@ public dogs=[];
     console.log(data);
     })
   }
+  delete(dog){
+    this.dog.deletelightdog(dog._id).subscribe(data=>{
+       console.log('dog deleted')
+      // this.bird=data
+     })
+     
+   }
   onSelect_light(dog){
     this.router.navigate(['/light-dog-edit',dog._id])
 }

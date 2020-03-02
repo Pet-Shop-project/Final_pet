@@ -17,7 +17,16 @@ router.get('/listcat',function(req,resp){
         
   })
   })
-
+  router.delete('/delete/:id', function(req, res){
+    console.log('Deleting a birds');
+    mongoose.model("light_cats").findByIdAndRemove(req.params.id, function(err, data){
+        if(err){
+            res.send("Error deleting cats");
+        }else{
+            res.json(data);
+        }
+    });
+  });
   router.get('/details/:_id',function(req,resp){
 
      

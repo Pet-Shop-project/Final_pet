@@ -7,7 +7,16 @@ var cors = require('cors');
 var parseUrlencoded = bodyParser.urlencoded({
   extended: true
 });
- 
+router.delete('/delete/:id', function(req, res){
+  console.log('Deleting a pet');
+  mongoose.model("normalSmallpets").findByIdAndRemove(req.params.id, function(err, data){
+      if(err){
+          res.send("Error deleting small");
+      }else{
+          res.json(data);
+      }
+  });
+});              
 
 
 router.get('/normal',(req,res)=>{

@@ -15,6 +15,7 @@ export class LightpetAddformComponent implements OnInit {
    ngOnInit() {
     
    }
+   
    onSubmit(){
      this.getnew.addnewlightpet(this.petModel).subscribe(response =>{
       console.log('data saved',response)

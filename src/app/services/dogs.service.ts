@@ -71,4 +71,14 @@ export class DogsService {
   addnewnormaldog(Dogs):Observable<any>{
     return this.http.post<any>("http://localhost:3000/PET-SHOP/normaldogs/adddog/",Dogs)
   }
+  deleteheavydog(id){
+    return this.http.delete<any>("http://localhost:3000/PET-SHOP/heavydogs/delete/"+id)
+  }
+  deletelightdog(id){
+    return this.http.delete<any>("http://localhost:3000/PET-SHOP/lightdogs/delete/"+id)
+  }
+  deletenormaldog(id){
+    return this.http.delete<any>("http://localhost:3000/PET-SHOP/normaldogs/delete/"+id)
+  }
+
 }
