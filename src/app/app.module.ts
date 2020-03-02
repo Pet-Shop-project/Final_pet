@@ -116,6 +116,7 @@ import { HeavypetEditComponent } from './dashboard/smallpets_dashbord/heavypet-e
 import { LightpetEditComponent } from './dashboard/smallpets_dashbord/lightpet-edit/lightpet-edit.component';
 import { NormalpetEditComponent } from './dashboard/smallpets_dashbord/normalpet-edit/normalpet-edit.component';
 import { EditAccessComponent } from './Admin accessories/edit-access/edit-access.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 // import { from } from 'rxjs';
 // import { MaterialModule } from './material/material.module';
@@ -239,7 +240,8 @@ import { EditAccessComponent } from './Admin accessories/edit-access/edit-access
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    NgxSpinnerModule
     // MaterialModule
     
   
