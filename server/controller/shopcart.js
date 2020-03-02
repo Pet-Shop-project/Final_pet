@@ -4,7 +4,11 @@ var route = express.Router();
 var mongoose = require("mongoose");
 var bcrypt = require("bcryptjs");
 var jwt = require('jsonwebtoken');
+var events = require('events');
+var eventEmitter = new events.EventEmitter();
+// let socketIO = require('socket.io')
 
+// let io = socketIO();
 var allshoppets = require('../model/allshoppets')
 var cart = require('../model/cart')
 
@@ -95,39 +99,25 @@ route.get("/add/:id/:price/:name", verifytoken, function (req, resp, next) {
   })
 
 })
+// socket
 
-route.get('/details', verifytoken, function (req, resp) {
-  if (req.query.token != null) {
-    cartId = Token.useremail
-    mongoose.model("cart").find({
-      user: cartId
-    }, function (err, data) {
-      if (!err) {
-        console.log(Token.useremail);
-        resp.status(200).send(data)
-        console.log(data)
-      } else {
-        console.log(err)
-      }
-    })
-  } else {
-    resp.status(200).json('no user login')
-  }
+  route.get('/deleteItem/:id',verifytoken, function (req, resp) {
+    cartId=Token.useremail
+    mongoose.model('cart').deleteOne({user:cartId},{ $pull:{ products :{product_id:req.params.id} } 
+    },()=>console.log("deleted"+req.params.id)
+    )
+  
+    resp.end()
+  })
 
-})
 
-route.get('/deleteItem/:id', verifytoken, function (req, resp) {
-  cartId = Token.useremail
-  mongoose.model('cart').deleteOne({
-    user: cartId
-  }, {
-    $pull: {
-      products: {
-        product_id: req.params.id
-      }
-    }
-  }, () => console.log("deleted" + req.params.id))
+// Bind the connection event with the listner1 function
 
+
+// socket
+route.get('/clear',verifytoken,function(req, resp){
+  cartId=Token.useremail
+  mongoose.model("cart").remove({user:cartId},(err,data)=>console.log(data))
   resp.end()
 })
 

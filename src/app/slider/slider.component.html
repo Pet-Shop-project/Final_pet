@@ -43,29 +43,29 @@
 <h1>Cats</h1>
 <div class="row">
 
-     <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let cat of cats_heavy " (click)="onSelect_hvyc()"  style="border-radius: 25px; width: 425px;height: 300px;">
+     <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let cat of cats_heavy " (click)="onSelect_hvyc()"  style="border-radius: 150px; width: 425px;height: 300px;">
        <div class="img-container m-0 p-0 shadow-sm">
-         <img src="{{cat.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 25px; width: 425px;height: 300px;">
-         <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 25px; width: 425px;height: 300px; margin-left: 22px;">
+         <img src="{{cat.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 150px; width: 425px;height: 300px;">
+         <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 150px; width: 425px;height: 300px; margin-left: 22px;">
            <h2>{{cat.name}}</h2>
            <p class="d-block small ">{{cat.price}} EGP</p>
          </div>
        </div>
      </div>
      
-     <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let cat of cats_normal " (click)="onSelect_norm_c()"  style="border-radius: 25px; width: 425px;height: 300px;">
+     <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let cat of cats_normal " (click)="onSelect_norm_c()"  style="border-radius:150px; width: 425px;height: 300px;">
           <div class="img-container m-0 p-0 shadow-sm">
-            <img src="{{cat.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 25px; width: 425px;height: 300px;">
-            <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 25px; width: 425px;height: 300px; margin-left: 22px;">
+            <img src="{{cat.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 150px; width: 425px;height: 300px;">
+            <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 150px; width: 425px;height: 300px; margin-left: 22px;">
               <h2>{{cat.name}}</h2>
               <p class="d-block small ">{{cat.price}} EGP</p>
             </div>
           </div>
         </div>
-     <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let cat of cats_light " (click)="onSelect_lightc()"  style="border-radius: 25px; width: 425px;height: 300px;">
+     <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let cat of cats_light " (click)="onSelect_lightc()"  style="border-radius: 150px; width: 425px;height: 300px;">
           <div class="img-container m-0 p-0 shadow-sm">
-            <img src="{{cat.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 25px; width: 425px;height: 300px;">
-            <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 25px; width: 425px;height: 300px; margin-left: 22px;">
+            <img src="{{cat.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 150px; width: 425px;height: 300px;">
+            <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 150px; width: 425px;height: 300px; margin-left: 22px;">
               <h2>{{cat.name}}</h2>
               <p class="d-block small ">{{cat.price}} EGP</p>
             </div>
@@ -75,10 +75,10 @@
    <!-- row dog -->
    <h1>Dogs</h1>
    <div class="row">
-     <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let dog of lightdogs " (click)="onSelect_lightd()"  style="border-radius: 25px; width: 425px;height: 300px;">
+     <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let dog of lightdogs " (click)="onSelect_lightd()"  style="border-radius: 150px; width: 425px;height: 300px;">
        <div class="img-container m-0 p-0 shadow-sm">
-         <img src="{{dog.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 25px; width: 425px;height: 300px;">
-         <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 25px; width: 425px;height: 300px; margin-left: 22px;">
+         <img src="{{dog.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 150px; width: 425px;height: 300px;">
+         <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 150px; width: 425px;height: 300px; margin-left: 22px;">
            <h2>{{dog.name}}</h2>
            <p class="d-block small ">{{dog.price}} EGP</p>
          </div>
@@ -86,19 +86,19 @@
      </div>
    
      
-     <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let dog of heavydogs " (click)="onSelect_hvyd()"  style="border-radius: 25px; width: 425px;height: 300px;">
+     <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let dog of heavydogs " (click)="onSelect_hvyd()"  style="border-radius: 150px; width: 425px;height: 300px;">
           <div class="img-container m-0 p-0 shadow-sm">
-            <img src="{{dog.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 25px; width: 425px;height: 300px;">
-            <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 25px; width: 425px;height: 300px; margin-left: 22px;">
+            <img src="{{dog.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 150px; width: 425px;height: 300px;">
+            <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 150px; width: 425px;height: 300px; margin-left: 22px;">
               <h2>{{dog.name}}</h2>
               <p class="d-block small ">{{dog.price}} EGP</p>
             </div>
           </div>
         </div>
-     <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let dog of dog_normal " (click)="onSelect_norm_d()"  style="border-radius: 25px; width: 425px;height: 300px;">
+     <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let dog of dog_normal " (click)="onSelect_norm_d()"  style="border-radius: 150px; width: 425px;height: 300px;">
           <div class="img-container m-0 p-0 shadow-sm">
-            <img src="{{dog.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 25px; width: 425px;height: 300px;">
-            <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 25px; width: 425px;height: 300px; margin-left: 22px;">
+            <img src="{{dog.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 150px; width: 425px;height: 300px;">
+            <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 150px; width: 425px;height: 300px; margin-left: 22px;">
               <h2>{{dog.name}}</h2>
               <p class="d-block small ">{{dog.price}} EGP</p>
             </div>
@@ -108,29 +108,29 @@
    <!-- birds -->
    <h1>Birds</h1>
    <div class="row">
-   <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let bird of lightbirds " (click)="onSelect_lightb()"  style="border-radius: 25px; width: 425px;height: 300px;">
+   <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let bird of lightbirds " (click)="onSelect_lightb()"  style="border-radius: 150px; width: 425px;height: 300px;">
      <div class="img-container m-0 p-0 shadow-sm">
-       <img src="{{bird.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 25px; width: 425px;height: 300px;">
-       <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 25px; width: 425px;height: 300px; margin-left: 22px;">
+       <img src="{{bird.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 150px; width: 425px;height: 300px;">
+       <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 150px; width: 425px;height: 300px; margin-left: 22px;">
          <h2>{{bird.name}}</h2>
          <p class="d-block small ">{{bird.price}} EGP</p>
        </div>
      </div>
    </div>
-<div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let bird of heavybirds " (click)="onSelect_hvyb()"  style="border-radius: 25px; width: 425px;height: 300px;">
+<div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let bird of heavybirds " (click)="onSelect_hvyb()"  style="border-radius: 150px; width: 425px;height: 300px;">
      <div class="img-container m-0 p-0 shadow-sm">
-       <img src="{{bird.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 25px; width: 425px;height: 300px;">
-       <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 25px; width: 425px;height: 300px; margin-left: 22px;">
+       <img src="{{bird.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 150px; width: 425px;height: 300px;">
+       <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 150px; width: 425px;height: 300px; margin-left: 22px;">
          <h2>{{bird.name}}</h2>
          <p class="d-block small ">{{bird.price}} EGP</p>
        </div>
      </div>
    </div>
 
-<div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let bird of bird_normal " (click)="onSelect_norm_b()"  style="border-radius: 25px; width: 425px;height: 300px;">
+<div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let bird of bird_normal " (click)="onSelect_norm_b()"  style="border-radius: 150px; width: 425px;height: 300px;">
      <div class="img-container m-0 p-0 shadow-sm">
-       <img src="{{bird.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 25px; width: 425px;height: 300px;">
-       <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 25px; width: 425px;height: 300px; margin-left: 22px;">
+       <img src="{{bird.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 150px; width: 425px;height: 300px;">
+       <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 150px; width: 425px;height: 300px; margin-left: 22px;">
          <h2>{{bird.name}}</h2>
          <p class="d-block small ">{{bird.price}} EGP</p>
        </div>
@@ -140,29 +140,29 @@
 <!-- pets -->
 <h1>Small pets</h1>
 <div class="row">
-     <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let pet of hvy_pet " (click)="onSelect_lightp()"  style="border-radius: 25px; width: 425px;height: 300px;">
+     <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let pet of hvy_pet " (click)="onSelect_lightp()"  style="border-radius: 150px; width: 425px;height: 300px;">
        <div class="img-container m-0 p-0 shadow-sm">
-         <img src="{{pet.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 25px; width: 425px;height: 300px;">
-         <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 25px; width: 425px;height: 300px; margin-left: 22px;">
+         <img src="{{pet.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 150px; width: 425px;height: 300px;">
+         <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 150px; width: 425px;height: 300px; margin-left: 22px;">
            <h2>{{pet.name}}</h2>
            <p class="d-block small ">{{pet.price}} EGP</p>
          </div>
        </div>
      </div>
-  <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let pet of light_pet " (click)=" onSelect_hvyp()"  style="border-radius: 25px; width: 425px;height: 300px;">
+  <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let pet of light_pet " (click)=" onSelect_hvyp()"  style="border-radius: 150px; width: 425px;height: 300px;">
        <div class="img-container m-0 p-0 shadow-sm">
-         <img src="{{pet.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 25px; width: 425px;height: 300px;">
-         <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 25px; width: 425px;height: 300px; margin-left: 22px;">
+         <img src="{{pet.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 150px; width: 425px;height: 300px;">
+         <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 150px; width: 425px;height: 300px; margin-left: 22px;">
            <h2>{{pet.name}}</h2>
            <p class="d-block small ">{{pet.price}} EGP</p>
          </div>
        </div>
      </div>
   
-  <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let pet of norm_pet " (click)="onSelect_norm_p()"  style="border-radius: 25px; width: 425px;height: 300px;">
+  <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let pet of norm_pet " (click)="onSelect_norm_p()"  style="border-radius: 150px; width: 425px;height: 300px;">
        <div class="img-container m-0 p-0 shadow-sm">
-         <img src="{{pet.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 25px; width: 425px;height: 300px;">
-         <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 25px; width: 425px;height: 300px; margin-left: 22px;">
+         <img src="{{pet.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 150px; width: 425px;height: 300px;">
+         <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 150px; width: 425px;height: 300px; margin-left: 22px;">
            <h2>{{pet.name}}</h2>
            <p class="d-block small ">{{pet.price}} EGP</p>
          </div>
@@ -172,10 +172,10 @@
   <!-- access -->
   <h1>Accessories</h1>
   <div class="row">
-    <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let acc of access " (click)="onSelect_access()"  style="border-radius: 25px; width: 425px;height: 300px;">
+    <div class="col-sm-4  my-3 workItem show-workItem catB" *ngFor="let acc of access " (click)="onSelect_access()"  style="border-radius: 150px; width: 425px;height: 300px;">
       <div class="img-container m-0 p-0 shadow-sm">
-        <img src="{{acc.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 25px; width: 425px;height: 300px;">
-        <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 25px; width: 425px;height: 300px; margin-left: 22px;">
+        <img src="{{acc.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 150px; width: 425px;height: 300px;">
+        <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 150px; width: 425px;height: 300px; margin-left: 22px;">
           <h2>{{acc.name}}</h2>
           <p class="d-block small ">{{acc.price}} EGP</p>
         </div>
@@ -188,7 +188,7 @@
     
  
          <!-- who we are -->
-         <div class="row">
+         <div class="row" style="background-color: whitesmoke;">
               <div class="col-sm-4">
 
               </div>
@@ -200,8 +200,7 @@
                         </h1>
                         <div class="paragraph">
                              <p>
-                                  Seeking a challenging position in society and a reputable company where my academic
-                                  background and interpersonal skills are well developed and utilized . 
+                              A pet, or companion animal, is an animal kept primarily for a person's company, entertainment or as an act of compassion such as taking in and protecting a stray cat, rather than as a working animal, livestock or laboratory animal. Popular pets are often considered to have attractive appearances, intelligence and relatable personalities, but some pets may be taken in on an altruistic basis and accepted as they are.
     
     
                              </p>
@@ -210,17 +209,14 @@
               </div>
               <div class="col-sm-4"></div>
          </div>
-         <div class="row">
+         <div class="row" style="background-color: whitesmoke;">
               <div class="col-sm-6">
                    <img src="https://images.pexels.com/photos/46024/pexels-photo-46024.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                         class="f_img">
               </div>
               <div class="col-sm-4">
                    <p class="sec_p">
-                        Seeking a challenging position in society and a reputable company where my academic background and
-                        interpersonal skills are well developed and utilized . I am looking for a job to gain experience, I
-                        am looking for a position with company that enables me to utilize all of my skills and
-                        qualifications.h
+                    Two of the most popular pets are dogs and cats. The technical term for a cat lover is an ailurophile, and for a dog lover, a cynophile. Other animals commonly kept include: rabbits; ferrets; pigs; rodents, such as gerbils, hamsters, chinchillas, rats, mice, and guinea pigs; avian pets, such as parrots, passerines and fowls; reptile pets, such as turtles, alligators, crocodiles, lizards, and snakes; aquatic pets, such as fish, freshwater and saltwater snails, amphibians like frogs and salamanders; and arthropod pets, such as tarantulas and hermit crabs. Small pets may be grouped together as pocket pets, while the equine and bovine group include the largest companion animals.
     
     
                    </p>
@@ -228,21 +224,17 @@
     
          </div>
          <!--  end who we are -->
-         <div class="row">
-              <div class="col-sm-12">
+         <div class="row" style="background-color: whitesmoke;">
+              <div class="col-sm-12"style="background-color: whitesmoke;">
                    <!-- slider -->
     
               </div>
          </div>
     
-         <div class="row" >
+         <div class="row" style="background-color: whitesmoke;">
               <div class="col-sm-6">
                    <p class="mpdi_p">
-                        Seeking a challenging position in society and a reputable company where my academic background and
-                        interpersonal skills are well developed and utilized . I am looking for a job to gain experience, I
-                        am looking for a position with company that enables me to utilize all of my skills and
-                        qualifications.l
-    
+                    Pets provide their owners (or "guardians") both physical and emotional benefits. Walking a dog can provide both the human and the dog with exercise, fresh air and social interaction. Pets can give companionship to people who are living alone or elderly adults who do not have adequate social interaction with other people. There is a medically approved class of therapy animals, mostly dogs or cats, that are brought to visit confined humans, such as children in hospitals or elders in nursing homes. Pet therapy utilizes trained animals and handlers to achieve specific physical, social, cognitive or emotional goals with patients.
     
                    </p>
     
@@ -258,31 +250,26 @@
               <div class="col-sm-6">
                    <pre>
     <span class="first_icon"><img src="https://image.flaticon.com/icons/svg/1530/1530857.svg" style="width: 70px;height: 70px;"></span>
-     <span  class="sec_icon" ><img src="https://image.flaticon.com/icons/svg/1530/1530856.svg" style="width: 70px;height: 70px;"></span>
-               
+     <span  class="sec_icon" ><img src="https://image.flaticon.com/icons/svg/1530/1530856.svg" style="width: 70px;height: 70px;"></span>      
      <img  src="https://image.flaticon.com/icons/svg/1303/1303474.svg" style="width: 70px;
     height: 70px; margin-left: 300px;">
-     <div class="thu_icon"><img src="https://image.flaticon.com/icons/svg/616/616568.svg" style="width: 70px;height: 70px;"></div>  
-                <span><img src="https://image.flaticon.com/icons/svg/427/427487.svg" style="width: 70px;height: 70px;"></span>
-    
-                <div class="fiv_icon"><img src="https://image.flaticon.com/icons/svg/570/570687.svg" style="width: 70px; height: 70px;margin-left: 100px;"></div> 
-    
-                          <div class="fou_icon"><img src="https://image.flaticon.com/icons/svg/403/403882.svg" style="width: 70px;height: 70px;"></div> 
-    
-     
-    <span><i class="fas fa-rabbit"></i></span>
-    
-            
-          
+     <div class="thu_icon" style="margin-left: 100px;"><img src="https://image.flaticon.com/icons/svg/616/616568.svg" style="width: 70px;height: 70px;"></div>  
+                <span style="margin-left: 200px;"><img src="https://image.flaticon.com/icons/svg/427/427487.svg" style="width: 70px;height: 70px;"></span>
+                <div class="fiv_icon" style="margin-left: 90px;"><img src="https://image.flaticon.com/icons/svg/570/570687.svg" style="width: 70px; height: 70px;margin-left: 100px;"></div> 
+                          <div class="fou_icon" ><img src="https://image.flaticon.com/icons/svg/403/403882.svg" style="width: 70px;height: 70px;"></div> 
+
+  <div class="fou_icon" style="margin-left: 100px;"><img src="https://image.flaticon.com/icons/svg/523/523442.svg" style="width: 70px;height: 70px; "></div>
+  <div class="fou_icon" style="margin-left: 250px;"><img src="https://image.flaticon.com/icons/svg/2395/2395762.svg" style="width: 70px;height: 70px; "></div> 
          </pre>
               </div>
               <div class="col-sm-6">
                    <div class="mpdi_pp"> 
+                     <br>
+                     <br>
+                     <br>
+
                    <p >
-                        Seeking a challenging position in society and a reputable company where my academic background and
-                        interpersonal skills are well developed and utilized . I am looking for a job to gain experience, I
-                        am looking for a position with company that enables me to utilize all of my skills and
-                        qualifications.l
+                    People most commonly get pets for companionship, to protect a home or property or because of the beauty or attractiveness of the animals.Aside from lack of desire, the most common reasons for not owning a pet are lack of time, lack of suitable housing and lack of ability to care for the pet when traveling. Some scholars, ethicists and animal rights organizations have raised concerns over keeping pets because of the lack of autonomy and objectification of non-human animals.
     
     
                    </p>

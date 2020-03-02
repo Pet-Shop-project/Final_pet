@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 
+// import {SocketService} from  './services/socket.service'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
