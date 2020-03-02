@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SocketConnectionService } from "src/app/services/socket-connection.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pet-shop';
+  constructor(private socketserv:SocketConnectionService){}
+  ngOnInit(){
+    this.socketserv.sockconnect()
+  }
 }

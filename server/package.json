@@ -17,6 +17,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.8.11",
     "ngx-pagination": "^5.0.0",
-    "populate": "^5.0.1"
+    "populate": "^5.0.1",
+    "socket.io": "^2.3.0"
   }
 }

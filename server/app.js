@@ -6,8 +6,33 @@ var bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
 var app = express();
 var bodyParser = require('body-parser')
+var route = express.Router();
+let http = require('http');
+let server = http.Server(app);
 
+let socketIO = require('socket.io');
+let io = socketIO(server);
 
+// io.on('connection', (socket) => {
+//   console.log('user connected');
+//   socket.on('deleteEvent',(cartId)=>{
+//     console.log('event done')
+//     route.get('/deleteItem/:id', verifytoken, function (req, resp) {
+//       cartId = Token.useremail
+//       mongoose.model('cart').deleteOne({
+//         user: cartId
+//       }, {
+//         $pull: {
+//           products: {
+//             product_id: req.params.id
+//           }
+//         }
+//       }, () => console.log("deleted" + req.params.id))
+    
+//       resp.end()
+//     })
+//   })
+// });
 
 var lightdogs = require("./controller/lightdogs");
 var normaldogs = require("./controller/normaldogs");
@@ -102,7 +127,7 @@ files_arr.forEach(function (file) {
   require(__dirname + "/model/" + file);
 });
 app.use(express.urlencoded ({extended : false}));
-app.listen(3000, function () {
+server.listen(3000, function () {
   console.log("server on port 3000");
 
 });
