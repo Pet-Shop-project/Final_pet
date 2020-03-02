@@ -117,6 +117,7 @@ import { LightpetEditComponent } from './dashboard/smallpets_dashbord/lightpet-e
 import { NormalpetEditComponent } from './dashboard/smallpets_dashbord/normalpet-edit/normalpet-edit.component';
 import { EditAccessComponent } from './Admin accessories/edit-access/edit-access.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { PaymentdoneComponent } from './paymentdone/paymentdone.component';
 
 
 
@@ -236,6 +237,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     LightpetEditComponent,
     NormalpetEditComponent,
     EditAccessComponent,
+    PaymentdoneComponent,
   ],
   imports: [
     BrowserModule,
