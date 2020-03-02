@@ -3,7 +3,7 @@ import { CartService } from '../services/cart.service';
 import { Router } from '@angular/router';
 import { LoginService } from '../services/login.service';
 import {Cart} from '../cart';
-import { SocketService } from '../services/socket.service';
+
 
 @Component({
   selector: 'app-cart',
@@ -19,7 +19,7 @@ export class CartComponent implements OnInit {
   public product={}
   public noProducts:String;
   public total:Number=0;
-  constructor(private cartserv:CartService,private router:Router,private LogServ : LoginService,private   socket:SocketService) {
+  constructor(private cartserv:CartService,private router:Router,private LogServ : LoginService  ) {
     if(this.LogServ.auth()){
       console.log(this.LogServ.auth())
       this.cartserv.cartProductsDetails().subscribe(data=>{
@@ -55,10 +55,6 @@ export class CartComponent implements OnInit {
     this.cartserv.deleteCart(this.product_id).subscribe(data=>{
       console.log("you deleted this item")
     })
-    // this.socket.delete_crt()
-    
-
- 
   }
 
 
