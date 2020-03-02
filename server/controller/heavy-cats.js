@@ -58,9 +58,9 @@ router.get('/listcat',function(req,resp){
 
     );
 });
-
+ 
   router.post('/addheavycat',parseUrlencoded,(req,res)=>{
-    const heavycats=mongoose.model('cats');
+    const heavycats=mongoose.model('cats'); 
     const newheavycats=new heavycats({
           name: req.body.name,
           size: req.body.size,
@@ -92,6 +92,20 @@ router.get('/listcat',function(req,resp){
         resp.send(cats);
     })
     
+    })
+    router.get('/search/:name',function(req,resp){
+
+     
+      var name=req.params.name;
+     
+     mongoose.model('cats').find({"name": {"$regex": name}},function(err,data){
+      if(data.length!=0)
+    
+      resp.json(data);
+      else
+      resp.send("Not found");
+    
+     })
     })
 module.exports = router;
 

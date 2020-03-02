@@ -1,3 +1,9 @@
+<form class="form-group" style="margin-top: 50px;margin-left: 80px;">
+  <input class="form-control" style="width: 300px;height: 55px;" type="search" placeholder="Search...."
+    aria-label="Search" #searchInput>
+  <button class="btn draw-border" style="margin-left: 310px;margin-top: -70px;" type="submit"
+    (click)="search(searchInput.value)">Search</button>
+</form>
 <div class="container">
   <div class="row" style="margin-bottom: 100px;">
     <div class="col-md-4 mt-4" *ngFor="let accessory of accessories |paginate:config">
@@ -12,7 +18,7 @@
               <h5 class="card-text">Color: {{accessory.color}}</h5>
               <a class="action-button shadow animate blue" (click)="addToCart(accessory._id,accessory.price,accessory.name,accessory.images[0])" style="cursor: pointer;">Add To cart</a>
 
-              <a href="#" class="action-button shadow animate yellow" style="margin-left: -10px;">wishlist</a>
+              <a class="action-button shadow animate yellow" (click)="addToWishlist(accessory._id,accessory.price,accessory.name,accessory.images[0])" style="cursor: pointer;">wishlist</a>
               
             </div>
           </div>

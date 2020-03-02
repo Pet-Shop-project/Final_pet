@@ -13,7 +13,7 @@ public smallpet=[]
 public sortpet=[]
 public start_sort=false
 
-collection = { count: 12, data: [] };
+collection = { count: this.smallpet.length, data: [] };
 config = {
   id: 'custom',
   itemsPerPage: 3,
@@ -63,4 +63,10 @@ public labels: any = {
         this.sortpet=data;
          this.start_sort=true
       })
-}}
+}
+search(name){
+  this.router.navigate(['/lightsmallpetsearch',name])
+ console.log(name);
+ 
+}
+}

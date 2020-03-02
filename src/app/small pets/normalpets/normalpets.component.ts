@@ -13,7 +13,7 @@ export class NormalpetsComponent implements OnInit {
   public sortpet=[]
   public start_sort=false
 
-  collection = { count: 12, data: [] };
+  collection = { count: this.smallpet.length, data: [] };
   config = {
     id: 'custom',
     itemsPerPage: 3,
@@ -63,4 +63,10 @@ export class NormalpetsComponent implements OnInit {
          this.start_sort=true
       })
 
-}}
+}
+search(name){
+  this.router.navigate(['/normalsmallpetsearch',name])
+ console.log(name);
+ 
+}
+}

@@ -2,6 +2,12 @@
 <br>
 <br>
 <br>
+<form class="form-group" style="margin-top: 50px;margin-left: 80px;">
+  <input class="form-control" style="width: 300px;height: 55px;" type="search" placeholder="Search...."
+    aria-label="Search" #searchInput>
+  <button class="btn draw-border" style="margin-left: 310px;margin-top: -70px;" type="submit"
+    (click)="search(searchInput.value)">Search</button>
+</form>
 <i class="fas fa-sync" style="color:silver; font-size: 28px;" (click)="on_click()"> sort by price</i>
 
   <div class="container contstyle" *ngIf="!start_sort">

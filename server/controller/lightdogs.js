@@ -59,4 +59,38 @@ route.get('/list',function(req,resp){
     })
     
     })
+    route.get('/search/:name',function(req,resp){
+
+     
+      var name=req.params.name;
+     
+     mongoose.model('lightdogs').find({"name": {"$regex": name}},function(err,data){
+      if(data.length!=0)
+    
+      resp.json(data);
+      else
+      resp.send("Not found");
+    
+     })
+    })
+    route.post('/adddog',parseUrlencoded,(req,res)=>{ 
+      const lightdogs=mongoose.model('lightdogs');
+      const newlightdog=new lightdogs({
+            name: req.body.name,
+            size: req.body.size,
+            life_span: req.body.life_span,
+            weight: req.body.weight,
+            color: req.body.color,
+            price: req.body.price,
+            temperament: req.body.temperament,
+            images: req.body.images
+      })
+      
+      newlightdog.save((err,res)=>{
+        if (err){
+          console.log(err)
+        }
+        console.log(res)
+      })
+    })  
  module.exports = route;

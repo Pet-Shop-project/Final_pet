@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./lightdogs.component.css']
 })
 export class LightdogsComponent implements OnInit {
-  collection = { count: 15, data: [] };
+  public dogs=[];
+  collection = { count: this.dogs.length, data: [] };
   config = {
     id: 'custom',
     itemsPerPage: 3,
@@ -42,7 +43,7 @@ export class LightdogsComponent implements OnInit {
     this.config.currentPage = event;
   }
   
-public dogs=[];
+
 public sortdog=[]
 public start_sort=false
   ngOnInit() {
@@ -54,6 +55,11 @@ public start_sort=false
   onSelect(dog){
     this.router.navigate(['/lightdogdetails',dog._id])
     console.log(dog._id)
+  }
+  search(name){
+    this.router.navigate(['/lightdogsearch',name])
+   console.log(name);
+   
   }
   on_click(){
     this.dog.sort_lightd().subscribe(data=>{

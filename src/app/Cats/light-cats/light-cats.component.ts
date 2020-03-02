@@ -7,7 +7,8 @@ import {Router} from '@angular/router'
   styleUrls: ['./light-cats.component.css']
 })
 export class LightCatsComponent implements OnInit {
-  collection = { count: 15, data: [] };
+  public cats=[]; 
+  collection = { count: this.cats.length, data: [] };
   config = {
     id: 'custom',
     itemsPerPage: 3,
@@ -42,7 +43,7 @@ export class LightCatsComponent implements OnInit {
     this.config.currentPage = event;
    }
   
-  public cats=[]; 
+  
   public start_sort=false
   ngOnInit() {
     this.catsServ.get_light_cats().subscribe(data=>{
@@ -60,6 +61,11 @@ export class LightCatsComponent implements OnInit {
       this.sortCat=data;
        this.start_sort=true
     })
+ 
+}
+search(name){
+  this.router.navigate(['/lightcatsearch',name])
+ console.log(name);
  
 }
 

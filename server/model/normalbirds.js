@@ -12,4 +12,4 @@ var normalbirds = new Schema({
     {collection:"normal_birds"}
 
 );
-mongoose.model("normalbirds",normalbirds);
+mongoose.model("normalbirds",normalbirds); 

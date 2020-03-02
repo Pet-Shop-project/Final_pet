@@ -5,11 +5,11 @@ var cats = new Schema({
     size:String,
     life_span:Number,
     weight:Number,
-    colors:String,
+    color:String,
     price:Number,
     temperament:String,
     images:[String]
 },
 {collection:"light-cats"}
 );
-mongoose.model("light_cats",cats);
+mongoose.model("light_cats",cats); 

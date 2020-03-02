@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DogsService } from "src/app/services/dogs.service";
+import { Dogs } from "src/app/dogs";
 
 @Component({
   selector: 'app-addform-admin',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddformAdminComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  constructor(private getnew:DogsService) { }
+  
+   dogModel=new Dogs("","",0 , 0,"",0 ,"",[""])
+   ngOnInit() {
+    
+   }
+   onSubmit(){
+     this.getnew.addnewdog(this.dogModel).subscribe(response =>{
+      console.log('data saved',response)
+   })
+   }
 
 }

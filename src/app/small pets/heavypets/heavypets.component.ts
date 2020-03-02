@@ -13,7 +13,7 @@ export class HeavypetsComponent implements OnInit {
 public start_sort=false
   
 
-  collection = { count: 12, data: [] };
+  collection = { count: this.smallpet.length, data: [] };
   config = {
     id: 'custom',
     itemsPerPage: 3,
@@ -52,7 +52,6 @@ public start_sort=false
       this.smallpet=data
      
     );
-    // console.log(this.lightsmallpet)
   }
   showdetails(heavy){
     this.router.navigate(["/heavydetail",heavy._id])
@@ -62,4 +61,10 @@ public start_sort=false
         this.sortpet=data;
          this.start_sort=true
       })
-}}
+}
+search(name){
+  this.router.navigate(['/heavysmallpetsearch',name])
+ console.log(name);
+ 
+}
+}

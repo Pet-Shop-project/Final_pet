@@ -49,8 +49,8 @@ import { AddformAdminComponent } from "./dog-admin/addform-admin/addform-admin.c
 import { AccessoriesAdminComponent } from "src/app/Admin accessories/accessories-admin/accessories-admin.component";
 import { CatAdminAddformComponent } from './cat_admin/cat-admin-addform/cat-admin-addform.component';
 import { AccessoriesAdminAddformComponent } from './Admin accessories/accessories-admin-addform/accessories-admin-addform.component';
-import { SmallpetAdminAddformComponent } from './smallpet-admin-addform/smallpet-admin-addform.component';
-import { BirdsAdminAddformComponent } from './birds-admin-addform/birds-admin-addform.component';
+import { SmallpetAdminAddformComponent } from './dashboard/smallpets_dashbord/smallpet-admin-addform/smallpet-admin-addform.component';
+import { BirdsAdminAddformComponent } from './dashboard/dashboard-design/birds_dashbord/birds-admin-addform/birds-admin-addform.component';
 import {AllCatDetailsComponent} from './Cats/all-cat-details/all-cat-details.component'
 import { AllbirdsAdminComponent } from './dashboard/dashboard-design/birds_dashbord/allbirds-admin/allbirds-admin.component';
 import { HeavybirdsAdminComponent } from './dashboard/dashboard-design/birds_dashbord/heavybirds-admin/heavybirds-admin.component';
@@ -64,12 +64,43 @@ import { AlldogsearchComponent } from './search/alldogsearch/alldogsearch.compon
 import { PaymentComponent } from './payment/payment/payment.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { AddnewadminComponent } from './addnewadmin/addnewadmin.component';
+import { LightdogsearchComponent } from './search/lightdogsearch/lightdogsearch.component';
+import { NormaldogsearchComponent } from './search/normaldogsearch/normaldogsearch.component';
+import { HeavydogsearchComponent } from './search/heavydogsearch/heavydogsearch.component';
+import { AllcatsearchComponent } from './search/allcatsearch/allcatsearch.component';
+import { LightcatsearchComponent } from './search/lightcatsearch/lightcatsearch.component';
+import { NormalcatsearchComponent } from './search/normalcatsearch/normalcatsearch.component';
+import { HeavycatsearchComponent } from './search/heavycatsearch/heavycatsearch.component';
+import { AllsmallpetsearchComponent } from './search/allsmallpetsearch/allsmallpetsearch.component';
+import { LightsmallpetsearchComponent } from './search/lightsmallpetsearch/lightsmallpetsearch.component';
+import { NormalsmallpetsearchComponent } from './search/normalsmallpetsearch/normalsmallpetsearch.component';
+import { HeavysmallpetsearchComponent } from './search/heavysmallpetsearch/heavysmallpetsearch.component';
+import { AllbirdsearchComponent } from './search/allbirdsearch/allbirdsearch.component';
+import { LightbirdssearchComponent } from './search/lightbirdssearch/lightbirdssearch.component';
+import { NormalbirdssearchComponent } from './search/normalbirdssearch/normalbirdssearch.component';
+import { HeavybirdssearchComponent } from './search/heavybirdssearch/heavybirdssearch.component';
+import { AccessoryComponent } from './search/accessory/accessory.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
 import { CatAdminEditComponent } from './cat_admin/cat-admin-edit/cat-admin-edit.component';
 import { HeavyCatEditComponent } from './cat_admin/heavy-cat-edit/heavy-cat-edit.component';
 import { NormalCatEditComponent } from './cat_admin/normal-cat-edit/normal-cat-edit.component';
 import { HeavyDogEditComponent } from './dog-admin/heavy-dog-edit/heavy-dog-edit.component';
 import { LightDogEditComponent } from './dog-admin/light-dog-edit/light-dog-edit.component';
 import { NormalDogEditComponent } from './dog-admin/normal-dog-edit/normal-dog-edit.component';
+import { LightCatAddformComponent } from "src/app/cat_admin/light-cat-addform/light-cat-addform.component";
+import { NormalCatAddformComponent } from "src/app/cat_admin/normal-cat-addform/normal-cat-addform.component";
+import { LightdogAddformComponent } from "src/app/dog-admin/lightdog-addform/lightdog-addform.component";
+import { NormaldogAddformComponent } from "src/app/dog-admin/normaldog-addform/normaldog-addform.component";
+import { LightpetAddformComponent } from "src/app/dashboard/smallpets_dashbord/lightpet-addform/lightpet-addform.component";
+import { NormalpetAddformComponent } from "src/app/dashboard/smallpets_dashbord/normalpet-addform/normalpet-addform.component";
+import { LightbirdAddformComponent } from "src/app/dashboard/dashboard-design/birds_dashbord/lightbird-addform/lightbird-addform.component";
+import { NormalbirdAddformComponent } from "src/app/dashboard/dashboard-design/birds_dashbord/normalbird-addform/normalbird-addform.component";
+import { HeavybirdEditComponent } from "src/app/dashboard/dashboard-design/birds_dashbord/heavybird-edit/heavybird-edit.component";
+import { LightbirdEditComponent } from "src/app/dashboard/dashboard-design/birds_dashbord/lightbird-edit/lightbird-edit.component";
+import { NormalbirdEditComponent } from "src/app/dashboard/dashboard-design/birds_dashbord/normalbird-edit/normalbird-edit.component";
+import { HeavypetEditComponent } from "src/app/dashboard/smallpets_dashbord/heavypet-edit/heavypet-edit.component";
+import { LightpetEditComponent } from "src/app/dashboard/smallpets_dashbord/lightpet-edit/lightpet-edit.component";
+import { NormalpetEditComponent } from "src/app/dashboard/smallpets_dashbord/normalpet-edit/normalpet-edit.component";
 import { EditAccessComponent } from './Admin accessories/edit-access/edit-access.component';
 
 const routes: Routes = [
@@ -138,18 +169,34 @@ const routes: Routes = [
 {path:'heavysmall_admin',component:HeavysmallAdminComponent},
 {path:'lightsmall_admin',component:LightsmallAdminComponent},
 {path:'normalsmall_admin',component:NormalsmallAdminComponent},
-
 {path:'accessories_admin',component:AccessoriesAdminComponent},
-{path:'dog_addform',component:AddformAdminComponent},
+// {path:'dog_addform',component:AddformAdminComponent},
 {path:'cat_addform',component:CatAdminAddformComponent},
 {path:'accessories_addform',component:AccessoriesAdminAddformComponent},
 {path:'smallpet_addform',component:SmallpetAdminAddformComponent},
-{path:'birds_addform',component:BirdsAdminAddformComponent},
+{path:'heavybirds_addform',component:BirdsAdminAddformComponent},
 {path:'cart',component:CartComponent},
 {path:'all_dog_search/:name',component:AlldogsearchComponent},
 {path:'payment',component:PaymentComponent},
 {path:'adminlogin',component:AdminloginComponent},
 {path:'addnewadmin',component:AddnewadminComponent},
+{path:'lightdogsearch/:name',component:LightdogsearchComponent},
+{path:'normaldogsearch/:name',component:NormaldogsearchComponent},
+{path:'heavydogsearch/:name',component:HeavydogsearchComponent},
+{path:'allcatsearch/:name',component:AllcatsearchComponent},
+{path:'lightcatsearch/:name',component:LightcatsearchComponent},
+{path:'normalcatsearch/:name',component:NormalcatsearchComponent},
+{path:'heavycatsearch/:name',component:HeavycatsearchComponent},
+{path:'allsmallpetsearch/:name',component:AllsmallpetsearchComponent},
+{path:'lightsmallpetsearch/:name',component:LightsmallpetsearchComponent},
+{path:'normalsmallpetsearch/:name',component:NormalsmallpetsearchComponent},
+{path:'heavysmallpetsearch/:name',component:HeavysmallpetsearchComponent},
+{path:'allbirdssearch/:name',component:AllbirdsearchComponent},
+{path:'lightbirdssearch/:name',component:LightbirdssearchComponent},
+{path:'normalbirdssearch/:name',component:NormalbirdssearchComponent},
+{path:'heavybirdssearch/:name',component:HeavybirdssearchComponent},
+{path:'accessorysearch/:name',component:AccessoryComponent},
+{path:'wishlist',component:WishlistComponent},
 {path:'light-cat-edit/:id',component:CatAdminEditComponent},
 {path:'heavy-cat-edit/:id',component:HeavyCatEditComponent},
 {path:'normal-cat-edit/:id',component:NormalCatEditComponent},
@@ -157,6 +204,23 @@ const routes: Routes = [
 {path:'heavy-dog-edit/:id',component:HeavyDogEditComponent},
 {path:'normal-dog-edit/:id',component:NormalDogEditComponent},
 {path:'light-dog-edit/:id',component:LightDogEditComponent},
+{path:'lightcat_addform',component:LightCatAddformComponent},
+{path:'normalcat_addform',component:NormalCatAddformComponent},
+{path:'heavydog_addform',component:AddformAdminComponent},
+{path:'lightdog_addform',component:LightdogAddformComponent},
+{path:'normaldog_addform',component:NormaldogAddformComponent},
+{path:'lightpet_addform',component:LightpetAddformComponent},
+{path:'normalpet_addform',component:NormalpetAddformComponent},
+{path:'lightbird_addform',component:LightbirdAddformComponent},
+{path:'normalbird_addform',component:NormalbirdAddformComponent},
+{path:'heavybird_edit/:id',component:HeavybirdEditComponent},
+{path:'lightbird_edit/:id',component:LightbirdEditComponent},
+{path:'normalbird_edit/:id',component:NormalbirdEditComponent},
+{path:'heavypet_edit/:id',component:HeavypetEditComponent},
+{path:'lightpet_edit/:id',component:LightpetEditComponent},
+{path:'normalpet_edit/:id',component:NormalpetEditComponent},
+
+
 {path:'access-edit',component:EditAccessComponent},
 
 // {path:'404',component:PageNotfoundComponent},

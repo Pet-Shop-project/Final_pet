@@ -23,4 +23,7 @@ export class HeavysmallAdminComponent implements OnInit {
   showdetails(heavy){
     this.router.navigate(["/heavysmall-admin",heavy._id])
     }
+    onSelect_heavy(pet){
+      this.router.navigate(['/heavypet_edit',pet._id])
+  }
 }

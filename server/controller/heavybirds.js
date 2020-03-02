@@ -59,5 +59,39 @@ route.get('/list',function(req,resp){
     })
     
     })
+    route.get('/search/:name',function(req,resp){
 
+     
+      var name=req.params.name;
+     
+     mongoose.model('heavy_birds').find({"name": {"$regex": name}},function(err,data){
+      if(data.length!=0)
+    
+      resp.json(data);
+      else
+      resp.send("Not found");
+    
+     })
+    })
+
+    route.post('/addbird',parseUrlencoded,(req,res)=>{
+      const heavybirds=mongoose.model('heavy_birds');
+      const newheavybird=new heavybirds({
+            name: req.body.name,
+            size: req.body.size,
+            life_span: req.body.life_span,
+            weight: req.body.weight,
+            color: req.body.color,
+            price: req.body.price,
+            temperament: req.body.temperament,
+            images: req.body.images 
+      })
+      
+      newheavybird.save((err,res)=>{
+        if (err){
+          console.log(err)
+        }
+        console.log(res)
+      })
+    })  
  module.exports = route;

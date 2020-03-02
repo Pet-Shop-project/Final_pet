@@ -11,7 +11,7 @@ export class HeavyBirdsComponent implements OnInit {
 public birds=[];
 public sortbirds=[]
 public start_sort=false
-collection = { count: 14, data: [] };
+collection = { count:this.birds.length, data: [] };
 config = {
   id: 'custom',
   itemsPerPage: 3,
@@ -30,7 +30,7 @@ public labels: any = {
     screenReaderPageLabel: 'page',
     screenReaderCurrentLabel: `You're on page`
 };
-  constructor(private bird:BirdsService,private route:Router) {
+  constructor(private bird:BirdsService,private route:Router,private router:Router) {
     for (var i = 0; i < this.collection.count; i++) {
       this.collection.data.push(
         {
@@ -48,7 +48,6 @@ public labels: any = {
   ngOnInit() {
     this.bird.listheavy().subscribe(data=>{
       this.birds=data;
-      // console.log(data)
     })
   }
   showdetails(bird){
@@ -60,5 +59,11 @@ public labels: any = {
         this.sortbirds=data;
          this.start_sort=true
       })
-}}
+}
+search(name){
+  this.router.navigate(['/heavybirdssearch',name])
+ console.log(name);
+ 
+}
+}
 

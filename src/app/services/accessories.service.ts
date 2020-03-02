@@ -5,7 +5,7 @@ import { Accessories } from '../accessories'
 @Injectable({
   providedIn: 'root'
 })
-export class AccessoriesService {
+export class AccessoriesService { 
   
 private myMessage = new Subject<any>();
 private requestBody = JSON.stringify(status);
@@ -18,6 +18,9 @@ private requestBody = JSON.stringify(status);
  }
   addnewaccessory(Accessories):Observable<any>{
     return this.http.post("http://localhost:3000/PET-SHOP/accessories/add",Accessories)
+  }
+  search(name):Observable<any>{
+    return this.http.get<any>("http://localhost:3000/PET-SHOP/accessories/search/"+name)
   }
 
 

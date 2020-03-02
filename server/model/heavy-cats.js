@@ -5,7 +5,7 @@ var cats = new Schema({
     size:String,
     life_span:Number,
     weight:Number,
-    colors:String,
+    color:String,
     price:Number,
     temperament:String,
     images:[String]
@@ -13,4 +13,4 @@ var cats = new Schema({
 {collection:"heavy-cats"}
 );
 mongoose.model("cats",cats);
- 
+  

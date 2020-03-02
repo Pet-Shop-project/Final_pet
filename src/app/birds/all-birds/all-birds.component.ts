@@ -29,7 +29,7 @@ public labels: any = {
     screenReaderPageLabel: 'page',
     screenReaderCurrentLabel: `You're on page`
 };
-  constructor(private bird:BirdsService,private route:Router) {
+  constructor(private bird:BirdsService,private route:Router,private router:Router) {
     for (var i = 0; i < this.collection.count; i++) {
       this.collection.data.push(
         {
@@ -54,6 +54,11 @@ public labels: any = {
   }
   showdetails(bird){
     this.route.navigate(["/all-details",bird._id])
+    }
+    search(name){
+      this.router.navigate(['/allbirdssearch',name])
+     console.log(name);
+     
     }
   }
 

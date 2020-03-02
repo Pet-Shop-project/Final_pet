@@ -1,1 +1,16 @@
-<p>allsmallpetsearch works!</p>
+<div class="row">
+    <div class="col-sm-12 col-md-4 my-3 mt-5 workItem show-workItem catB" *ngFor="let all of smallpet"
+      (click)="showdetails(all)">
+      <div class="img-container m-0 p-0 shadow-sm">
+        <img src="{{all.images[0]}}" class="img-center img-fluid img-showcase" style="width: 350px;height: 250px;">
+        <div class="overlay d-flex flex-column align-items-center justify-content-center">
+          <h2>{{all.name}}</h2>
+          <p class="d-block small ">{{all.price}} EGP</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn first" style="margin-left: 150px;cursor: pointer;margin-bottom: 50px;" (click)="back()">Back</button>
+  <br>
+  <br>
+  <br>

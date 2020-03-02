@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./all-cats.component.css']
 })
 export class AllCatsComponent implements OnInit {
-  collection = { count: 45, data: [] };
+  public cats=[];
+  collection = { count: this.cats.length, data: [] };
   config = {
     id: 'custom',
     itemsPerPage: 3,
@@ -42,7 +43,7 @@ export class AllCatsComponent implements OnInit {
     this.config.currentPage = event;
    }
    
-  public cats=[];
+ 
   ngOnInit() {
 
     this.cat.listallcats().subscribe(data=>{
@@ -53,6 +54,11 @@ export class AllCatsComponent implements OnInit {
 onSelect(cat){
   this.router.navigate(['/all-cat-details',cat._id])
   console.log(cat._id)
+}
+search(name){
+  this.router.navigate(['/allcatsearch',name])
+ console.log(name);
+ 
 }
 
 

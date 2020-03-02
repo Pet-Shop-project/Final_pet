@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./normaldogs.component.css']
 })
 export class NormaldogsComponent implements OnInit {
-  collection = { count: 15, data: [] };
+  public dogs=[]; 
+  collection = { count:this.dogs.length, data: [] };
   config = {
     id: 'custom',
     itemsPerPage: 3,
@@ -42,7 +43,7 @@ export class NormaldogsComponent implements OnInit {
     this.config.currentPage = event;
   }
   
-  public dogs=[]; 
+  
   public sortdog=[]
 public start_sort=false
   ngOnInit() {
@@ -55,7 +56,11 @@ public start_sort=false
     this.router.navigate(['/normaldogdetails',dog._id])
     console.log(dog._id)
   }
-
+  search(name){
+    this.router.navigate(['/normaldogsearch',name])
+   console.log(name);
+   
+  }
   on_click(){
     this.dog.sort_normd().subscribe(data=>{
       this.sortdog=data;

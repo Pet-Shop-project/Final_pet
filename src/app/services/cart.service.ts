@@ -9,21 +9,6 @@ import { Cart } from '../cart'
 export class CartService {
 
   constructor(private http:HttpClient) { }
-  // getCart():Observable<any>{
-  //   return this.http.get<any>('http://localhost:3000/PET-SHOP/shopcart/show')
-  // }
-  // postCart(proId):Observable<any> {
-  //   return this.http.get<any>('http://localhost:3000/PET-SHOP/shopcart/cart/'+proId,
-  //   {
-  //     observe :'body',   
-  //     params : new HttpParams().append('token',localStorage.getItem('token'))}
-    
-  //   )
-
-  // }
-  // postDeleteCart(proId):Observable<any> {
-  //   return this.http.get<any>('http://localhost:3000/PET-SHOP/shopcart/deleteCart/'+proId)
-  // }
   cartProducting(prductId,productPrice,productName,productImg):Observable<any>{
     console.log(prductId)
     return this.http.get('http://localhost:3000/PET-SHOP/shopcart/add/'+prductId+'/'+productPrice+'/'+productName+'?img='+productImg,{
