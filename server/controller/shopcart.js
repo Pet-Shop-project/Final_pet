@@ -99,7 +99,7 @@ route.get("/add/:id/:price/:name", verifytoken, function (req, resp, next) {
   })
 
 })
-// socket
+
 
   route.get('/deleteItem/:id',verifytoken, function (req, resp) {
     cartId=Token.useremail
@@ -111,10 +111,10 @@ route.get("/add/:id/:price/:name", verifytoken, function (req, resp, next) {
   })
 
 
-// Bind the connection event with the listner1 function
 
 
-// socket
+
+
 route.get('/clear',verifytoken,function(req, resp){
   cartId=Token.useremail
   mongoose.model("cart").remove({user:cartId},(err,data)=>console.log(data))

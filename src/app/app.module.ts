@@ -116,7 +116,7 @@ import { HeavypetEditComponent } from './dashboard/smallpets_dashbord/heavypet-e
 import { LightpetEditComponent } from './dashboard/smallpets_dashbord/lightpet-edit/lightpet-edit.component';
 import { NormalpetEditComponent } from './dashboard/smallpets_dashbord/normalpet-edit/normalpet-edit.component';
 import { EditAccessComponent } from './Admin accessories/edit-access/edit-access.component';
-import { SocketService } from './services/socket.service';
+
 
 
 // import { from } from 'rxjs';
@@ -251,7 +251,7 @@ import { SocketService } from './services/socket.service';
   providers: [
     // SmallpetServiceService
     AuthenticationService,
-    SocketService
+  
   ],
   bootstrap: [AppComponent]
 })

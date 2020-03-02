@@ -11,16 +11,7 @@ var bodyParser = require('body-parser')
 
 
 
-let http = require('http');
-let server = http.Server(app);
-let socketIO = require('socket.io')
-let io = socketIO(server)
-io.on('connection', (socket) => {
-  console.log('user connected');
-  socket.on('connection', () => {
-    io.emit();
-  });
-});
+
 
 
 
@@ -117,7 +108,7 @@ files_arr.forEach(function (file) {
   require(__dirname + "/model/" + file);
 });
 app.use(express.urlencoded ({extended : false}));
-server.listen(3000, function () {
+app.listen(3000, function () {
   console.log("server on port 3000");
 
 });
