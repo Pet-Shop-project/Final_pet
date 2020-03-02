@@ -117,6 +117,10 @@ import { LightpetEditComponent } from './dashboard/smallpets_dashbord/lightpet-e
 import { NormalpetEditComponent } from './dashboard/smallpets_dashbord/normalpet-edit/normalpet-edit.component';
 import { EditAccessComponent } from './Admin accessories/edit-access/edit-access.component';
 import { AboutComponent } from './about/about.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+
+
+
 
 // import { from } from 'rxjs';
 // import { MaterialModule } from './material/material.module';
@@ -241,7 +245,9 @@ import { AboutComponent } from './about/about.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    NgxSpinnerModule
+  
     // MaterialModule
     
   
@@ -250,6 +256,9 @@ import { AboutComponent } from './about/about.component';
   providers: [
     // SmallpetServiceService
     AuthenticationService
+  
+  
+  
   ],
   bootstrap: [AppComponent]
 })

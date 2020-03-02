@@ -153,6 +153,7 @@ body{
     .fourth {
       border-color: #57b6e2;
       color: black;
+      font-size: 22px;
       background-image: linear-gradient(45deg, #57b6e2 50%, transparent 50%);
       background-position: 100%;
       background-size: 400%;
@@ -164,6 +165,7 @@ body{
     .fifth {
       border-color: red;
       color: black;
+      font-size: 21px;
       background-image: linear-gradient(45deg, rgb(238, 14, 14) 50%, transparent 50%);
       background-position: 100%;
       background-size: 400%;

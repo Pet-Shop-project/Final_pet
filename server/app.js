@@ -5,7 +5,13 @@ var cors = require('cors');
 var bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
 var app = express();
+
 var bodyParser = require('body-parser')
+
+
+
+
+
 
 
 

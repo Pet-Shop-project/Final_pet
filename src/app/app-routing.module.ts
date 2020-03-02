@@ -151,8 +151,6 @@ const routes: Routes = [
 {path:'heavy-cats-details/:_id',component:HeavyCatsDetailsComponent},
 {path:'light-cats-details/:_id',component:LightCatsDetailsComponent},
 {path:'normal-cats-details/:_id',component:NormalCatsDetailsComponent},
-// {path:'404',component:PageNotfoundComponent},
-// { path: '', component:PageNotfoundComponent},
 {path:'heavy-cats-details',component:HeavyCatsDetailsComponent},
 {path:'light-cats-details',component:LightCatsDetailsComponent},
 {path:'normal-cats-details',component:NormalCatsDetailsComponent},

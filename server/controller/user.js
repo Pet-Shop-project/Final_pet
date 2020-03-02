@@ -10,7 +10,20 @@ router.get('/Username', verifytoken, (req, res, next) => {
   return res.status(200).json(Token.useremail)
 })
 var Token = ''
-
+function verifytoken(req, res, next) {  
+  let token = req.query.token;
+  console.log(token)
+  jwt.verify(token, 'Secret', (err, verifytoken) => {
+    if (err)
+      return res.status(400).json({
+        Msg: 'Unauthorized'
+      })
+    if (verifytoken) {
+      Token = verifytoken;      
+      next();
+    }
+  })
+}
 
 //Register New Account
 app.use(bodyParser.urlencoded({
@@ -124,27 +137,6 @@ router.post('/login', (req, res, next) => {
 
 });
 
-
-
-
-
-function verifytoken(req, res, next) {
-  // console.log(req.query)
-  // console.log(req.body);
-  
-  let token = req.query.token;
-  console.log(token)
-  jwt.verify(token, 'Secret', (err, verifytoken) => {
-    if (err)
-      return res.status(400).json({
-        Msg: 'Unauthorized'
-      })
-    if (verifytoken) {
-      Token = verifytoken;      
-      next();
-    }
-  })
-}
 //Delete user from database
 router.delete("/:userId", (req, res, next) => {
   User.remove({

@@ -3,6 +3,8 @@ import { CartService } from '../services/cart.service';
 import { Router } from '@angular/router';
 import { LoginService } from '../services/login.service';
 import {Cart} from '../cart';
+
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -10,13 +12,14 @@ import {Cart} from '../cart';
 })
 export class CartComponent implements OnInit {
   // cart=[];
+  public id;
   public productsInCart : Cart[]=[]
   public cartInfo: Cart[]=[];
   public product_id;
   public product={}
   public noProducts:String;
   public total:Number=0;
-  constructor(private cartserv:CartService,private router:Router,private LogServ : LoginService) {
+  constructor(private cartserv:CartService,private router:Router,private LogServ : LoginService  ) {
     if(this.LogServ.auth()){
       console.log(this.LogServ.auth())
       this.cartserv.cartProductsDetails().subscribe(data=>{
@@ -53,5 +56,6 @@ export class CartComponent implements OnInit {
       console.log("you deleted this item")
     })
   }
+
 
 }
