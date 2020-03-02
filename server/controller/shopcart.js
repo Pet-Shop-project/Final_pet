@@ -101,7 +101,6 @@ route.get("/add/:id/:price/:name", verifytoken, function (req, resp, next) {
 })
 // socket
 
-<<<<<<< HEAD
   route.get('/deleteItem/:id',verifytoken, function (req, resp) {
     cartId=Token.useremail
     mongoose.model('cart').deleteOne({user:cartId},{ $pull:{ products :{product_id:req.params.id} } 
@@ -119,40 +118,6 @@ route.get("/add/:id/:price/:name", verifytoken, function (req, resp, next) {
 route.get('/clear',verifytoken,function(req, resp){
   cartId=Token.useremail
   mongoose.model("cart").remove({user:cartId},(err,data)=>console.log(data))
-=======
-route.get('/details', verifytoken, function (req, resp) {
-  if (req.query.token != null) {
-    cartId = Token.useremail
-    mongoose.model("cart").find({
-      user: cartId
-    }, function (err, data) {
-      if (!err) {
-        console.log(Token.useremail);
-        resp.status(200).send(data)
-        console.log(data)
-      } else {
-        console.log(err)
-      }
-    })
-  } else {
-    resp.status(200).json('no user login')
-  }
-
-})
-
-route.get('/deleteItem/:id', verifytoken, function (req, resp) {
-  cartId = Token.useremail
-  mongoose.model('cart').deleteOne({
-    user: cartId
-  }, {
-    $pull: {
-      products: {
-        product_id: req.params.id
-      }
-    }
-  }, () => console.log("deleted" + req.params.id))
-
->>>>>>> 57e01d3a55a6d0ab46d5d1370823a2d80c3da781
   resp.end()
 })
 
