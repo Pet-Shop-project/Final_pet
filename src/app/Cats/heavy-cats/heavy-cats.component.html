@@ -9,6 +9,7 @@
 </form>
 
 <i class="fas fa-sync" style="color:silver; font-size: 28px;" (click)="on_click()"> sort by price</i>
+
   <div class="row" *ngIf="!start_sort">
     <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB" *ngFor="let cat of cats |paginate:config" (click)="onSelect(cat)"  style="border-radius: 25px; width: 425px;height: 300px;">
       <div class="img-container m-0 p-0 shadow-sm">
