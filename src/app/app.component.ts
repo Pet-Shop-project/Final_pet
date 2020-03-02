@@ -13,6 +13,6 @@ export class AppComponent {
     this.spinner.show();
     setTimeout(() => {
       this.spinner.hide();
-    }, 5000);
+    }, 4000);
   }
 }
