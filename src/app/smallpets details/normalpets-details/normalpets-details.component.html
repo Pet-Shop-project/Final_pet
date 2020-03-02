@@ -37,20 +37,20 @@
             <div class="container pt-4 pb-5">
               <div class="row carousel-indicators">
                 <div class="col-md-3 item">
-                  <img src="{{pet.images[0]}}"
-                    class="img-fluid" data-target="#carouselExampleIndicators" data-slide-to="0" style="width:70px;height: 70px;" />
+                  <img src="{{pet.images[0]}}" class="img-fluid" data-target="#carouselExampleIndicators"
+                    data-slide-to="0" style="width:70px;height: 70px;" />
                 </div>
                 <div class="col-md-3 item">
-                  <img src="{{pet.images[1]}}"
-                    class="img-fluid" data-target="#carouselExampleIndicators" data-slide-to="1" style="width:70px;height: 70px;"/>
+                  <img src="{{pet.images[1]}}" class="img-fluid" data-target="#carouselExampleIndicators"
+                    data-slide-to="1" style="width:70px;height: 70px;" />
                 </div>
                 <div class="col-md-3 item">
-                  <img src="{{pet.images[3]}}"
-                    class="img-fluid" data-target="#carouselExampleIndicators" data-slide-to="2" style="width:70px;height: 70px;"/>
+                  <img src="{{pet.images[3]}}" class="img-fluid" data-target="#carouselExampleIndicators"
+                    data-slide-to="2" style="width:70px;height: 70px;" />
                 </div>
                 <div class="col-md-3 item">
-                  <img src="{{pet.images[2]}}"
-                    class="img-fluid" data-target="#carouselExampleIndicators" data-slide-to="3" style="width:70px;height: 70px;"/>
+                  <img src="{{pet.images[2]}}" class="img-fluid" data-target="#carouselExampleIndicators"
+                    data-slide-to="3" style="width:70px;height: 70px;" />
                 </div>
               </div>
             </div>
@@ -85,10 +85,12 @@
             </div>
           </div>
           <br>
-          <a class="action-button shadow animate blue" (click)="addToCart(pet._id,pet.price,pet.name,pet.images[0])" style="cursor: pointer;">Add To cart</a>
+          <a class="action-button shadow animate blue" (click)="addToCart(pet._id,pet.price,pet.name,pet.images[0])"
+            style="cursor: pointer;">Add To cart</a>
           <a href="#" class="action-button shadow animate yellow">Add wishlist</a>
           <br>
-         <a class="action-button shadow animate black" style="margin-left: 150px;cursor: pointer;" (click)="back()" routerLink="/smallpets/normal">Back</a>
+          <a class="action-button shadow animate black" style="margin-left: 150px;cursor: pointer;" (click)="back()"
+            routerLink="/smallpets/normal">Back</a>
         </div>
       </div>
     </div>

@@ -95,6 +95,8 @@ import { HeavyDogEditComponent } from './dog-admin/heavy-dog-edit/heavy-dog-edit
 import { LightDogEditComponent } from './dog-admin/light-dog-edit/light-dog-edit.component';
 import { NormalDogEditComponent } from './dog-admin/normal-dog-edit/normal-dog-edit.component';
 import { EditAccessComponent } from './Admin accessories/edit-access/edit-access.component';
+import { SocketService } from './services/socket.service';
+
 
 // import { from } from 'rxjs';
 // import { MaterialModule } from './material/material.module';
@@ -197,7 +199,8 @@ import { EditAccessComponent } from './Admin accessories/edit-access/edit-access
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+  
     // MaterialModule
     
   
@@ -205,7 +208,8 @@ import { EditAccessComponent } from './Admin accessories/edit-access/edit-access
  
   providers: [
     // SmallpetServiceService
-    AuthenticationService
+    AuthenticationService,
+    SocketService
   ],
   bootstrap: [AppComponent]
 })
