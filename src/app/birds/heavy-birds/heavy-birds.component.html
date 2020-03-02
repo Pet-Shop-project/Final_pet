@@ -8,11 +8,25 @@
     (click)="search(searchInput.value)">Search</button>
 </form>
 <i class="fas fa-sync" style="color:silver; font-size: 28px;" (click)="on_click()"> sort by price</i> 
+
+  <!--  -->
+  <div class="row" *ngIf="!start_sort">
+    <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB" *ngFor="let bird of birds |paginate:config" style="border-radius: 25px; width: 425px;height: 300px;"  (click)=" showdetails(bird)" >
+      <div class="img-container m-0 p-0 shadow-sm">
+        <img src="{{bird.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 25px; width: 425px;height: 300px;">
+        <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 25px; width: 425px;height: 300px; margin-left: 22px;">
+          <h2>{{bird.name}}</h2>
+          <p class="d-block small ">{{bird.price}} EGP</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  -->
  
 <!-- sort -->
 
 <div class="row" *ngIf="start_sort">
-  <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB" *ngFor="let bird of sortbirds |paginate:config" (click)="onSelect(bird)"  style="border-radius: 25px; width: 425px;height: 300px;"  (click)=" showdetails(bird)" >
+  <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB" *ngFor="let bird of sortbirds |paginate:config" style="border-radius: 25px; width: 425px;height: 300px;"  (click)=" showdetails(bird)" >
     <div class="img-container m-0 p-0 shadow-sm">
       <img src="{{bird.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 25px; width: 425px;height: 300px;">
       <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 25px; width: 425px;height: 300px; margin-left: 22px;">
