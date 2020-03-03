@@ -17,6 +17,7 @@ export class DashboardDesignComponent implements OnInit {
     }
     else{
       this.router.navigate(['/adminlogin'])
+      
     }
    }
 

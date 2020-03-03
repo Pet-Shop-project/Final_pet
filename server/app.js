@@ -5,6 +5,7 @@ var cors = require('cors');
 var bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
 var app = express();
+
 var bodyParser = require('body-parser')
 var route = express.Router();
 let http = require('http');
@@ -33,6 +34,11 @@ let io = socketIO(server);
 //     })
 //   })
 // });
+
+
+
+
+
 
 var lightdogs = require("./controller/lightdogs");
 var normaldogs = require("./controller/normaldogs");
