@@ -28,4 +28,7 @@ public smallpet:[];
   showdetails(light){
     this.router.navigate(["/lightdetail",light._id])
     }
+    back(){
+      this.router.navigate(['smallpets/light'])
+      }
 }

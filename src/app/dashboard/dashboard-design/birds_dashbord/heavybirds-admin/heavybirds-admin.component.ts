@@ -19,6 +19,13 @@ export class HeavybirdsAdminComponent implements OnInit {
       // console.log(data)
     })
   }
+  delete(bird){
+    this.bird.deletebird(bird._id).subscribe(data=>{
+       console.log('bird deleted')
+      // this.bird=data
+     })
+     
+   }
   showdetails(bird){
     this.route.navigate(["/heavybirds_admin",bird._id])
     }

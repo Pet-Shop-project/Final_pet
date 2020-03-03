@@ -11,7 +11,7 @@
 
   <!--  -->
   <div class="row" *ngIf="!start_sort">
-    <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB" *ngFor="let bird of birds |paginate:config" (click)="onSelect(cat)"  style="border-radius: 25px; width: 425px;height: 300px;"  (click)=" showdetails(bird)" >
+    <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB" *ngFor="let bird of birds |paginate:config" style="border-radius: 25px; width: 425px;height: 300px;"  (click)=" showdetails(bird)" >
       <div class="img-container m-0 p-0 shadow-sm">
         <img src="{{bird.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 25px; width: 425px;height: 300px;">
         <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 25px; width: 425px;height: 300px; margin-left: 22px;">
@@ -26,7 +26,7 @@
 <!-- sort -->
 
 <div class="row" *ngIf="start_sort">
-  <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB" *ngFor="let bird of sortbirds |paginate:config" (click)="onSelect(cat)"  style="border-radius: 25px; width: 425px;height: 300px;"  (click)=" showdetails(bird)" >
+  <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB" *ngFor="let bird of sortbirds |paginate:config" style="border-radius: 25px; width: 425px;height: 300px;"  (click)=" showdetails(bird)" >
     <div class="img-container m-0 p-0 shadow-sm">
       <img src="{{bird.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 25px; width: 425px;height: 300px;">
       <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 25px; width: 425px;height: 300px; margin-left: 22px;">

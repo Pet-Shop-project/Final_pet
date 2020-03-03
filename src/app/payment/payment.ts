@@ -1,7 +1,8 @@
 export class Payment {
     constructor(
         public card:String,
-        public verification:String,
+        public acount_number:String,
+        public postal_code:String
     ){}
     }
 

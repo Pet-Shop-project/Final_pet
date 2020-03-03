@@ -102,6 +102,8 @@ import { HeavypetEditComponent } from "src/app/dashboard/smallpets_dashbord/heav
 import { LightpetEditComponent } from "src/app/dashboard/smallpets_dashbord/lightpet-edit/lightpet-edit.component";
 import { NormalpetEditComponent } from "src/app/dashboard/smallpets_dashbord/normalpet-edit/normalpet-edit.component";
 import { EditAccessComponent } from './Admin accessories/edit-access/edit-access.component';
+import { PaymentdoneComponent } from './paymentdone/paymentdone.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   
@@ -111,7 +113,7 @@ const routes: Routes = [
   {path:'dogs/alldogs',component:AlldogsComponent},
   {path:'dogs/lightdogs',component:LightdogsComponent},
   {path:'dogs/normaldogs',component:NormaldogsComponent},
-  {path:'dogs/heavydogs',component:HeavydogsComponent},
+  {path:'dogs/heavydogs',component:HeavydogsComponent}, 
   {path:'alldogdetails/:_id',component:AlldogdetailsComponent},
   {path:'all-cat-details/:_id',component:AllCatDetailsComponent},
 
@@ -217,12 +219,16 @@ const routes: Routes = [
 {path:'heavypet_edit/:id',component:HeavypetEditComponent},
 {path:'lightpet_edit/:id',component:LightpetEditComponent},
 {path:'normalpet_edit/:id',component:NormalpetEditComponent},
-{path:'access-edit',component:EditAccessComponent},
+{path:'about',component:AboutComponent},
 
-// {path:'404',component:PageNotfoundComponent},
-// { path: '', component:PageNotfoundComponent},
+{path:'access-edit/:id',component:EditAccessComponent},
+
+
+{path:'done',component:PaymentdoneComponent},
+{path:'404',component:PageNotfoundComponent},
+{ path: '', component:PageNotfoundComponent},
     
-//     { path: '**', redirectTo: '404' }
+    { path: '**', redirectTo: '404' }
 
 ];
 

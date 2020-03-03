@@ -16,9 +16,10 @@
                 <h5 class="card-text">Price: {{accessory.price}} $</h5>
                 <h5 class="card-text">Length: {{accessory.length}} cm</h5>
                 <h5 class="card-text">Color: {{accessory.color}}</h5>
-                <div (click)="onSelect()">
+                <div (click)="onSelect(accessory)">
                   <a  class="action-button shadow animate blue" >Edit</a></div>
-                <a href="#" class="action-button shadow animate yellow" style="margin-left: -10px;">delete</a>
+                  <button (click)=" delete (accessory)"   class="action-button shadow animate red"> Delete</button> 
+               
                 
               </div>
             </div>

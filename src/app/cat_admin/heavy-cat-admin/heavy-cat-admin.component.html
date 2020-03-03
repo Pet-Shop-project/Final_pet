@@ -19,7 +19,8 @@
               <h5 class="card-text">Color: {{cat.color}}</h5>
               <div (click)="onSelect_heavy(cat)">
                 <a  class="action-button shadow animate blue" >Edit</a></div>
-              <a href="#" class="action-button shadow animate yellow" style="margin-left: -10px;">Delete</a>
+            
+                <button (click)=" delete (cat)" class="action-button shadow animate red"> Delete</button> 
               
             </div>
           </div>

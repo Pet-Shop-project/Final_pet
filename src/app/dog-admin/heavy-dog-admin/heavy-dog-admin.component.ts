@@ -17,6 +17,13 @@ export class HeavyDogAdminComponent implements OnInit {
 
     })
   }
+  delete(dog){
+    this.dog.deleteheavydog(dog._id).subscribe(data=>{
+       console.log('dog deleted')
+      // this.bird=data
+     })
+     
+   }
   onSelect_heavy(dog){
     this.router.navigate(['/heavy-dog-edit',dog._id])
 }

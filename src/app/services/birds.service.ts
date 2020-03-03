@@ -72,4 +72,14 @@ listheavy():Observable<any>{
   addnewnormalbird(Birds):Observable<any>{
     return this.http.post("http://localhost:3000/PET-SHOP/normalbirds/addbird/",Birds)
   }
+  deletebird(id){
+    return this.http.delete<any>("http://localhost:3000/PET-SHOP/heavybirds/delete/"+id)
+  }
+  deletenormaltbird(id){
+    return this.http.delete<any>("http://localhost:3000/PET-SHOP/normalbirds/delete/"+id)
+  }
+    deletelightbird(id){
+    return this.http.delete<any>("http://localhost:3000/PET-SHOP/lightbirds/delete/"+id)
+  }
+ 
 }

@@ -20,6 +20,13 @@ export class HeavysmallAdminComponent implements OnInit {
     );
     // console.log(this.lightsmallpet)
   }
+  delete(pet){
+    this.getheavypet.deleteheavysmall(pet._id).subscribe(data=>{
+       console.log('Small deleted')
+      // this.bird=data
+     })
+     
+   }
   showdetails(heavy){
     this.router.navigate(["/heavysmall-admin",heavy._id])
     }

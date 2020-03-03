@@ -43,6 +43,9 @@ public birds=new Birds("", "",0,0,"",0,"",[""]);
       error => console.log('error',error)
       )
   }
+  back(){
+    this.router.navigate(['/light-birds'])
+    }
+}
   
-  }
 

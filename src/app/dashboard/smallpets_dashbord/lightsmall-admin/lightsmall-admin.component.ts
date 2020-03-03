@@ -20,6 +20,13 @@ export class LightsmallAdminComponent implements OnInit {
     );
     console.log(this.pets)
   }
+  delete(pet){
+    this.getLightpet.deletelightsmall(pet._id).subscribe(data=>{
+       console.log('small deleted') 
+      // this.bird=data
+     })
+     
+   }
   showdetails(light){
     this.router.navigate(["/lightsmall-admin",light._id])
     }

@@ -18,8 +18,15 @@ export class HeavyCatAdminComponent implements OnInit {
     this.catsServ.get_heavy_cats().subscribe(data=>{
       this.cats=data;
   })
+  
   }
-
+  delete(cat){
+    this.catsServ.deleteheavycat(cat._id).subscribe(data=>{
+       console.log('cat deleted')
+      // this.bird=data
+     })
+     
+   }
 
 
   onSelect(cat){

@@ -19,6 +19,12 @@ export class NormalbirdsAdminComponent implements OnInit {
     })
   
   }
+  delete(bird){
+    this.bird.deletenormaltbird(bird._id).subscribe(data=>{
+       console.log('bird deleted')
+      // this.bird=data
+     })
+    }
   showdetails(bird){
     this.route.navigate(["/normal-details",bird._id])
     }

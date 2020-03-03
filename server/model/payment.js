@@ -7,10 +7,18 @@ var  payment= new Schema({
         type: String,
         required: true
       },
-    verification: {
+    acount_number: {
+        type: String,
+        required: true
+    },
+    postal_code: {
         type: String,
         required: true
     }
-});
+},
+{
+    collection: "payment"
+}
+);
 
 mongoose.model("payment",payment);

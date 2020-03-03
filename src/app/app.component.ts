@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { SocketConnectionService } from "src/app/services/socket-connection.service";
 
 import { NgxSpinnerService } from 'ngx-spinner';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -18,6 +20,7 @@ export class AppComponent {
     setTimeout(() => {
       this.spinner.hide();
     }, 4000);
+  
   }
 
 }

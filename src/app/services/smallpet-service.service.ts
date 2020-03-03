@@ -49,8 +49,8 @@ export class SmallpetServiceService {
   getalldetails(all_id):Observable<any>{
     return this.http.get<any>(this.alldetails_api+all_id )
   }
-  updatelightpet(id,Smallpets):Observable<any>{
-    return this.http.put("http://localhost:3000/PET-SHOP/light_pet/update/"+id,Smallpets)
+  updatelightpet(id,pets):Observable<any>{
+    return this.http.put("http://localhost:3000/PET-SHOP/light_pet/update/"+id,pets)
   }
   updatenormalpet(id,Smallpets):Observable<any>{
     return this.http.put("http://localhost:3000/PET-SHOP/normal_pet/update/"+id,Smallpets)
@@ -88,11 +88,24 @@ export class SmallpetServiceService {
 
   }
   addnewlightpet(Smallpets):Observable<any>{
-    return this.http.post('http://localhost:3000/PET-SHOP/light_pet/addpet/',Smallpets)
+    return this.http.post<any>('http://localhost:3000/PET-SHOP/light_pet/addpet/',Smallpets)
 
   }
   addnewnormalpet(Smallpets):Observable<any>{
     return this.http.post('http://localhost:3000/PET-SHOP/normal_pet/addpet/',Smallpets)
-
+ 
   }
+  deletenormalsmall(id){
+    return this.http.delete<any>("http://localhost:3000/PET-SHOP/normal_pet/delete/"+id)
+  }
+  
+   
+  deleteheavysmall(id){
+    return this.http.delete<any>("http://localhost:3000/PET-SHOP/heavy_pet/delete/"+id)
+  }
+
+  deletelightsmall(id){
+    return this.http.delete<any>("http://localhost:3000/PET-SHOP/light_pet/delete/"+id)
+  }
+
 }

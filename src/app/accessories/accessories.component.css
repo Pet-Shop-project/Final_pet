@@ -150,7 +150,7 @@
 }
 .draw-border:hover::after {
   transition-delay: 0s, 0.25s, 0s;
-}
+} 
 .btn {
   background: none;
   border: none;
