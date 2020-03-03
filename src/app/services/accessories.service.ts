@@ -22,7 +22,9 @@ private requestBody = JSON.stringify(status);
   search(name):Observable<any>{
     return this.http.get<any>("http://localhost:3000/PET-SHOP/accessories/search/"+name)
   }
-
+  deleteaccessories(id){
+    return this.http.delete<any>("http://localhost:3000/PET-SHOP/accessories/delete/"+id)
+  }
 
   
 }

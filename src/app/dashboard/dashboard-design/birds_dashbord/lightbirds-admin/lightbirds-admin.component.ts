@@ -18,6 +18,13 @@ export class LightbirdsAdminComponent implements OnInit {
       console.log(data)
     })
   }
+  delete(bird){
+    this.bird.deletelightbird(bird._id).subscribe(data=>{
+       console.log('bird deleted')
+      // this.bird=data
+     })
+     
+   }
   showdetails(bird){
     this.route.navigate(["/light-details",bird._id])
     }

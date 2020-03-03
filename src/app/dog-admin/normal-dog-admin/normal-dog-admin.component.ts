@@ -17,6 +17,13 @@ export class NormalDogAdminComponent implements OnInit {
       console.log(data);
     })
   }
+  delete(dog){
+    this.dog.deletenormaldog(dog._id).subscribe(data=>{
+       console.log('dog deleted')
+      // this.bird=data
+     })
+     
+   }
   onSelect_normal(dog){
     this.router.navigate(['/normal-dog-edit',dog._id])
 }

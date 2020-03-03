@@ -20,6 +20,16 @@ route.get('/list',function(req,resp){
       resp.json(data);
     })
   })
+  route.delete('/delete/:id', function(req, res){
+    console.log('Deleting a birds');
+    mongoose.model("heavydogs").findByIdAndRemove(req.params.id, function(err, data){
+        if(err){
+            res.send("Error deleting dog");
+        }else{
+            res.json(data);
+        }
+    });
+  });
   route.put('/update/:id', function(req, res){
     console.log('Update a heavydogs');
     mongoose.model("heavydogs").findByIdAndUpdate(req.params.id,

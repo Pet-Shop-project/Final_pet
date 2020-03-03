@@ -95,4 +95,17 @@ export class SmallpetServiceService {
     return this.http.post('http://localhost:3000/PET-SHOP/normal_pet/addpet/',Smallpets)
 
   }
+  deletenormalsmall(id){
+    return this.http.delete<any>("http://localhost:3000/PET-SHOP/normal_pet/delete/"+id)
+  }
+  
+   
+  deleteheavysmall(id){
+    return this.http.delete<any>("http://localhost:3000/PET-SHOP/heavy_pet/delete/"+id)
+  }
+
+  deletelightsmall(id){
+    return this.http.delete<any>("http://localhost:3000/PET-SHOP/light_pet/delete/"+id)
+  }
+
 }

@@ -20,6 +20,16 @@ route.get('/lightbirdsdetails/:_id', function (req, resp) {
     resp.json(data);
   })
 })
+route.delete('/delete/:id', function(req, res){
+  console.log('Deleting a birds');
+  mongoose.model("lightbirds").findByIdAndRemove(req.params.id, function(err, data){
+      if(err){
+          res.send("Error deleting birds");
+      }else{
+          res.json(data);
+      }
+  });
+});
 route.put('/update/:id', function (req, res) {
   console.log('Update a lightbirds');
   mongoose.model("lightbirds").findByIdAndUpdate(req.params.id, {

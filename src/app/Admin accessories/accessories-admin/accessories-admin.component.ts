@@ -21,5 +21,15 @@ export class AccessoriesAdminComponent implements OnInit {
   onSelect(){
     this.router.navigate(['access-edit/'])
 }
+remove(accss){
+  this.acc.deleteaccessories(accss._id).subscribe(data=>{
+    console.log('accssess delete')
+    // this.accessories=data
+  })
 }
+
+}
+
+
+
 

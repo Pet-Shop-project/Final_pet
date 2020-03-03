@@ -13,6 +13,16 @@ route.get('/list',function(req,resp){
          resp.json(data);
   })
   })
+  route.delete('/delete/:id', function(req, res){
+    console.log('Deleting accessories');
+    mongoose.model("accessories").findByIdAndRemove(req.params.id, function(err, data){
+        if(err){
+            res.send("Error deleting accessories");
+        }else{
+            res.json(data);
+        }
+    });
+  });
   route.put('/update/:id', function(req, res){
     console.log('Update a accessory');
     mongoose.model("accessories").findByIdAndUpdate(req.params.id,

@@ -156,4 +156,13 @@ random_lightb():Observable<any>{
   listRandomccessories():Observable<any>{
     return this.http.get("http://localhost:3000/PET-SHOP/accessories/random/")
   }
+  deletelightcats(id):Observable<any>{
+    return this.http.delete<any>("http://localhost:3000/PET-SHOP/light_cats/delete/"+id)
+  }
+  deleteheavycat(id){
+    return this.http.delete<any>("http://localhost:3000/PET-SHOP/heavy_cats/delete/"+id)
+  }
+  deletenormalcat(id){
+    return this.http.delete<any>("http://localhost:3000/PET-SHOP/normal_cats/delete/"+id)
+  }
 }

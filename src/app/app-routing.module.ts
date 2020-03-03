@@ -103,6 +103,7 @@ import { LightpetEditComponent } from "src/app/dashboard/smallpets_dashbord/ligh
 import { NormalpetEditComponent } from "src/app/dashboard/smallpets_dashbord/normalpet-edit/normalpet-edit.component";
 import { EditAccessComponent } from './Admin accessories/edit-access/edit-access.component';
 import { PaymentdoneComponent } from './paymentdone/paymentdone.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   
@@ -218,13 +219,14 @@ const routes: Routes = [
 {path:'heavypet_edit/:id',component:HeavypetEditComponent},
 {path:'lightpet_edit/:id',component:LightpetEditComponent},
 {path:'normalpet_edit/:id',component:NormalpetEditComponent},
-{path:'access-edit',component:EditAccessComponent},
-{path:'done',component:PaymentdoneComponent}
+{path:'about',component:AboutComponent},
 
-// {path:'404',component:PageNotfoundComponent},
-// { path: '', component:PageNotfoundComponent},
+{path:'access-edit',component:EditAccessComponent},
+{path:'done',component:PaymentdoneComponent},
+{path:'404',component:PageNotfoundComponent},
+{ path: '', component:PageNotfoundComponent},
     
-//     { path: '**', redirectTo: '404' }
+    { path: '**', redirectTo: '404' }
 
 ];
 
