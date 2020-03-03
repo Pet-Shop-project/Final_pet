@@ -9,7 +9,7 @@
       </div>
     
     <div class="row" style="margin-bottom: 100px;">
-      <div class="col-md-4 mt-4" *ngFor="let dog of dogs" (click)="onSelect(dog)">
+      <div class="col-md-4 mt-4" *ngFor="let dog of dogs">
         <div class="card profile-card-5" >
             <div class="card-img-block">
                 <img class="card-img-top" src="{{dog.images[0]}}" alt="Card image cap">
@@ -21,7 +21,7 @@
                 <h5 class="card-text">Color: {{accessory.color}}</h5> -->
                 <div (click)="onSelect_normal(dog)">
                   <a  class="action-button shadow animate blue" >Edit</a></div>
-                  <button (click)=" delete (dog)" class="btn btn-info"> Delete</button> 
+                  <button (click)=" delete (dog)" class="action-button shadow animate red"> Delete</button>  
                 
               </div>
             </div>

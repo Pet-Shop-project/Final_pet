@@ -107,12 +107,12 @@ router.get('/search/:name', function (req, resp) {
 
 
 router.post('/addpet', parseUrlencoded, (req, res) => {
-  const lightSmallpet = mongoose.model('lightSmallpets');
-  const newlightSmallpet = new lightSmallpet({
+  const lightSmallpets = mongoose.model('lightSmallpets');
+  const newlightSmallpet = new lightSmallpets({
     name: req.body.name,
     size: req.body.size,
     life_span: req.body.life_span,
-    weight: req.body.weight,
+    weight: req.body.weight, 
     color: req.body.color,
     price: req.body.price,
     temperament: req.body.temperament,
@@ -121,7 +121,7 @@ router.post('/addpet', parseUrlencoded, (req, res) => {
 
   newlightSmallpet.save((err, res) => {
     if (err) {
-      console.log(err)
+      console.log(err) 
     }
     console.log(res)
   })
