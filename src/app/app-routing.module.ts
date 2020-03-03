@@ -102,6 +102,7 @@ import { HeavypetEditComponent } from "src/app/dashboard/smallpets_dashbord/heav
 import { LightpetEditComponent } from "src/app/dashboard/smallpets_dashbord/lightpet-edit/lightpet-edit.component";
 import { NormalpetEditComponent } from "src/app/dashboard/smallpets_dashbord/normalpet-edit/normalpet-edit.component";
 import { EditAccessComponent } from './Admin accessories/edit-access/edit-access.component';
+import { PaymentdoneComponent } from './paymentdone/paymentdone.component';
 import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
@@ -222,6 +223,8 @@ const routes: Routes = [
 
 {path:'access-edit/:id',component:EditAccessComponent},
 
+
+{path:'done',component:PaymentdoneComponent},
 {path:'404',component:PageNotfoundComponent},
 { path: '', component:PageNotfoundComponent},
     

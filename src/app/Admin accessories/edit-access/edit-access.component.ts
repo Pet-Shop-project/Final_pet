@@ -12,20 +12,20 @@ export class EditAccessComponent implements OnInit {
   constructor(private Serv:AccessoriesService, private router:Router,private route:ActivatedRoute,) { }
   public code;
   public ID;
-  public AccessoriesS=[]
+ 
    
       
   public Accessories=new Accessories ("","",0,0,"",0,"",['']);
   ngOnInit() {
    
     this.route.paramMap.subscribe((params:ParamMap)=>{
-      this.code=params.get('_id');
+      this.code=params.get('id');
       console.log(typeof(params.get("_id")))
      });
      this.Serv.accessories_details(this.code).subscribe(data=>{
-      this.AccessoriesS=data;
+      this.Accessories=data;
     
-      console.log(this.AccessoriesS);
+      console.log(this.Accessories);
   })
 
 }

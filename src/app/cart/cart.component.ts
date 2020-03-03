@@ -3,8 +3,6 @@ import { CartService } from '../services/cart.service';
 import { Router } from '@angular/router';
 import { LoginService } from '../services/login.service';
 import {Cart} from '../cart';
-
-
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',

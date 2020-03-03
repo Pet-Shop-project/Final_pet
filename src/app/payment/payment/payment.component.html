@@ -1,24 +1,50 @@
-<app-navbar></app-navbar>
+
 <br>
 <body>
-
-  <app-dashboard-navbar></app-dashboard-navbar>
-<div class="container-fluid">
+  <div class="container-fluid">
     <div class="row" style="margin-bottom: 150px;margin-top: 200px;">
-    <h2>Stacked form</h2>
-    <form method="POST" #form="ngForm" novalidate (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label for="card" style="font-size: 15px;margin-right: 30px;">Card Number:</label>
-        <input type="text" class="form-control" class="validate" name="card" id="card"  [(ngModel)]="cardModel.card" 
-        [class.is-invalid]="number.invalid && number.touched"  #number="ngModel" required placeholder="Card Number" style="width: 500px;height: 40px;border-radius: 20px;text-align: center;font-size: 18px;">
-      </div>
-      <div class="form-group">
-        <label for="card" style="font-size: 15px;margin-right: 10px;">Enter Verification:</label>
-        <input type="text" class="form-control" class="validate" name="verification"  id="verification" [class.is-invalid]="card.invalid &&card.touched"
-         [(ngModel)]="cardModel.verification" #card="ngModel" required placeholder="Verification Number" style="width: 500px;height: 40px;border-radius: 20px;text-align: center;font-size: 18px;">
-      </div>
-      <button class="btn fourth" type="submit" class="btn btn-primary" style="margin-left: 200px;">Submit Payment</button>
-    </form>
-  </div>
+      <h2>Stacked form</h2>
+      <form #form="ngForm" novalidate (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="card" style="font-size: 22px;margin-right: 30px;color: black;font-weight: bold;">Card
+            Number:</label>
+          <!-- <input type="text" class="form-control" class="validate" name="card" id="card"  [(ngModel)]="cardModel.card" 
+        [class.is-invalid]="number.invalid && number.touched"  #number="ngModel" required placeholder="Card Number" style="width: 500px;height: 40px;border-radius: 20px;text-align: center;font-size: 18px;"> -->
+          <!-- <input type="text" [class.is-invalid]="card.invalid && card.touched" class="form-control" #card="ngModel"
+            pattern="^\d{14}$" required [class.is-invalid]="card.invalid" [(ngModel)]="cardModel.card" name="card">
+          <div *ngIf="card.errors && (card.invalid || card.touched)">
+            <small class="text-danger" *ngIf="card.errors.required">Card Number is required</small>
+            <small class="text-danger" *ngIf="card.errors.pattern">Phone number must be 14 digits</small>
+          </div> -->
+          <input type="number" class="form-control" name="card" [(ngModel)]="cardModel.card" required
+         placeholder="Enter Card Number" [class.is-invalid]="card.invalid && card.touched" #card="ngModel"  style="width: 500px;height: 40px;border-radius: 20px;text-align: center;font-size: 18px;">
+       <small class="text-danger" [class.d-none]="card.valid || card.untouched">Card is Required</small>
+        </div>
+        <div class="form-group">
+          <label for="acount_number" style="font-size: 22px;margin-right: 10px;color: black;font-weight: bold;">Acount
+            Number:</label>
+          <input type="text" class="form-control" name="acount_number" [(ngModel)]="cardModel.acount_number" required
+            placeholder="Enter Card Number" [class.is-invalid]="acount_number.invalid && acount_number.touched"
+            #acount_number="ngModel"
+            style="width: 500px;height: 40px;border-radius: 20px;text-align: center;font-size: 18px;">
+          <small class="text-danger" [class.d-none]="acount_number.valid || acount_number.untouched">Acount Number is
+            Required</small>
+
+        </div>
+        <div class="form-group">
+          <label for="postal_code" style="font-size: 22px;margin-right: 10px;color: black;font-weight: bold;">Postal
+            Code:</label>
+          <input type="number" class="form-control" name="postal_code" [(ngModel)]="cardModel.postal_code" required
+            placeholder="Enter Postal Code" [class.is-invalid]="postal_code.invalid && postal_code.touched"
+            #postal_code="ngModel"
+            style="width: 500px;height: 40px;border-radius: 20px;text-align: center;font-size: 18px;">
+          <small class="text-danger" [class.d-none]="postal_code.valid || postal_code.untouched">Postal code is
+            Required</small>
+
+        </div>
+        <button class="btn fourth" type="submit" style="margin-left: 200px;" value="Submit Form"
+          [disabled]="form.form.invalid">Submit Payment</button>
+      </form>
+    </div>
   </div>
 </body>

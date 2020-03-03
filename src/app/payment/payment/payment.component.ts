@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Payment } from '../payment'
 import { from } from 'rxjs';
 import { PaymentService } from '../payment.service';
+import { Router } from '@angular/router';
 
 import { NavbarService } from 'src/app/services/navbar.service';
 
@@ -11,8 +12,9 @@ import { NavbarService } from 'src/app/services/navbar.service';
   styleUrls: ['./payment.component.css']
 })
 export class PaymentComponent implements OnInit {
-    public cardModel=new Payment('','');
-    constructor(private pay:PaymentService,private nav:NavbarService) { }
+  
+    public cardModel=new Payment('','','');
+    constructor(private pay:PaymentService,private router:Router,private nav :NavbarService) { }
     
 
   ngOnInit() {
@@ -20,10 +22,18 @@ export class PaymentComponent implements OnInit {
   }
   onSubmit() {
     this.pay.payment(this.cardModel).subscribe(
-      data => console.log('Payment done', data),
-      error => console.log('Error',error)
-      )
+      data => {console.log('Payment done', data)
+     if(data){
+      this.router.navigate(['/done'])
+     }
+    
+    },
+      error => {console.log('Error',error)}
+    
   
+      )
+    
     }
+  
 
 }
