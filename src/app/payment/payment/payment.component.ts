@@ -3,6 +3,8 @@ import { Payment } from '../payment'
 import { from } from 'rxjs';
 import { PaymentService } from '../payment.service';
 
+import { NavbarService } from 'src/app/services/navbar.service';
+
 @Component({
   selector: 'app-payment',
   templateUrl: './payment.component.html',
@@ -10,10 +12,11 @@ import { PaymentService } from '../payment.service';
 })
 export class PaymentComponent implements OnInit {
     public cardModel=new Payment('','');
-    constructor(private pay:PaymentService) { }
+    constructor(private pay:PaymentService,private nav:NavbarService) { }
     
 
   ngOnInit() {
+    this.nav.show()
   }
   onSubmit() {
     this.pay.payment(this.cardModel).subscribe(

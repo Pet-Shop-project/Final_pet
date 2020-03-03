@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Smallpets } from "src/app/smallpets";
 import { SmallpetServiceService } from "src/app/services/smallpet-service.service";
+import { NavbarDashboardService } from 'src/app/services/navbar-dashboard.service';
 
 @Component({
   selector: 'app-smallpet-admin-addform',
@@ -9,11 +10,11 @@ import { SmallpetServiceService } from "src/app/services/smallpet-service.servic
 })
 export class SmallpetAdminAddformComponent implements OnInit {
 
-  constructor(private getnew:SmallpetServiceService) { }
+  constructor(private getnew:SmallpetServiceService,private nav:NavbarDashboardService) { }
   
    petModel=new Smallpets("","",0 ,0,"",0 ,"",[""])
    ngOnInit() {
-    
+    this.nav.show()
    }
    onSubmit(){
      this.getnew.addnewheavypet(this.petModel).subscribe(response =>{

@@ -3,7 +3,7 @@
        <div class='overlay'></div>
        <div class='content'>
          <div class='welcome'>Light Cats<br><br>Form</div>
-         <form action="accessories/update" method='PUT' #adminform='ngForm' novalidate (ngSubmit)="onSubmit()">
+         <form action="accessories/update/:id" method='PUT' #adminform='ngForm' novalidate (ngSubmit)="onSubmit()">
          
          <div class='input-fields'>
            <!--  -->
@@ -18,7 +18,7 @@
           <input  #images="ngModel" [(ngModel)]="Accessories.images"  type='text'  class='input-line full-width' value={{Accessories.images}} name="images" placeholder="images">
        
          </div>
-        {{Accessories | json}}
+       
          <div><button  type="submit" class='ghost-round full-width'>Edit</button></div>
          </form>
        </div>

@@ -220,7 +220,7 @@ const routes: Routes = [
 {path:'normalpet_edit/:id',component:NormalpetEditComponent},
 {path:'about',component:AboutComponent},
 
-{path:'access-edit',component:EditAccessComponent},
+{path:'access-edit/:id',component:EditAccessComponent},
 
 {path:'404',component:PageNotfoundComponent},
 { path: '', component:PageNotfoundComponent},

@@ -100,4 +100,16 @@ route.get('/list',function(req,resp){
     })
     
     })
+    route.get('/details/:_id',function(req,resp){
+
+     
+      var _id=req.params._id;
+     
+     mongoose.model('accessories').findOne({_id:_id},function(err,data){
+    
+      resp.json(data);
+    
+     })
+    
+    })
   module.exports = route;

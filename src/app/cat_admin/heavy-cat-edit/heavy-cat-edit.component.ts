@@ -23,7 +23,7 @@ export class HeavyCatEditComponent implements OnInit {
      });
      this.catServ.heavy_cats_details(this.code).subscribe(data=>{
       this.cat=data;
-      this.ID=this.code.slice(0,9);
+      
       console.log(this.cat);
   })
   }
