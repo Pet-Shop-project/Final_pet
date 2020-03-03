@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./payment.component.css']
 })
 export class PaymentComponent implements OnInit {
+  
     public cardModel=new Payment('','','');
     constructor(private pay:PaymentService,private router:Router) { }
     
