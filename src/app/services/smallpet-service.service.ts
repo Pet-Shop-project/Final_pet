@@ -88,12 +88,12 @@ export class SmallpetServiceService {
 
   }
   addnewlightpet(Smallpets):Observable<any>{
-    return this.http.post('http://localhost:3000/PET-SHOP/light_pet/addpet/',Smallpets)
+    return this.http.post<any>('http://localhost:3000/PET-SHOP/light_pet/addpet/',Smallpets)
 
   }
   addnewnormalpet(Smallpets):Observable<any>{
     return this.http.post('http://localhost:3000/PET-SHOP/normal_pet/addpet/',Smallpets)
-
+ 
   }
   deletenormalsmall(id){
     return this.http.delete<any>("http://localhost:3000/PET-SHOP/normal_pet/delete/"+id)

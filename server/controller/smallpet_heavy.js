@@ -13,7 +13,7 @@ var parseUrlencoded = bodyParser.urlencoded({
 });
 router.delete('/delete/:id', function(req, res){
   console.log('Deleting a birds');
-  mongoose.model("heavySmallpets").findByIdAndRemove(req.params.id, function(err, data){
+  mongoose.model('heavySmallpets').findByIdAndRemove(req.params.id, function(err, data){
       if(err){
           res.send("Error deleting small");
       }else{
