@@ -14,15 +14,17 @@ export class LightpetEditComponent implements OnInit {
   public code;
   public ID;
 
-  public pet=new Smallpets ("","",0,0,"",0,"",['']); 
+  public pets=new Smallpets ("","",0,0,"",0,"",['']); 
   ngOnInit() {
 
     this.route.paramMap.subscribe((params:ParamMap)=>{
       this.code=params.get('id');
       
      });
+    
+   
      this.petServ.getlightdetails(this.code).subscribe(data=>{
-      this.pet=data;
+      this.pets=data;
       this.ID=this.code.slice(0,9);
      
   })
@@ -30,11 +32,12 @@ export class LightpetEditComponent implements OnInit {
 
   onSubmit(){
   
-      this.petServ.updatelightpet(this.code,this.pet).subscribe(data=>{
+   
+      this.petServ.updatelightpet(this.code,this.pets).subscribe(data=>{
         
        
         
-       
+  
         
         })
        

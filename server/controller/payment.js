@@ -37,16 +37,16 @@ route.post('/pay',parseUrlencoded,(req,res)=>{
         card: req.body.card,
         acount_number: req.body.acount_number,
         postal_code: req.body.postal_code
-        // user:req.body.user
+      
   })
   newPay.save((err,data)=>{
     if (err){ 
       console.log(err)
     }
     else{
-      console.log(data)
+   
       res.send(data)
-      console.log("Done");
+     
       
     }
     

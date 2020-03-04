@@ -18,7 +18,7 @@ router.get('/listcat', function (req, resp) {
   })
 })
 router.delete('/delete/:id', function(req, res){
-  console.log('Deleting a birds');
+
   mongoose.model("normal_cats").findByIdAndRemove(req.params.id, function(err, data){
       if(err){
           res.send("Error deleting cats");
@@ -42,7 +42,7 @@ router.get('/details/:_id', function (req, resp) {
 
 })
 router.put('/update/:id', function (req, res) {
-  console.log('Update a normal cats');
+ 
   mongoose.model("normal_cats").findByIdAndUpdate(req.params.id, {
       $set: {
         name: req.body.name,

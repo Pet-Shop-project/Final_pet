@@ -36,7 +36,7 @@ export class LightCatsDetailsComponent implements OnInit {
   
   back()
   {
-   this.router.navigate(['/listcats']);
+   this.router.navigate(['/light-cats']);
 
   }
   public addToCart(prductId,productPrice,productName,productImg){

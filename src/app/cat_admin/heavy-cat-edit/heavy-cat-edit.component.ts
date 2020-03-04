@@ -25,6 +25,8 @@ export class HeavyCatEditComponent implements OnInit {
       this.cat=data;
       this.ID=this.code.slice(0,9);
      
+      
+      console.log(this.cat);
   })
   }
   onSubmit(){

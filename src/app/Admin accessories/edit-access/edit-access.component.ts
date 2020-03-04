@@ -12,32 +12,36 @@ export class EditAccessComponent implements OnInit {
   constructor(private Serv:AccessoriesService, private router:Router,private route:ActivatedRoute,) { }
   public code;
   public ID;
-  public Accessories=[]
+ 
    
       
-  public ccessories=new Accessories ("","",0,0,"",0,"",['']);
+  public Accessories=new Accessories ("","",0,0,"",0,"",['']);
   ngOnInit() {
-    this.Serv.listaccessories().subscribe(data=>{
+   
+    this.route.paramMap.subscribe((params:ParamMap)=>{
+      this.code=params.get('id');
+      console.log(typeof(params.get("_id")))
+     });
+     this.Serv.accessories_details(this.code).subscribe(data=>{
       this.Accessories=data;
     
 
     })
+  
+     
   
 
 }
 // 
 
  
-  onSubmit(){
-    console.log("heree")
-      this.Serv.updatepet(this.code,this.ccessories).subscribe(data=>{
-        
-       
-        
-        console.log(data);
-        
-        })
-        console.log(this.ccessories);
-        
-    }
+onSubmit(){
+  console.log("heree")
+    this.Serv.updatepet(this.code,this.Accessories).subscribe(data=>{
+      
+     
+      
+      
+      
+      })}
 }

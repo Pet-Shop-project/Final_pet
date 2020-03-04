@@ -9,8 +9,6 @@ router.get('/whole', (req, res) => {
     if (error) {
       console.log(error)
     }
-    // console.log(result)
-
     res.json(result)
   })
 })
@@ -22,7 +20,7 @@ router.get("/details/:id", (req, res) => {
     if (error) {
       console.log(error)
     }
-    // console.log(data)
+   
     res.json(data)
   })
 })

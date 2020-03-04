@@ -4,7 +4,12 @@ var route = express.Router();
 var mongoose = require("mongoose");
 var bcrypt = require("bcryptjs");
 var jwt = require('jsonwebtoken');
-
+var app = express();
+let http = require('http');
+let server = http.Server(app);
+let socketIO = require('socket.io');
+// let io = socketIO();
+let io = socketIO(server);
 var allshoppets = require('../model/allshoppets')
 var cart = require('../model/cart')
 
@@ -60,12 +65,12 @@ route.get("/add/:id/:price/:name", verifytoken, function (req, resp, next) {
     if (!cart) {
       var cartModel = mongoose.model("cart")
       var cart = new cartModel()
-      cart.product_id = req.params.id // change to object of allshoppets
+      cart.product_id = req.params.id 
       cart.totalPrice = productPrice;
       cart.totalQuantity = 1;
       cart.user = cartId;
       cart.name = productName;
-      // cart.images = productImage;
+  
       cart.save(function (err, data) {
         resp.send(data);
         console.log(data);
@@ -87,7 +92,7 @@ route.get("/add/:id/:price/:name", verifytoken, function (req, resp, next) {
         }
         console.log(data)
         console.log(cart)
-        console.log("Iam Heree Update")
+      
 
 
       })
@@ -115,21 +120,28 @@ route.get('/details', verifytoken, function (req, resp) {
   }
 
 })
-
-route.get('/deleteItem/:id', verifytoken, function (req, resp) {
-  cartId = Token.useremail
-  mongoose.model('cart').deleteOne({
-    user: cartId
-  }, {
-    $pull: {
-      products: {
-        product_id: req.params.id
-      }
-    }
-  }, () => console.log("deleted" + req.params.id))
-
-  resp.end()
+io.on('connection',(socket)=>{
+  socket.on('deleteEvent',(cartId)=>{
+    route.get('/deleteItem/:id', verifytoken, function (req, resp) {
+      cartId = Token.useremail
+      mongoose.model('cart').deleteOne({
+        user: cartId
+      }, {
+        $pull: {
+          products: {
+            product_id: req.params.id
+          }
+        }
+      }, () => console.log("deleted" + req.params.id))
+    
+      resp.end()
+    })
+  })
+  socket.emit('deleteEvent',cartId)
 })
+  
+
+
 
 route.get('/clear', verifytoken, function (req, resp) {
   cartId = Token.useremail

@@ -36,7 +36,7 @@ export class AllCatDetailsComponent implements OnInit {
 
   back()
   {
-   this.router.navigate(['/listcats']);
+   this.router.navigate(['/all-cats']);
 
   }
   public addToCart(prductId,productPrice,productName,productImg){

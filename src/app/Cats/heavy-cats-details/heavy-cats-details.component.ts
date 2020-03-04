@@ -36,7 +36,7 @@ export class HeavyCatsDetailsComponent implements OnInit {
 
   back()
   {
-   this.router.navigate(['/listcats']);
+   this.router.navigate(['/heavy-cats']);
 
   }
   public addToCart(prductId,productPrice,productName,productImg){
