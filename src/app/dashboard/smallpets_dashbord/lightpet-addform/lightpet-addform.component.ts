@@ -11,7 +11,7 @@ export class LightpetAddformComponent implements OnInit {
 
   constructor(private getnew:SmallpetServiceService) { }
   
-   petModel=new Smallpets("","",0 ,0,"",0 ,"",[""])
+   petModel=new Smallpets("","",0 , 0,"",0 ,"",[""])
    ngOnInit() {
     
    }

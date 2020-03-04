@@ -19,7 +19,7 @@ export class LightpetEditComponent implements OnInit {
 
     this.route.paramMap.subscribe((params:ParamMap)=>{
       this.code=params.get('id');
-      console.log(typeof(params.get("id")))
+      console.log(typeof(params.get("_id")))
      });
      this.petServ.getlightdetails(this.code).subscribe(data=>{
       this.pet=data;
@@ -31,16 +31,10 @@ export class LightpetEditComponent implements OnInit {
   onSubmit(){
     console.log("heree")
       this.petServ.updatelightpet(this.code,this.pet).subscribe(data=>{
-        
-       
-        
-        console.log(data);
+     console.log(data);
         
         })
         console.log(this.pet);
         
     }
-
-
-
 }

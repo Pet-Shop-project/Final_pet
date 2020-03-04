@@ -14,7 +14,7 @@
     <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB" *ngFor="let cat of cats |paginate:config" (click)="onSelect(cat)"  style="border-radius: 25px; width: 425px;height: 300px;">
       <div class="img-container m-0 p-0 shadow-sm">
         <img src="{{cat.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 25px; width: 425px;height: 300px;">
-        <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 25px; width: 425px;height: 300px; margin-left: 22px;">
+        <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 25px; width: 425px;height: 300px; margin-left: 41px;">
           <h2>{{cat.name}}</h2>
           <p class="d-block small ">{{cat.price}} EGP</p>
         </div>
@@ -26,7 +26,7 @@
     <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB" *ngFor="let cat of sortCat " (click)="onSelect(cat)"  style="border-radius: 25px; width: 425px;height: 300px;">
       <div class="img-container m-0 p-0 shadow-sm">
         <img src="{{cat.images[0]}}" class="img-center img-fluid img-showcase" style="border-radius: 25px; width: 425px;height: 300px;">
-        <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 25px; width: 425px;height: 300px; margin-left: 22px;">
+        <div class="overlay d-flex flex-column align-items-center justify-content-center" style="border-radius: 25px; width: 425px;height: 300px; margin-left:41px;">
           <h2>{{cat.name}}</h2>
           <p class="d-block small ">{{cat.price}} EGP</p>
         </div>

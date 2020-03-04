@@ -36,7 +36,6 @@ router.get('/light', (req, res) => {
 
 
 
-
 router.get("/details/:id", (req, res) => {
   mongoose.model("lightSmallpets").findOne({
     _id: req.params.id
