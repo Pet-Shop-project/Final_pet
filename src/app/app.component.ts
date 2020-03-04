@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { SocketConnectionService } from "src/app/services/socket-connection.service";
+
 import { NgxSpinnerService } from 'ngx-spinner';
 
 
@@ -8,9 +10,12 @@ import { NgxSpinnerService } from 'ngx-spinner';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private spinner: NgxSpinnerService) { }
+  constructor(private spinner: NgxSpinnerService,private socketserv:SocketConnectionService) { }
   title = 'pet-shop';
+
+  
   ngOnInit() {
+    this.socketserv.sockconnect()
     this.spinner.show();
     setTimeout(() => {
       this.spinner.hide();

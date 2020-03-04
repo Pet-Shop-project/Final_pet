@@ -113,7 +113,7 @@ const routes: Routes = [
   {path:'dogs/alldogs',component:AlldogsComponent},
   {path:'dogs/lightdogs',component:LightdogsComponent},
   {path:'dogs/normaldogs',component:NormaldogsComponent},
-  {path:'dogs/heavydogs',component:HeavydogsComponent},
+  {path:'dogs/heavydogs',component:HeavydogsComponent}, 
   {path:'alldogdetails/:_id',component:AlldogdetailsComponent},
   {path:'all-cat-details/:_id',component:AllCatDetailsComponent},
 

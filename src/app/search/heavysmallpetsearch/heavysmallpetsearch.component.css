@@ -32,6 +32,7 @@
   .workItem {
     display: none;
   }
+ 
   .show-workItem {
     display: block;
     transition: all .35s ease;
@@ -50,7 +51,7 @@
     text-align: center;
     padding-top: 130px;
   }
-  .overlay:hover {
+  .overlay:hover { 
     opacity: 1;
   }
   .action-button

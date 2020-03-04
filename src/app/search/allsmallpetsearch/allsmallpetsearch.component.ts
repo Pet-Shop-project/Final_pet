@@ -28,4 +28,7 @@ public smallpet:[];
   showdetails(all){
     this.router.navigate(["/alldetail",all._id])
     }
+    back(){
+      this.router.navigate(['smallpets/all'])
+      }
 }

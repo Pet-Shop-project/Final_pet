@@ -2,7 +2,7 @@
 
 <app-dashboard-navbar></app-dashboard-navbar>
 
-<div class="container">
+<div class="container"> 
     <div class="row mt-4">
         <div class="btn" routerLink='/normaldog_addform'>Add new dog<div class="btn2"></div>
       </div>
@@ -12,7 +12,7 @@
       <div class="col-md-4 mt-4" *ngFor="let dog of dogs">
         <div class="card profile-card-5" >
             <div class="card-img-block">
-                <img class="card-img-top" src="{{dog.images[0]}}" alt="Card image cap">
+                <img class="card-img-top" src="{{dog.images[0]}}" alt="Card image cap" style="width: 300px; height: 300px;">
             </div>
                 <div class="card-body pt-0">
                 <h4 class="card-title">{{dog.name}}</h4>
