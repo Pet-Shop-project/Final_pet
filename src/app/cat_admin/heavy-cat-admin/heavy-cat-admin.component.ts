@@ -22,8 +22,8 @@ export class HeavyCatAdminComponent implements OnInit {
   }
   delete(cat){
     this.catsServ.deleteheavycat(cat._id).subscribe(data=>{
-       console.log('cat deleted')
-      // this.bird=data
+       
+      
      })
      
    }
@@ -31,7 +31,7 @@ export class HeavyCatAdminComponent implements OnInit {
 
   onSelect(cat){
     this.router.navigate(['/heavy-cats-details',cat._id])
-   console.log(cat._id);
+  
    
   }
   onSelect_heavy(cat){

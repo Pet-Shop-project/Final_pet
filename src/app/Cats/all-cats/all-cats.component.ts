@@ -48,16 +48,16 @@ export class AllCatsComponent implements OnInit {
 
     this.cat.listallcats().subscribe(data=>{
       this.cats=data;
-      console.log(data);
+     
   })
 }
 onSelect(cat){
   this.router.navigate(['/all-cat-details',cat._id])
-  console.log(cat._id)
+ 
 }
 search(name){
   this.router.navigate(['/allcatsearch',name])
- console.log(name);
+
  
 }
 

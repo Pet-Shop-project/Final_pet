@@ -57,7 +57,7 @@ public sortCat=[]
 
   onSelect(cat){
     this.router.navigate(['/heavy-cats-details',cat._id])
-   console.log(cat._id);
+ 
    
   }
 
@@ -71,7 +71,7 @@ public sortCat=[]
 }
 search(name){
   this.router.navigate(['/heavycatsearch',name])
- console.log(name);
+ 
  
 }
 

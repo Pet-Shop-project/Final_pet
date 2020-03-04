@@ -18,15 +18,14 @@ export class NormalCatAdminComponent implements OnInit {
   }
   delete(cat){
     this.catsServ.deletenormalcat(cat._id).subscribe(data=>{
-       console.log('cat deleted')
-      // this.bird=data
+      
      })
      
    }
 
   onSelect(cat){
     this.router.navigate(['/normal-cats-details',cat._id])
-   console.log(cat._id);
+   
    
   }
   onSelect_norm(cat){

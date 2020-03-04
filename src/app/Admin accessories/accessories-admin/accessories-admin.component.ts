@@ -23,7 +23,7 @@ export class AccessoriesAdminComponent implements OnInit {
 }
 delete(accessory){
   this.acc.deleteaccessories(accessory._id).subscribe(data=>{
-     console.log('accssoreis deleted')
+     
     // this.bird=data
    })
    

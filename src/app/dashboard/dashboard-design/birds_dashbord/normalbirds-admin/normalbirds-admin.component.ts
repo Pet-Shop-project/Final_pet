@@ -15,14 +15,13 @@ export class NormalbirdsAdminComponent implements OnInit {
   ngOnInit() {
     this.bird.listnormalbird().subscribe(data=>{
       this.birds=data;
-      console.log(data)
+      
     })
   
   }
   delete(bird){
     this.bird.deletenormaltbird(bird._id).subscribe(data=>{
-       console.log('bird deleted')
-      // this.bird=data
+     
      })
     }
   showdetails(bird){

@@ -25,17 +25,17 @@ public birds=new Birds("", "",0,0,"",0,"",[""]);
      this.getallbirds.alldetails(this.allid).subscribe(data =>{
       this.birds=data;
      })
-      // console.log(this.lightdetails)
+      
   }
   public addToCart(prductId,productPrice,productName,productImg){
-    console.log(prductId)
+    
     this.cartserv.cartProducting(prductId,productPrice,productName,productImg).subscribe(
       response => console.log('Add to cart', response),
       error => console.log('error',error)
       )
   }
   public addToWishlist(prductId,productPrice,productName,productImg){
-    console.log(prductId)
+    
     this.wishlist.cartProducting(prductId,productPrice,productName,productImg).subscribe(
       response => console.log('Add to Wishlist', response),
       error => console.log('error',error)

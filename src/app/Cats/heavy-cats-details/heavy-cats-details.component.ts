@@ -23,14 +23,14 @@ export class HeavyCatsDetailsComponent implements OnInit {
 
     this.route.paramMap.subscribe((params:ParamMap)=>{
       this.code=params.get('_id');
-      console.log(typeof(params.get("_id")))
+      
      });
 
 
      this.catServ.heavy_cats_details(this.code).subscribe(data=>{
       this.cat=data;
       this.ID=this.code.slice(0,9);
-      console.log(this.cat);
+     
     })
   }
 
@@ -40,14 +40,14 @@ export class HeavyCatsDetailsComponent implements OnInit {
 
   }
   public addToCart(prductId,productPrice,productName,productImg){
-    console.log(prductId)
+   
     this.cartserv.cartProducting(prductId,productPrice,productName,productImg).subscribe(
       response => console.log('Add to cart', response),
       error => console.log('error',error)
       )
   }
   public addToWishlist(prductId,productPrice,productName,productImg){
-    console.log(prductId)
+   
     this.wishlist.cartProducting(prductId,productPrice,productName,productImg).subscribe(
       response => console.log('Add to Wishlist', response),
       error => console.log('error',error)

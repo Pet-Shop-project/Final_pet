@@ -19,12 +19,12 @@ export class HeavypetEditComponent implements OnInit {
 
     this.route.paramMap.subscribe((params:ParamMap)=>{
       this.code=params.get('id');
-      console.log(typeof(params.get("_id")))
+    
      });
      this.petServ.getheavydetails(this.code).subscribe(data=>{
       this.pet=data;
       this.ID=this.code.slice(0,9);
-      console.log(this.pet);
+     
   })
   }
 

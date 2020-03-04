@@ -19,25 +19,25 @@ export class NormalpetEditComponent implements OnInit {
 
     this.route.paramMap.subscribe((params:ParamMap)=>{
       this.code=params.get('id');
-      console.log(typeof(params.get("_id")))
+    
      });
      this.petServ.getnormaldetails(this.code).subscribe(data=>{
       this.pet=data;
       this.ID=this.code.slice(0,9);
-      console.log(this.pet);
+      
   })
   }
 
   onSubmit(){
-    console.log("heree")
+   
       this.petServ.updatenormalpet(this.code,this.pet).subscribe(data=>{
         
        
         
-        console.log(data);
+        
         
         })
-        console.log(this.pet);
+      
         
     }
 

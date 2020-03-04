@@ -62,7 +62,7 @@ public labels: any = {
 }
 search(name){
   this.router.navigate(['/heavybirdssearch',name])
- console.log(name);
+ 
  
 }
 }

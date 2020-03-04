@@ -15,13 +15,12 @@ export class LightbirdsAdminComponent implements OnInit {
   ngOnInit() {
     this.bird.listlightd().subscribe(data=>{
       this.birds=data;
-      console.log(data)
+     
     })
   }
   delete(bird){
     this.bird.deletelightbird(bird._id).subscribe(data=>{
-       console.log('bird deleted')
-      // this.bird=data
+      
      })
      
    }

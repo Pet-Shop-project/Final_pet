@@ -19,25 +19,25 @@ export class NormalbirdEditComponent implements OnInit {
 
     this.route.paramMap.subscribe((params:ParamMap)=>{
       this.code=params.get('id');
-      console.log(typeof(params.get("_id")))
+      
      });
      this.birdServ.normaldetails(this.code).subscribe(data=>{
       this.bird=data;
       this.ID=this.code.slice(0,9);
-      console.log(this.bird);
+     
   })
   }
 
   onSubmit(){
-    console.log("heree")
+ 
       this.birdServ.updatenormalpet(this.code,this.bird).subscribe(data=>{
         
        
         
-        console.log(data);
+       
         
         })
-        console.log(this.bird);
+       
         
     }
 

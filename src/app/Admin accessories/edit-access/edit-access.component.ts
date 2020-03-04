@@ -19,7 +19,7 @@ export class EditAccessComponent implements OnInit {
   ngOnInit() {
     this.Serv.listaccessories().subscribe(data=>{
       this.Accessories=data;
-    console.log(data);
+    
 
     })
   

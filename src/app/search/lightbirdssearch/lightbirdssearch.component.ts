@@ -24,6 +24,9 @@ export class LightbirdssearchComponent implements OnInit {
        this.birds=data;
      })
   }
+  back(){
+    this.router.navigate(['/light-birds'])
+    }
   showdetails(bird){
     this.router.navigate(["/light-details",bird._id])
     }

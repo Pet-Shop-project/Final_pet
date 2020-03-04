@@ -14,13 +14,12 @@ public dogs=[];
   ngOnInit() {
     this.dog.listlightd().subscribe(data=>{
     this.dogs=data;
-    console.log(data);
+   
     })
   }
   delete(dog){
     this.dog.deletelightdog(dog._id).subscribe(data=>{
-       console.log('dog deleted')
-      // this.bird=data
+      
      })
      
    }

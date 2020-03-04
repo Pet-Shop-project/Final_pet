@@ -17,12 +17,12 @@ public pets:[];
       this.pets=data
      
     );
-    console.log(this.normalsmallpet)
+    
   }
   delete(pet){
     this.getnormalpet.deletenormalsmall(pet._id).subscribe(data=>{
-       console.log('small deleted')
-      // this.bird=data
+       
+     
      })
      
    } 

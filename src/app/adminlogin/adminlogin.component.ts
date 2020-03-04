@@ -65,7 +65,7 @@ export class AdminloginComponent implements OnInit {
       this.Result= true; 
   
       this.Div=error.error.Msg
-      console.log("erro")
+      
     }
     );
   }

@@ -48,7 +48,7 @@ public labels: any = {
   ngOnInit() {
     this.bird.listallbirds().subscribe(data=>{
       this.birds=data;
-      console.log(data)
+      
     })
   
   }
@@ -57,7 +57,7 @@ public labels: any = {
     }
     search(name){
       this.router.navigate(['/allbirdssearch',name])
-     console.log(name);
+     
      
     }
   }

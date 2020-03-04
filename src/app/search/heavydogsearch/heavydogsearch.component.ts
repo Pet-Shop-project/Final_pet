@@ -33,7 +33,7 @@ export class HeavydogsearchComponent implements OnInit {
     }
     onSelect(dog){
       this.router.navigate(['/heavydogdetails',dog._id])
-      console.log(dog._id)
+      
     }
 
 }
