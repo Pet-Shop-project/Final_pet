@@ -18,15 +18,14 @@ export class LightCatAdminComponent implements OnInit {
   }
   delete(cats){
     this.catsServ.deletelightcats(cats._id).subscribe(data=>{
-       console.log('cat deleted')
-      // this.bird=data
+       
      })
      
    }
 
   onSelect(cat){
     this.router.navigate(['/light-cats-details',cat._id])
-   console.log(cat._id);
+  
    
   }
   onSelect_light(cat){

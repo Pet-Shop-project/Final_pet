@@ -18,12 +18,12 @@ export class LightDogEditComponent implements OnInit {
 
     this.route.paramMap.subscribe((params:ParamMap)=>{
       this.code=params.get('id');
-      console.log(typeof(params.get("_id")))
+     
      });
      this.dogServ.lightdogdetails(this.code).subscribe(data=>{
       this.dog=data;
       this.ID=this.code.slice(0,9);
-      console.log(this.dog);
+     
   })
   }
   onSubmit(){

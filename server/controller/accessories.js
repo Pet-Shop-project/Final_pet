@@ -68,7 +68,7 @@ route.get('/list',function(req,resp){
       if (err){
         console.log(err)
       }
-      console.log(res)
+  
     })
   }) 
   route.get('/search/:name',function(req,resp){
@@ -98,6 +98,18 @@ route.get('/list',function(req,resp){
         }
         resp.send(cats);
     })
+    
+    })
+    route.get('/details/:_id',function(req,resp){
+
+     
+      var _id=req.params._id;
+     
+     mongoose.model('accessories').findOne({_id:_id},function(err,data){
+    
+      resp.json(data);
+    
+     })
     
     })
   module.exports = route;

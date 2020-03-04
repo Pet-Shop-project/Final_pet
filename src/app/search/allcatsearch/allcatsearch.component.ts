@@ -29,5 +29,8 @@ export class AllcatsearchComponent implements OnInit {
     this.router.navigate(['/all-cat-details',cat._id])
     console.log(cat._id)
   }
+  back(){
+    this.router.navigate(['/all-cats'])
+    }
 
 }

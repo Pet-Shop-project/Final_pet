@@ -2,17 +2,17 @@
 
 <app-dashboard-navbar></app-dashboard-navbar>
 
-<div class="container">
+<div class="container"> 
     <div class="row mt-4">
         <div class="btn" routerLink='/normaldog_addform'>Add new dog<div class="btn2"></div>
       </div>
       </div>
     
     <div class="row" style="margin-bottom: 100px;">
-      <div class="col-md-4 mt-4" *ngFor="let dog of dogs" (click)="onSelect(dog)">
+      <div class="col-md-4 mt-4" *ngFor="let dog of dogs">
         <div class="card profile-card-5" >
             <div class="card-img-block">
-                <img class="card-img-top" src="{{dog.images[0]}}" alt="Card image cap">
+                <img class="card-img-top" src="{{dog.images[0]}}" alt="Card image cap" style="width: 300px; height: 300px;">
             </div>
                 <div class="card-body pt-0">
                 <h4 class="card-title">{{dog.name}}</h4>
@@ -21,7 +21,7 @@
                 <h5 class="card-text">Color: {{accessory.color}}</h5> -->
                 <div (click)="onSelect_normal(dog)">
                   <a  class="action-button shadow animate blue" >Edit</a></div>
-                  <button (click)=" delete (dog)" class="btn btn-info"> Delete</button> 
+                  <button (click)=" delete (dog)" class="action-button shadow animate red"> Delete</button>  
                 
               </div>
             </div>

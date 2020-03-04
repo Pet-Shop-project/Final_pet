@@ -55,7 +55,7 @@ export class NormalCatsComponent implements OnInit {
   
   onSelect(cat){
     this.router.navigate(['/normal-cats-details',cat._id])
-   console.log(cat._id);
+   
    
   }
   on_click(){
@@ -67,7 +67,7 @@ export class NormalCatsComponent implements OnInit {
 }
 search(name){
   this.router.navigate(['/normalcatsearch',name])
- console.log(name);
+ 
  
 }
 

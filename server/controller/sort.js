@@ -53,7 +53,7 @@ router.get('/listcat_heavy',function(req,resp){
 
 
   })
-  // birds
+
 
 router.get('/listbirds_norm',function(req,resp){
 

@@ -3,15 +3,17 @@
 
 <div class="container">
     <div class="row mt-4">
-        <div class="btn" routerLink='/lightpet_addform'>Add new pet<div class="btn2"></div>
+        <div class="btn" routerLink='/lightpet_addform'>Add new pet
+          <div class="btn2"></div>
       </div>
-      </div>
+    
   
     <div class="row" style="margin-bottom: 100px;">
       <div class="col-md-4 mt-4" *ngFor="let pet of pets" (click)="onSelect(pet)">
+      
         <div class="card profile-card-5" >
             <div class="card-img-block">
-                <img class="card-img-top" src="{{pet.images[0]}}" alt="Card image cap">
+                <img class="card-img-top" src="{{pet.images[0]}}" alt="Card image cap" style="width: 300px; height: 300px;">
             </div>
                 <div class="card-body pt-0">
                 <h4 class="card-title">{{pet.name}}</h4>
@@ -19,11 +21,12 @@
               
                 <div (click)="onSelect_light(pet)">
                     <a  class="action-button shadow animate blue" >Edit</a></div>
-                    <button (click)=" delete (pets)" class="btn btn-info"> Delete</button> 
+                    <button (click)=" delete (pet)" class="action-button shadow animate red"> Delete</button> 
                 
               </div>
-            </div>
+          
     </div>
     </div>
+  </div>
   </div>
 

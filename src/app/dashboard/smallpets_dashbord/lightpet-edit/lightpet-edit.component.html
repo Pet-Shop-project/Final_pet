@@ -1,5 +1,4 @@
 <div class='container'>
-
   <div class='window'>
     <div class='overlay'></div>
     <div class='content'>
@@ -7,33 +6,33 @@
       <div class='welcome'>light pet<br><br> Form</div>
       <form action="/light_pet/update/:id" method="PUT" #adminform='ngForm' novalidate (ngSubmit)="onSubmit()">
         <div class='input-fields'>
-          <input type='text' name="name" class='input-line full-width' #name="ngModel" [(ngModel)]="pet.name"
-            value="{{pet.name}}">
-          <input type='text' name="size" class='input-line full-width' #size="ngModel" [(ngModel)]="pet.size"
-            value="{{pet.size}}">
+          <input type='text' name="name" class='input-line full-width' #name="ngModel" [(ngModel)]="pets.name"
+            value="{{pets.name}}">
+          <input type='text' name="size" class='input-line full-width' #size="ngModel" [(ngModel)]="pets.size"
+            value="{{pets.size}}">
           <input type='number' name="life_span" class='input-line full-width' #life_span="ngModel"
-            [(ngModel)]="pet.life_span" value="{{pet.life_span}}">
-          <input type='number' name="weight" class='input-line full-width' #weight="ngModel" [(ngModel)]="pet.weight"
-            value="{{pet.weight}}">
-          <input type='text' name="color" class='input-line full-width' #color="ngModel" [(ngModel)]="pet.color"
-            value="{{pet.color}}">
-          <input type='number' name="price" class='input-line full-width' #price="ngModel" [(ngModel)]="pet.price"
-            value="{{pet.price}}">
+            [(ngModel)]="pets.life_span" value="{{pets.life_span}}">
+          <input type='number' name="weight" class='input-line full-width' #weight="ngModel" [(ngModel)]="pets.weight"
+            value="{{pets.weight}}">
+          <input type='text' name="color" class='input-line full-width' #color="ngModel" [(ngModel)]="pets.color"
+            value="{{pets.color}}">
+          <input type='number' name="price" class='input-line full-width' #price="ngModel" [(ngModel)]="pets.price"
+            value="{{pets.price}}">
           <input type='text' name="temperament" class='input-line full-width' #temperament="ngModel"
-            [(ngModel)]="pet.temperament" value="{{pet.temperament}}">
-          <input type='text' name="images" class='input-line full-width' #images="ngModel" [(ngModel)]="pet.images[0]"
-            value="{{pet.images[0]}}">
-          <input type='text' name="images" class='input-line full-width' #images="ngModel" [(ngModel)]="pet.images[1]"
-            value="{{pet.images[1]}}">
-          <input type='text' name="images" class='input-line full-width' #images="ngModel" [(ngModel)]="pet.images[2]"
-            value="{{pet.images[2]}}">
-          <input type='text' name="images" class='input-line full-width' #images="ngModel" [(ngModel)]="pet.images[3]"
-            value="{{pet.images[3]}}">
+            [(ngModel)]="pets.temperament" value="{{pets.temperament}}">
+          <input type='text' name="images" class='input-line full-width' #images="ngModel" [(ngModel)]="pets.images[0]"
+            value="{{pets.images[0]}}">
+          <input type='text' name="images" class='input-line full-width' #images="ngModel" [(ngModel)]="pets.images[1]"
+            value="{{pets.images[1]}}">
+          <input type='text' name="images" class='input-line full-width' #images="ngModel" [(ngModel)]="pets.images[2]"
+            value="{{pets.images[2]}}">
+          <input type='text' name="images" class='input-line full-width' #images="ngModel" [(ngModel)]="pets.images[3]"
+            value="{{pets.images[3]}}">
         </div>
 
         <button type="submit" class='ghost-round full-width '>Edit</button>
       </form>
     </div>
-  </div>
+</div>
 
 </div>

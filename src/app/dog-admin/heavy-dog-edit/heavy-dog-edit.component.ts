@@ -19,24 +19,23 @@ export class HeavyDogEditComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe((params:ParamMap)=>{
       this.code=params.get('id');
-      console.log(typeof(params.get("_id")))
+     
      });
      this.dogServ.heavydetails(this.code).subscribe(data=>{
       this.dog=data;
       this.ID=this.code.slice(0,9);
-      console.log(this.dog);
+     
   })
   }
   onSubmit(){
-    console.log("heree")
+   
       this.dogServ.updateheavypet(this.code,this.dog).subscribe(data=>{
         
        
         
-        console.log(data);
+       
         
         })
-        console.log(this.dog);
-        
+       
     }
 }

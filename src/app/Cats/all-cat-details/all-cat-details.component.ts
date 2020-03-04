@@ -23,20 +23,20 @@ export class AllCatDetailsComponent implements OnInit {
 
     this.route.paramMap.subscribe((params:ParamMap)=>{
       this.code=params.get('_id');
-      console.log(typeof(params.get("_id")))
+     
      });
 
 
      this.catServ.all_details(this.code).subscribe(data=>{
       this.cat=data;
       
-      console.log(this.cat);
+      
     })
   }
 
   back()
   {
-   this.router.navigate(['/listcats']);
+   this.router.navigate(['/all-cats']);
 
   }
   public addToCart(prductId,productPrice,productName,productImg){
@@ -47,7 +47,7 @@ export class AllCatDetailsComponent implements OnInit {
       )
   }
   public addToWishlist(prductId,productPrice,productName,productImg){
-    console.log(prductId)
+    
     this.wishlist.cartProducting(prductId,productPrice,productName,productImg).subscribe(
       response => console.log('Add to Wishlist', response),
       error => console.log('error',error)

@@ -24,6 +24,9 @@ export class AllbirdsearchComponent implements OnInit {
        this.birds=data;
      })
   }
+  back(){
+    this.router.navigate(['/all-birds'])
+    }
   showdetails(bird){
     this.router.navigate(["/all-details",bird._id])
     }

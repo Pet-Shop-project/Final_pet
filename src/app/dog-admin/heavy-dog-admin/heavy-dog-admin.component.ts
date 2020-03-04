@@ -19,8 +19,7 @@ export class HeavyDogAdminComponent implements OnInit {
   }
   delete(dog){
     this.dog.deleteheavydog(dog._id).subscribe(data=>{
-       console.log('dog deleted')
-      // this.bird=data
+      
      })
      
    }

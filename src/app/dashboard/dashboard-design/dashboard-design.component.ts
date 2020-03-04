@@ -12,7 +12,7 @@ export class DashboardDesignComponent implements OnInit {
 
   constructor(public nav: NavbarService,private router:Router,private LogServ : AdminloginService ) {
     if(this.LogServ.auth()){
-      console.log(this.LogServ.auth())
+     
       this.router.navigate(['../dashboard'])
     }
     else{

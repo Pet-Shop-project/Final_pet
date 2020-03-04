@@ -18,12 +18,12 @@ export class LightsmallAdminComponent implements OnInit {
       this.pets=data
      
     );
-    console.log(this.pets)
+   
   }
-  delete(pets){
-    this.getLightpet.deletelightsmall(pets._id).subscribe(data=>{
-       console.log('small deleted')
-      // this.bird=data
+  delete(pet){
+    this.getLightpet.deletelightsmall(pet._id).subscribe(data=>{
+       
+    
      })
      
    }

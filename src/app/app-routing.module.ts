@@ -113,7 +113,7 @@ const routes: Routes = [
   {path:'dogs/alldogs',component:AlldogsComponent},
   {path:'dogs/lightdogs',component:LightdogsComponent},
   {path:'dogs/normaldogs',component:NormaldogsComponent},
-  {path:'dogs/heavydogs',component:HeavydogsComponent},
+  {path:'dogs/heavydogs',component:HeavydogsComponent}, 
   {path:'alldogdetails/:_id',component:AlldogdetailsComponent},
   {path:'all-cat-details/:_id',component:AllCatDetailsComponent},
 
@@ -221,7 +221,9 @@ const routes: Routes = [
 {path:'normalpet_edit/:id',component:NormalpetEditComponent},
 {path:'about',component:AboutComponent},
 
-{path:'access-edit',component:EditAccessComponent},
+{path:'access-edit/:id',component:EditAccessComponent},
+
+
 {path:'done',component:PaymentdoneComponent},
 {path:'404',component:PageNotfoundComponent},
 { path: '', component:PageNotfoundComponent},

@@ -25,7 +25,7 @@ function verifytoken(req, res, next) {
   })
 }
 
-//Register New Account
+
 app.use(bodyParser.urlencoded({
   extended: true
 }));
@@ -38,9 +38,7 @@ router.post('/register', (req, res) => {
     password2
   } = req.body
   var error;
-  // if (error) {
-  //   return res.status(400).send(error.details[0].message);
-  // }
+ 
 
   if (!name || !email || !password || !password2) {
     res.status(501).json({
@@ -63,7 +61,7 @@ router.post('/register', (req, res) => {
     });
 
   } else {
-    //validation passed
+   
     User.findOne({
       email: email
     }).then(user => {
@@ -98,7 +96,7 @@ router.post('/register', (req, res) => {
 
   }
 })
-//Login to registered account
+
 router.post('/login', (req, res, next) => {
   const {
     email,
@@ -116,7 +114,7 @@ router.post('/login', (req, res, next) => {
       });
     }
 
-    // Match password
+   
     bcrypt.compare(password, user.password, (err, isMatch) => {
       if (isMatch) {
         let token = jwt.sign({
@@ -124,7 +122,7 @@ router.post('/login', (req, res, next) => {
         }, 'Secret', {
           expiresIn: '3h'
         })
-        // console.log(token)
+       
         res.status(200).json(token);
       } else {
         res.status(501).json({

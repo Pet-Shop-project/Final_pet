@@ -10,7 +10,7 @@ var parseUrlencoded = bodyParser.urlencoded({
 route.get('/list',function(req,resp){
     mongoose.model('alldogs').find(function (err, data) {
          resp.json(data);
-        //  resp.send("data");
+       
   })
   })
   route.get('/details/:_id', function (req, resp) {

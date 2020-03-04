@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AccessoriesService } from "src/app/services/accessories.service";
 import { Accessories } from 'src/app/accessories';
+import { NavbarDashboardService } from 'src/app/services/navbar-dashboard.service';
 
 @Component({
   selector: 'app-accessories-admin-addform',
@@ -9,7 +10,7 @@ import { Accessories } from 'src/app/accessories';
 })
 export class AccessoriesAdminAddformComponent implements OnInit {
 
-  constructor(private getnew:AccessoriesService) { }
+  constructor(private getnew:AccessoriesService,private nav:NavbarDashboardService) { }
  
   accessModel=new Accessories("","",0 , 0,"",0 ,"",[""])
   ngOnInit() {
@@ -18,7 +19,9 @@ export class AccessoriesAdminAddformComponent implements OnInit {
   onSubmit(){
     this.getnew.addnewaccessory(this.accessModel).subscribe(response =>{
      console.log('data saved',response)
-  })
+  }),
+ this.nav.show()
+  
   }
   
   

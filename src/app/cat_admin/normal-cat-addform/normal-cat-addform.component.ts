@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Cats } from "src/app/cats";
 import { HeavtCatsService } from "src/app/services/heavt-cats.service";
+import { NavbarDashboardService } from 'src/app/services/navbar-dashboard.service';
 
 @Component({
   selector: 'app-normal-cat-addform',
@@ -10,7 +11,7 @@ import { HeavtCatsService } from "src/app/services/heavt-cats.service";
 export class NormalCatAddformComponent implements OnInit {
 
   catModel=new Cats("","",0,0,"",0,"",[""])
-  constructor(private getnew:HeavtCatsService) { }
+  constructor(private getnew:HeavtCatsService,private nav:NavbarDashboardService) { }
 
   ngOnInit() {
   }
@@ -19,6 +20,7 @@ export class NormalCatAddformComponent implements OnInit {
     this.getnew.addnewnormalcat(this.catModel).subscribe(response =>{
       console.log('data saved',response)
    })
+   this.nav.show()
   }
 
 }

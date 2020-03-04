@@ -5,6 +5,7 @@ import { Adminlogin } from './adminlogin';
 import { AdminloginService } from './adminlogin.service';
 import { NgForm } from '@angular/forms';
 import { GeneraladminService } from '../addnewadmin/generaladmin.service';
+import { NavbarDashboardService } from '../services/navbar-dashboard.service';
 
 @Component({
   selector: 'app-adminlogin',
@@ -17,7 +18,7 @@ export class AdminloginComponent implements OnInit {
   Result2: boolean=false;
   Div: string;
   Div2: string;
-  constructor(private router:Router , private Gen:GeneraladminService,private adminserv:AdminloginService) { }
+  constructor(private router:Router , private Gen:GeneraladminService,private adminserv:AdminloginService,private nav:NavbarDashboardService) { }
 
   ngOnInit() {
     this.resetForm()
@@ -35,6 +36,7 @@ export class AdminloginComponent implements OnInit {
       this.Result = true
     this.Div= "Please Login To view this Page"
     }
+    this.nav.show()
   }
   onSubmit (form :NgForm)
   {
@@ -65,7 +67,7 @@ export class AdminloginComponent implements OnInit {
       this.Result= true; 
   
       this.Div=error.error.Msg
-      console.log("erro")
+      
     }
     );
   }

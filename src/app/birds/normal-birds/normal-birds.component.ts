@@ -50,7 +50,7 @@ public start_sort=false
   ngOnInit() {
     this.bird.listnormalbird().subscribe(data=>{
       this.birds=data;
-      console.log(data)
+      
     })
   
   }
@@ -65,7 +65,7 @@ public start_sort=false
 }
 search(name){
   this.router.navigate(['/normalbirdssearch',name])
- console.log(name);
+ 
  
 }
 }

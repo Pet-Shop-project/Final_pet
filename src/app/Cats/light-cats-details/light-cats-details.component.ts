@@ -21,14 +21,14 @@ export class LightCatsDetailsComponent implements OnInit {
 
     this.route.paramMap.subscribe((params:ParamMap)=>{
       this.code=params.get('_id');
-      console.log(typeof(params.get("_id")))
+     
      });
 
 
      this.catServ.light_cats_details(this.code).subscribe(data=>{
       this.cat=data;
       this.ID=this.code.slice(0,9);
-      console.log(this.cat);
+      
     })
   }
 
@@ -36,7 +36,7 @@ export class LightCatsDetailsComponent implements OnInit {
   
   back()
   {
-   this.router.navigate(['/listcats']);
+   this.router.navigate(['/light-cats']);
 
   }
   public addToCart(prductId,productPrice,productName,productImg){

@@ -8,7 +8,7 @@ var parseUrlencoded = bodyParser.urlencoded({
   extended: true
 });
 router.delete('/delete/:id', function(req, res){
-  console.log('Deleting a pet');
+ 
   mongoose.model("normalSmallpets").findByIdAndRemove(req.params.id, function(err, data){
       if(err){
           res.send("Error deleting small");
@@ -34,12 +34,12 @@ router.get("/details/:id",(req,res)=>{
         if(error){
             console.log(error)
         }
-        // console.log(data)
+      
         res.json(data)
     }) 
 }) 
 router.put('/update/:id', function(req, res){
-    console.log('Update a normal Smallpets');
+    
     mongoose.model("normalSmallpets").findByIdAndUpdate(req.params.id,
     {
         $set: {name: req.body.name,

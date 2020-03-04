@@ -49,7 +49,7 @@ public start_sort=false
   ngOnInit() {
     this.bird.listlightd().subscribe(data=>{
       this.birds=data;
-      console.log(data)
+      
     })
   }
   showdetails(bird){
@@ -63,7 +63,7 @@ public start_sort=false
 }
 search(name){
   this.router.navigate(['/lightbirdssearch',name])
- console.log(name);
+ 
  
 }
 }

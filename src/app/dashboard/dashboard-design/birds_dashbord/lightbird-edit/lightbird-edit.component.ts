@@ -19,12 +19,12 @@ export class LightbirdEditComponent implements OnInit {
 
     this.route.paramMap.subscribe((params:ParamMap)=>{
       this.code=params.get('id');
-      console.log(typeof(params.get("_id")))
+    
      });
      this.birdServ.lightbirddetails(this.code).subscribe(data=>{
       this.bird=data;
       this.ID=this.code.slice(0,9);
-      console.log(this.bird);
+     
   })
   }
 
@@ -34,10 +34,10 @@ export class LightbirdEditComponent implements OnInit {
         
        
         
-        console.log(data);
+      
         
         })
-        console.log(this.bird);
+        
         
     }
 

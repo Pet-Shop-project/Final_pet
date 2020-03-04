@@ -31,4 +31,7 @@ export class LightcatsearchComponent implements OnInit {
    console.log(cat._id);
    
   }
+  back(){
+    this.router.navigate(['/light-cats'])
+    }
 }

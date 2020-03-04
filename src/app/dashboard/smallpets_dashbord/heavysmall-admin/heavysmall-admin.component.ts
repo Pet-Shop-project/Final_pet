@@ -18,12 +18,10 @@ export class HeavysmallAdminComponent implements OnInit {
      
      
     );
-    // console.log(this.lightsmallpet)
   }
-  delete(pets){
-    this.getheavypet.deleteheavysmall(pets._id).subscribe(data=>{
-       console.log('Small deleted')
-      // this.bird=data
+  delete(pet){
+    this.getheavypet.deleteheavysmall(pet._id).subscribe(data=>{
+       
      })
      
    }

@@ -21,8 +21,7 @@ export class HeavybirdsAdminComponent implements OnInit {
   }
   delete(bird){
     this.bird.deletebird(bird._id).subscribe(data=>{
-       console.log('bird deleted')
-      // this.bird=data
+      
      })
      
    }

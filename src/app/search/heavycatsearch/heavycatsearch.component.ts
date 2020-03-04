@@ -30,5 +30,8 @@ export class HeavycatsearchComponent implements OnInit {
     this.router.navigate(['/heavy-cats-details',cat._id])
     console.log(cat._id)
   }
+  back(){
+    this.router.navigate(['/heavy-cats'])
+    }
 
 }

@@ -53,7 +53,7 @@ export class LightCatsComponent implements OnInit {
 
   onSelect(cat){
     this.router.navigate(['/light-cats-details',cat._id])
-   console.log(cat._id);
+  
    
   }
   on_click(){
@@ -65,7 +65,7 @@ export class LightCatsComponent implements OnInit {
 }
 search(name){
   this.router.navigate(['/lightcatsearch',name])
- console.log(name);
+
  
 }
 

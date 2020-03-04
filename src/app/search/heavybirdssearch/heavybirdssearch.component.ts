@@ -24,6 +24,9 @@ export class HeavybirdssearchComponent implements OnInit {
        this.birds=data;
      })
   }
+  back(){
+    this.router.navigate(['/heavybirds'])
+    }
   showdetails(bird){
     this.router.navigate(["/heavy-details",bird._id])
     }

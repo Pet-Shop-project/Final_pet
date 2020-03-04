@@ -8,10 +8,10 @@
       </div>
     
     <div class="row" style="margin-bottom: 100px;">
-      <div class="col-md-4 mt-4"*ngFor="let bird of birds" (click)="onSelect(bird)">
+      <div class="col-md-4 mt-4"*ngFor="let bird of birds">
         <div class="card profile-card-5" >
             <div class="card-img-block">
-                <img class="card-img-top" src="{{bird.images[0]}}" alt="Card image cap">
+                <img class="card-img-top" src="{{bird.images[0]}}" alt="Card image cap" style="width: 300px; height: 300px;">
             </div>
                 <div class="card-body pt-0">
                 <h4 class="card-title">{{bird.name}}</h4>
@@ -19,7 +19,7 @@
               
                 <div (click)="onSelect_light(bird)"> 
                     <a  class="action-button shadow animate blue" >Edit</a></div>
-                    <button (click)=" delete (bird)" class="btn btn-info"> Delete</button>
+                    <button (click)=" delete (pet)" class="action-button shadow animate red"> Delete</button> 
                 
               </div>
             </div>

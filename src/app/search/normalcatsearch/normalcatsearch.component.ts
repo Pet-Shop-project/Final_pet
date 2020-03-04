@@ -30,5 +30,8 @@ export class NormalcatsearchComponent implements OnInit {
     this.router.navigate(['/normal-cats-details',cat._id])
     console.log(cat._id)
   }
+  back(){
+    this.router.navigate(['/normal-cats'])
+    }
 
 }

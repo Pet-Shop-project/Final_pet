@@ -27,7 +27,7 @@ public birds=new Birds("", "",0,0,"",0,"",[""]);
      this.getlightbirds.lightbirddetails(this.lightid).subscribe(data =>{
       this.birds=data;
      })
-      // console.log(this.lightdetails)
+      
   }
   public addToCart(prductId,productPrice,productName,productImg){
     console.log(prductId)
