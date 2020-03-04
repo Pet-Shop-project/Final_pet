@@ -49,7 +49,7 @@ router.get("/details/:id", (req, res) => {
 })
 
 router.put('/update/:id', function (req, res) {
-  console.log('Update a light Smallpets');
+
   mongoose.model("lightSmallpets").findByIdAndUpdate(req.params.id, {
       $set: {
         name: req.body.name,
@@ -123,7 +123,7 @@ router.post('/addpet', parseUrlencoded, (req, res) => {
     if (err) {
       console.log(err) 
     }
-    console.log(res)
+ 
   })
 })
 module.exports = router

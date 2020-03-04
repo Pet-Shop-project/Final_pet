@@ -65,12 +65,12 @@ route.get("/add/:id/:price/:name", verifytoken, function (req, resp, next) {
     if (!cart) {
       var cartModel = mongoose.model("cart")
       var cart = new cartModel()
-      cart.product_id = req.params.id // change to object of allshoppets
+      cart.product_id = req.params.id 
       cart.totalPrice = productPrice;
       cart.totalQuantity = 1;
       cart.user = cartId;
       cart.name = productName;
-      // cart.images = productImage;
+  
       cart.save(function (err, data) {
         resp.send(data);
         console.log(data);
@@ -92,7 +92,7 @@ route.get("/add/:id/:price/:name", verifytoken, function (req, resp, next) {
         }
         console.log(data)
         console.log(cart)
-        console.log("Iam Heree Update")
+      
 
 
       })

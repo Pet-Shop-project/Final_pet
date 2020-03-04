@@ -68,7 +68,7 @@ route.get('/list',function(req,resp){
       if (err){
         console.log(err)
       }
-      console.log(res)
+  
     })
   }) 
   route.get('/search/:name',function(req,resp){

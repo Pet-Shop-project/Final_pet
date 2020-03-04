@@ -89,7 +89,7 @@ router.post('/login', (req, res, next) => {
     password
   } = req.body
   console.log(req.body)
-  console.log("asd")
+ 
   Admin.findOne({
     email: email
   }).then(user => {
@@ -100,7 +100,7 @@ router.post('/login', (req, res, next) => {
       });
     }
 
-    // Match password
+   
     bcrypt.compare(password, user.password, (err, isMatch) => {
       if (isMatch) {
         let Admintoken = jwt.sign({
@@ -108,7 +108,7 @@ router.post('/login', (req, res, next) => {
         }, 'Secret', {
           expiresIn: '3h'
         })
-        // console.log(token)
+       
         res.status(200).json(Admintoken);
       } else {
         res.status(501).json({

@@ -27,7 +27,7 @@ router.get('/heavy', (req, res) => {
     if (error) {
       console.log(error)
     }
-    // console.log(result)
+   
 
     res.json(result)
   })
@@ -41,12 +41,12 @@ router.get("/details/:id", (req, res) => {
     if (error) {
       console.log(error)
     }
-    // console.log(data)
+   
     res.json(data)
   })
 })
 router.put('/update/:id', function (req, res) {
-  console.log('Update a heavy Smallpets');
+  
   mongoose.model("heavySmallpets").findByIdAndUpdate(req.params.id, {
       $set: {
         name: req.body.name,
