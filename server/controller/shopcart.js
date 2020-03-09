@@ -120,8 +120,7 @@ route.get('/details', verifytoken, function (req, resp) {
   }
 
 })
-io.on('connection',(socket)=>{
-  socket.on('deleteEvent',(cartId)=>{
+
     route.get('/deleteItem/:id', verifytoken, function (req, resp) {
       cartId = Token.useremail
       mongoose.model('cart').deleteOne({
@@ -136,10 +135,7 @@ io.on('connection',(socket)=>{
     
       resp.end()
     })
-  })
-  socket.emit('deleteEvent',cartId)
-})
-  
+ 
 
 
 

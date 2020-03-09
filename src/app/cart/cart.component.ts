@@ -54,7 +54,6 @@ export class CartComponent implements OnInit {
     this.cartserv.clearCart().subscribe(data=>console.log("you've cleared your cart"))
   }
   delete(data){
-    this.socket.deletepet(data);
     this.cartserv.deleteCart(this.product_id).subscribe(data=>{
       
     })
