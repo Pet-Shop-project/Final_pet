@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
   <div class="row" style="margin-top: 50px;margin-bottom: 100px;box-sizing: border-box;">
     <div class="col-sm-6">
       <div class="row" style="margin-left: 40px;">
@@ -21,7 +21,7 @@
                 <img class="d-block w-100" src="{{pet.images[2]}}" alt="Third slide"
                   style="width: 600px;height: 400px;">
                 <div class="carousel-caption">
-                  <!-- <h3>Face</h3> -->
+                 
                   <p>Recommended Food</p>
                 </div>
               </div>
@@ -94,4 +94,82 @@
       </div>
     </div>
   </div>
+</div> -->
+<div class="container">
+ 
+
+  <p style="font-size: 30px;margin-left: 500px;text-decoration: underline;"></p>
+  <div class="row"> 
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-md-4">
+          <div id="closeImgs" class="carousel slide" data-ride="carousel" style="width: 350px;height: 400px;margin-left: 65px;">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#closeImgs" data-slide-to="0" class="active"></li>
+              <li data-target="#closeImgs" data-slide-to="1"></li>
+              <li data-target="#closeImgs" data-slide-to="2"></li>
+              <li data-target="#closeImgs" data-slide-to="3"></li>
+            </ul>
+            
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{{pet.images[0]}}" >
+              </div>
+              <div class="carousel-item">
+                <img src="{{pet.images[1]}}">
+              </div>
+              <div class="carousel-item">
+                <img src="{{pet.images[2]}}">
+              </div>
+              <div class="carousel-item">
+                <img src="{{pet.images[3]}}">
+              </div>
+              
+            </div>
+            
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#closeImgs" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#closeImgs" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
+
+
+      </div>
+      </div>
+    </div>
+    <!-- Div of product name ,price,description and designer with buutton add to cart-->
+    <div class="col-md-4" id="details">
+      <div class="row">
+        <div class="col-sm-12">
+        <!-- <input type="submit" value="Add to cart" name="btn" id="btnid"> -->
+        <h3>{{pet.name}}</h3>
+        <p>Weight : {{pet.weight}} Kg</p> 
+        <p>Price: {{pet.price}} $</p>
+        <h5> Temperament: {{pet.temperament}}</h5>
+        <br>
+        <button type="button" class="btn btn-dark" (click)="addToCart(pet._id,pet.price,pet.name,pet.images[0])" >Add to Cart</button>
+        <button type="button" class="btn btn-light"(click)="addToWishlist(pet._id,pet.price,pet.name,pet.images[0])" >Add to Wishlist</button>
+
+        <br>
+          <br>
+          <hr>
+          <div>
+            <h6>MORE INFORMATION</h6>
+            <p>color: {{pet.color}} </p>
+            <p>Life span: {{pet.life_span}}</p>
+            <p>Size: {{pet.size}} </p>
+            
+          </div>
+      </div>
+      <button type="button" class="btn btn-info" routerLink="/smallpets/normal">Back </button>
+
+  </div>
 </div>
+</div>
+</div> 

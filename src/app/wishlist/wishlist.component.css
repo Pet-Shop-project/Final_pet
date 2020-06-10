@@ -180,7 +180,20 @@ body{
     }
       
    
-   
+    @media (max-width:768px)
+    {
+     h1{
+       font-size: 24px;
+       color: teal;
+     }
+     .fifth{
+       width: 200px;
+       height: 60px;
+       margin-left: 5%;
+     
+     }
+       
+      }
   
   
   

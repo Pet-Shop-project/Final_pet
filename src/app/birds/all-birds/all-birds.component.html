@@ -1,24 +1,35 @@
-<div class="container contstyle">
-  <form class="form-group" style="margin-top: 50px;margin-left: 80px;">
-    <input class="form-control" style="width: 300px;height: 55px;" type="search" placeholder="Search...."
-      aria-label="Search" #searchInput>
-    <button class="btn draw-border" style="margin-left: 310px;margin-top: -70px;" type="submit"
-      (click)="search(searchInput.value)">Search</button>
-  </form>
-  <div class="row">
-                        <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB" *ngFor= "let bird of birds |paginate:config" (click)=" showdetails(bird)">
-                          <div class="img-container m-0 p-0 shadow-sm">
-                            <img src="{{bird.images[0]}}" style="width: 300px;height: 300px;">
-                            <div class="overlay d-flex flex-column align-items-center justify-content-center">
-                              <h2>{{bird.name}}</h2>
-                              <p class="d-block small ">{{bird.price}}</p>
-                            </div>
-                          </div>
-                        </div>
+<!--   -->
 
-                       
-                        
-  </div>                
+
+
+
+<button type="button" class="btn btn-info" style=" width: 100px; margin:10px 10px 10px 10px;" routerLink="/">Back</button>
+<br>
+<form class="form-group" style="margin-top: 50px;margin-left: 80px;">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Find your pet..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button"        (click)="search(searchInput.value)">Search</button>
+    </div>
+  </div>
+ 
+</form>
+<div class="container-fluid padding random">
+  <div class="row padding">
+    <div class="col-md-4" *ngFor= "let bird of birds |paginate:config">
+      <div class="card">
+        
+        <div class="card-body" >
+          <img class="card-img-top" src="{{bird.images[0]}}">
+          <h2>{{bird.name}}</h2>
+        <p class="d-block small ">{{bird.price}} EGP</p>
+          <a class="btn btn-outline-secondary" (click)=" showdetails(bird)">More details</a>
+        </div>
+      </div>
+      
+    </div>
+   
+  </div>
 </div>
 <pagination-template #p="paginationApi" [id]="config.id" (pageChange)="config.currentPage = $event">
     

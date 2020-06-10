@@ -177,7 +177,17 @@ body{
     color: black;
   }
     
- 
+  @media (max-width:767px){
+h1{
+  font-size: 24px;
+  color: darkgray;
+}
+.fifth{
+  width: 200px;
+  height: 60px;
+  margin-left: 5%;
+}
+ }
  
 
 

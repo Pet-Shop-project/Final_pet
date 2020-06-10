@@ -1,24 +1,44 @@
+<button type="button" class="btn btn-info" style=" width: 100px; margin:10px 10px 10px 10px;" routerLink="/">Back</button>
 <form class="form-group" style="margin-top: 50px;margin-left: 80px;">
-  <input class="form-control" style="width: 300px;height: 55px;" type="search" placeholder="Search...."
-    aria-label="Search" #searchInput>
-  <button class="btn draw-border" style="margin-left: 310px;margin-top: -70px;" type="submit"
-    (click)="search(searchInput.value)">Search</button>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Find your pet..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button"  (click)="search(searchInput.value)">Search</button>
+    </div>
+  </div>
+ 
 </form>
-
-<div class="row">
-  <div class="col-sm-12 col-md-4 my-3 workItem show-workItem catB" *ngFor="let cat of cats |paginate:config"
-    (click)="onSelect(cat)" style="border-radius: 25px; width: 425px;height: 300px;">
+<div class="container-fluid padding random">
+  <div class="row padding">
+    <div class="col-md-4" *ngFor="let cat of cats |paginate:config">
+      <div class="card">
+        
+        <div class="card-body" >
+          <img class="card-img-top" src="{{cat.images[0]}}">
+          <h2>{{cat.name}}</h2>
+        <p class="d-block small ">{{cat.price}} EGP</p>
+          <a class="btn btn-outline-secondary"  (click)="onSelect(cat)">More details</a>
+        </div>
+      </div>
+      
+    </div>
+   
+  </div>
+</div>
+<!-- <div class="row">
+  <div class="col-md-4 my-3 workItem" *ngFor="let cat of cats |paginate:config"
+    (click)="onSelect(cat)">
     <div class="img-container m-0 p-0 shadow-sm">
       <img src="{{cat.images[0]}}" class="img-center img-fluid img-showcase"
-        style="border-radius: 25px; width: 425px;height: 300px;">
+        >
       <div class="overlay d-flex flex-column align-items-center justify-content-center"
-        style="border-radius: 25px; width: 425px;height: 300px; margin-left: 41px;">
+        >
         <h2>{{cat.name}}</h2>
         <p class="d-block small ">{{cat.price}} EGP</p>
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <pagination-template #p="paginationApi" [id]="config.id" (pageChange)="config.currentPage = $event">
 
 

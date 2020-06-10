@@ -104,6 +104,7 @@ import { NormalpetEditComponent } from "src/app/dashboard/smallpets_dashbord/nor
 import { EditAccessComponent } from './Admin accessories/edit-access/edit-access.component';
 import { PaymentdoneComponent } from './paymentdone/paymentdone.component';
 import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   
@@ -225,10 +226,10 @@ const routes: Routes = [
 
 
 {path:'done',component:PaymentdoneComponent},
-{path:'404',component:PageNotfoundComponent},
-{ path: '', component:PageNotfoundComponent},
+// {path:'404',component:PageNotfoundComponent},
+// { path: '', component:PageNotfoundComponent},
     
-    { path: '**', redirectTo: '404' }
+    // { path: '**', redirectTo: '404' }
 
 ];
 
